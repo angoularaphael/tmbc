@@ -33,10 +33,11 @@ export const NAV = [
 ];
 
 export const SALLES = [
-  { name: "Portet-sur-Garonne", tag: "Le vaisseau amiral", url: "https://www.boxing-center-portet.fr/" },
-  { name: "États-Unis", tag: "Le colosse", url: "https://boxingcenter.fr/" },
-  { name: "Saint-Cyprien", tag: "La rive gauche", url: "https://bc-st-cyprien.vercel.app/" },
-  { name: "Ramonville", tag: "L’octogone à ciel ouvert", url: "https://bc-ramonville.vercel.app/" },
+  { name: "Minimes", tag: "Le berceau", url: "https://boxe-toulouse.com/" },
+  { name: "Portet-sur-Garonne", tag: "Le vaisseau amiral", url: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-portet-sur-garonne-2/" },
+  { name: "États-Unis", tag: "Le colosse", url: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/" },
+  { name: "Saint-Cyprien", tag: "La rive gauche", url: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-saint-cyprien/" },
+  { name: "Ramonville", tag: "L’octogone à ciel ouvert", url: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-ramonville/" },
 ];
 
 export const GEO = {

@@ -37,9 +37,8 @@ import { SITE, LINKS, NAV, SALLES } from "../data/site.js";
     <div>
       <p class="foot-title">Réseau</p>
       <ul class="foot-list">
-        <li><a href={LINKS.wordpress} target="_blank" rel="noopener">boxe-toulouse.com</a></li>
-        <li><a href={LINKS.groupe} target="_blank" rel="noopener">Boxing Center · États-Unis</a></li>
-        {SALLES.filter((s) => s.name !== "États-Unis").map((salle) => (
+        <li><a href="https://boxingcenter.fr/salle-de-sport-toulouse/" target="_blank" rel="noopener">Toutes les salles</a></li>
+        {SALLES.map((salle) => (
           <li><a href={salle.url} target="_blank" rel="noopener">{salle.name}</a></li>
         ))}
       </ul>
@@ -57,8 +56,8 @@ import { SITE, LINKS, NAV, SALLES } from "../data/site.js";
     </div>
   </div>
 
-  <div class="wrap foot-salles" aria-label="Les autres salles Boxing Center">
-    <p class="foot-title">Les autres salles</p>
+  <div class="wrap foot-salles" aria-label="Les salles Boxing Center">
+    <p class="foot-title">Les salles Boxing Center</p>
     <div class="salle-row">
       {SALLES.map((salle) => (
         <a class="salle-card" href={salle.url} target="_blank" rel="noopener">

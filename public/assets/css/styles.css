@@ -1049,6 +1049,17 @@ html.js .punch-letter.is-in {
   border: 1px solid var(--rope);
 }
 
+.contact-panel {
+  display: grid;
+  gap: 8px;
+  padding: 28px 26px 32px;
+  background: #121212;
+  border: 1px solid var(--line);
+}
+
+.contact-panel p { margin: 0 0 1em; }
+.contact-panel .btn-row { margin-top: 8px; }
+
 .site-footer {
   padding: 72px 0 32px;
   background: #050505;
@@ -1100,7 +1111,7 @@ html.js .punch-letter.is-in {
 
 .salle-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-top: 16px;
 }
@@ -1385,7 +1396,7 @@ html.js [data-stagger].is-in > *:nth-child(n+9) { animation-delay: 0.68s; }
   position: relative;
   overflow: hidden;
   min-height: 420px;
-  background: #000;
+  background: #000 url("/assets/media/sparring-graff-1200.webp") center / cover no-repeat;
   perspective: 1000px;
 }
 

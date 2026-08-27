@@ -334,16 +334,6 @@
     }, 1000);
   };
 
-  const form = $("#contact-form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const box = $("#form-ok");
-      form.hidden = true;
-      if (box) box.hidden = false;
-    });
-  }
-
   onScrollHeader();
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   splitPunches();

@@ -89,17 +89,18 @@ const faq = JSON.stringify({
         <div data-reveal>
           <p class="kicker">Écrire au club</p>
           <h2 class="display">Une question avant de <span class="tint">venir.</span></h2>
-          <p>Maquette : le formulaire n’envoie pas encore de mail. Pour une vraie réponse, appelez le 05 62 24 46 82.</p>
+          <p class="lede">Pas de formulaire : on répond plus vite au téléphone, à l’accueil, ou par mail. Lun–sam 10h–21h30.</p>
         </div>
-        <div data-reveal>
-          <form class="form" id="contact-form">
-            <label>Prénom <input name="prenom" required autocomplete="given-name" /></label>
-            <label>E-mail <input type="email" name="email" required autocomplete="email" /></label>
-            <label>Téléphone <input type="tel" name="tel" autocomplete="tel" /></label>
-            <label>Message <textarea name="message" rows="4" required></textarea></label>
-            <button class="btn bell" type="submit"><span>Envoyer</span></button>
-          </form>
-          <p class="notice" id="form-ok" hidden>Message simulé. Appelez la salle pour confirmer un créneau.</p>
+        <div class="contact-panel" data-reveal>
+          <p>Le plus simple, c’est d’appeler la salle. On vous dit le créneau, on prête les gants, on vous attend.</p>
+          <p><strong>Téléphone</strong><br><a href="tel:+33562244682">05 62 24 46 82</a></p>
+          <p><strong>E-mail</strong><br><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+          <p><strong>Adresse</strong><br>12 rue de Fenouillet, 31200 Toulouse<br>Métro B Barrière de Paris · 3 min à pied</p>
+          <p class="btn-row">
+            <a class="btn bell" href="tel:+33562244682"><span>Appeler</span></a>
+            <a class="btn btn--ghost" href="mailto:boxingcenter31@gmail.com"><span>Écrire</span></a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=12+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener"><span>Itinéraire</span></a>
+          </p>
         </div>
       </div>
     </section>
