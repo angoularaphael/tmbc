@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import BagTrap from "../components/BagTrap.astro";
 import { SITE, GEO, OG_IMAGE, OG_ALT, KEYWORDS, clubGraph } from "../data/site.js";
 
 const {
@@ -79,6 +80,7 @@ const schema = JSON.stringify(
   <Header current={current} />
   <slot />
   <Footer />
+  <BagTrap />
   <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

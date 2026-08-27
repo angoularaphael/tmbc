@@ -334,6 +334,109 @@
     }, 1000);
   };
 
+  const backNav = () => {
+    $$("[data-back]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (window.history.length > 1) window.history.back();
+        else window.location.href = "/";
+      });
+    });
+  };
+
+  const toTop = () => {
+    const btn = $("[data-totop]");
+    if (!btn) return;
+    const sync = () => {
+      btn.hidden = window.scrollY < 420;
+    };
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+  };
+
+  const bagTrap = () => {
+    const overlay = $("#bag-stage");
+    const bag = $("[data-bag]");
+    const hitBtn = $("[data-bag-hit]");
+    const hitsEl = $("[data-bag-hits]");
+    const hint = $("[data-bag-hint]");
+    const tease = $("[data-bag-tease]");
+    const result = $("[data-bag-result]");
+    const box = overlay?.querySelector(".bag-trap__box");
+    const dots = $$("[data-bag-dots] li");
+    const openers = $$("[data-bag-open]");
+    const closeBtn = $("[data-bag-close]");
+    if (!overlay || !hitBtn) return;
+
+    const punches = ["Jab.", "Crochet.", "Direct."];
+    const teases = ["Gants offerts ? Pas encore.", "Essai 10 € ? Presque."];
+    let hits = 0;
+    let busy = false;
+
+    const setExpanded = (open) => {
+      openers.forEach((b) => b.setAttribute("aria-expanded", String(open)));
+    };
+
+    const reveal = () => {
+      result.hidden = false;
+      box?.classList.add("is-done");
+      bag?.classList.add("is-done");
+    };
+
+    const open = () => {
+      overlay.hidden = false;
+      document.body.classList.add("bag-open");
+      setExpanded(true);
+      if (reduce || hits >= 3) reveal();
+      closeBtn?.focus();
+    };
+
+    const close = () => {
+      overlay.hidden = true;
+      document.body.classList.remove("bag-open");
+      setExpanded(false);
+    };
+
+    openers.forEach((b) => b.addEventListener("click", open));
+    closeBtn?.addEventListener("click", close);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !overlay.hidden) close();
+    });
+
+    hitBtn.addEventListener("click", () => {
+      if (busy || hits >= 3) return;
+      busy = true;
+      hits += 1;
+      bag.classList.remove("is-swing");
+      void bag.offsetWidth;
+      bag.classList.add("is-swing");
+      dots[hits - 1]?.classList.add("is-on");
+      hitsEl.textContent = `${hits} / 3`;
+      hint.textContent = punches[hits - 1];
+      if (hits < 3) {
+        tease.hidden = false;
+        tease.textContent = teases[hits - 1];
+        setTimeout(() => { busy = false; }, reduce ? 0 : 520);
+        return;
+      }
+      tease.hidden = true;
+      hint.textContent = "KO";
+      if (!reduce) {
+        document.body.classList.add("is-gong");
+        setTimeout(() => document.body.classList.remove("is-gong"), 950);
+      }
+      setTimeout(() => {
+        reveal();
+        busy = false;
+      }, reduce ? 0 : 620);
+    });
+  };
+
   onScrollHeader();
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   splitPunches();
@@ -349,4 +452,7 @@
   lightbox();
   pocketVideo();
   clock();
+  backNav();
+  toTop();
+  bagTrap();
 })();
