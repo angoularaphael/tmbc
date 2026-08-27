@@ -1,0 +1,76 @@
+---
+import { SITE, LINKS, NAV, SALLES } from "../data/site.js";
+---
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="brand__mark">{SITE.short}</p>
+      <p class="foot-lead">{SITE.name} — association de boxe anglaise, berceau du réseau Boxing Center.</p>
+      <p>{SITE.address}<br>{SITE.zip} {SITE.city}</p>
+      <p>{SITE.hours} · dimanche fermé</p>
+      <p class="btn-row foot-cta">
+        <a class="btn" href={LINKS.rentree}><span>4 semaines · 29 €</span></a>
+        <a class="btn btn--ghost" href={LINKS.saison}><span>Saison · 259 €</span></a>
+      </p>
+    </div>
+
+    <div>
+      <p class="foot-title">Le club</p>
+      <ul class="foot-list">
+        {NAV.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <p class="foot-title">Boutique</p>
+      <ul class="foot-list">
+        <li><a href={LINKS.boutique} target="_blank" rel="noopener">Boutique Boxing Center</a></li>
+        <li><a href={LINKS.rentree} target="_blank" rel="noopener">Offre rentrée · 29 €</a></li>
+        <li><a href={LINKS.saison} target="_blank" rel="noopener">Saison 12 mois · 259 €</a></li>
+        <li><a href={LINKS.essai} target="_blank" rel="noopener">Séance d’essai · 10 €</a></li>
+        <li><a href={LINKS.abos} target="_blank" rel="noopener">Abonnements & école</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="foot-title">Réseau</p>
+      <ul class="foot-list">
+        <li><a href={LINKS.wordpress} target="_blank" rel="noopener">boxe-toulouse.com</a></li>
+        <li><a href={LINKS.groupe} target="_blank" rel="noopener">Boxing Center · États-Unis</a></li>
+        {SALLES.filter((s) => s.name !== "États-Unis").map((salle) => (
+          <li><a href={salle.url} target="_blank" rel="noopener">{salle.name}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <p class="foot-title">Contact</p>
+      <ul class="foot-list">
+        <li><a href={`tel:${SITE.tel}`}>{SITE.phone}</a></li>
+        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li><a href={SITE.instagram} target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href={SITE.facebook} target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="/contact/">Venir à la salle</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap foot-salles" aria-label="Les autres salles Boxing Center">
+    <p class="foot-title">Les autres salles</p>
+    <div class="salle-row">
+      {SALLES.map((salle) => (
+        <a class="salle-card" href={salle.url} target="_blank" rel="noopener">
+          <strong>{salle.name}</strong>
+          <span>{salle.tag}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="wrap legal">
+    <span>© {new Date().getFullYear()} {SITE.name} · FFBoxe · FFKMDA · FMMAF</span>
+    <span>toulouse-minimes-boxing-club.fr</span>
+  </div>
+</footer>

@@ -1,0 +1,121 @@
+---
+import Base from "../layouts/Base.astro";
+import { KEYWORDS } from "../data/site.js";
+---
+<Base
+  title="Association de boxe Toulouse Minimes | Le club TMBC"
+  description="Le club de boxe TMBC à Toulouse Minimes : association de boxe anglaise depuis 2016, rings, 12 sacs, coachs diplômés, FFBoxe. 12 rue de Fenouillet."
+  keywords={KEYWORDS.club}
+  current="club"
+  crumbs={[
+    { name: "Accueil", href: "/" },
+    { name: "Le club de boxe", href: "/club/" },
+  ]}
+>
+  <main id="main">
+<header class="page-hero" data-round-id="01">
+      <img src="/assets/media/salle-plongee-1200.webp" alt="Plateau vu de haut, sacs alignés sous la verrière" width="1200" height="800" />
+      <div class="wrap" data-reveal>
+        <p class="kicker">Club de boxe Toulouse</p>
+        <h1 class="display" data-punch>Le berceau.</h1>
+        <p class="lede">TMBC — Toulouse Minimes Boxing Club — est l’association de boxe et le club de boxe historique des Minimes. Première salle du réseau Boxing Center, ouverte en 2016 au 12 rue de Fenouillet : des rings, pas des miroirs.</p>
+      </div>
+    </header>
+
+    <section class="section" data-round-id="02" aria-labelledby="t-hist">
+      <div class="wrap split">
+        <div data-reveal>
+          <p class="kicker">Chronologie</p>
+          <h2 id="t-hist" class="display">Une salle qui a <span class="tint">fait école.</span></h2>
+        </div>
+        <div class="timeline" data-reveal>
+          <article>
+            <p class="kicker">2016</p>
+            <p>Ouverture au 12 rue de Fenouillet. Concept des salles américaines : accès six jours sur sept, plusieurs rings, boxe anglaise d’abord.</p>
+          </article>
+          <article>
+            <p class="kicker">2018</p>
+            <p>La boxe éducative et le Boxing Lady décollent. L’école accueille les enfants dès 3 ans. Johnson Suffo et Salomon Kitoko passent professionnels.</p>
+          </article>
+          <article>
+            <p class="kicker">Aujourd’hui</p>
+            <p>Trois boxeurs professionnels et une trentaine d’amateurs formés sur ces rings. Affiliations FFBoxe, FFKMDA, FMMAF.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--steel" data-round-id="03" aria-labelledby="t-eq">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Le plateau</p>
+        <h2 id="t-eq" class="display" data-reveal>Ce que vous touchez <span class="tint">en arrivant.</span></h2>
+        <ul class="equip" data-stagger style="margin-top:32px;padding:0">
+          <li data-reveal><strong>Plusieurs rings</strong><p>Travail en petits groupes, sans attendre son tour.</p></li>
+          <li data-reveal><strong>Douze sacs lourds</strong><p>Et une zone pattes d’ours dans le cours d’anglaise.</p></li>
+          <li data-reveal><strong>Prépa à l’étage</strong><p>Rack, barres, cardio. Surplombe les rings. Accès libre aux heures d’ouverture.</p></li>
+          <li data-reveal><strong>Vestiaires H / F</strong><p>Séparés. On peut venir voir un cours sans rien demander.</p></li>
+          <li data-reveal><strong>Matériel prêté</strong><p>Gants, casques et protections le temps de l’essai et de s’équiper.</p></li>
+          <li data-reveal><strong>Accès libre</strong><p>Rings et sacs en autonomie, sans réservation, du lundi au samedi.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" data-round-id="04" aria-labelledby="t-coachs">
+      <div class="wrap">
+        <p class="kicker" data-reveal>L’encadrement</p>
+        <h2 id="t-coachs" class="display" data-reveal>Un coach vous corrige dès la <span class="tint">première.</span></h2>
+        <div class="coach-grid" data-stagger style="margin-top:32px">
+          <article class="coach magnet" data-reveal>
+            <img src="/assets/media/coach-mehdi.webp" alt="Portrait de Mehdi, coach principal TMBC" width="400" height="500" loading="lazy" />
+            <h3>Mehdi</h3>
+            <p>Coach principal. Anglaise, éducative, compétiteurs, Baby Boxe, boxing camp, open sparring. Ancien compétiteur de haut niveau.</p>
+          </article>
+          <article class="coach magnet" data-reveal>
+            <h3>Chloé</h3>
+            <p>Boxing Lady. Préparation physique. Pas de portrait publié : le club n’en a validé qu’un, celui de Mehdi.</p>
+          </article>
+          <article class="coach magnet" data-reveal>
+            <h3>David</h3>
+            <p>Boxing Lady et boxe pieds-poings. Le mercredi soir, c’est son créneau pieds-poings — le seul de la semaine.</p>
+          </article>
+          <article class="coach magnet" data-reveal>
+            <h3>Clément</h3>
+            <p>Boxing camp et cross training. La condition physique, sans opposition obligatoire.</p>
+          </article>
+        </div>
+        <p class="note-media">Valentin Guth et Johnson interviennent aussi en loisirs / éducative. Remus est commercial, pas coach de cours.</p>
+      </div>
+    </section>
+
+    <section class="section section--plate" data-round-id="05">
+      <div class="wrap split">
+        <div data-reveal>
+          <p class="kicker">Première séance</p>
+          <h2 class="display">Personne ne vous jette sur le <span class="tint">ring.</span></h2>
+          <ul class="list-check">
+            <li>Arriver un quart d’heure avant. Dire que c’est une première.</li>
+            <li>Aucun dossier, aucun certificat médical pour l’essai.</li>
+            <li>Gants prêtés. Échauffement, garde, jab, sac. Le coach arrête avant la blessure.</li>
+            <li>Pas de sparring imposé. Pas de test de niveau. Rien à signer en sortant.</li>
+          </ul>
+          <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai"><span>Essai 10 €</span></a>
+          <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/offre/259"><span>Saison · 259 €</span></a>
+        </div>
+        <div class="shot" data-reveal>
+          <img src="/assets/media/coach-garde-v2-1200.webp" alt="Un coach corrige la garde d’un boxeur" width="1200" height="800" loading="lazy" />
+          <span class="tape">Le geste juste</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--steel seo-local" aria-labelledby="seo-club">
+      <div class="wrap prose">
+        <h2 id="seo-club">Association et club de boxe anglaise à Toulouse Minimes</h2>
+        <p>Le Toulouse Minimes Boxing Club (TMBC) est une <strong>association de boxe à Toulouse</strong> affiliée FFBoxe, FFKMDA et FMMAF. La <strong>salle de boxe</strong>, au 12 rue de Fenouillet (31200 Toulouse), a ouvert en 2016. C’est le berceau du réseau Boxing Center et un <strong>club de boxe anglaise</strong> de référence à Toulouse nord : plusieurs rings, 12 sacs lourds, zone pattes d’ours, plateau de préparation physique à l’étage, vestiaires hommes et femmes.</p>
+        <p>L’encadrement est diplômé d’État. Mehdi, coach principal, suit la boxe anglaise loisirs, l’éducative, les compétiteurs, le Baby Boxe et le boxing camp. Chloé encadre le Boxing Lady. David le Boxing Lady et les pieds-poings. Clément le boxing camp. Personne n’est laissé frapper dans le vide : dès la première séance, un coach place les pieds, les poings et la garde — y compris si vous n’avez jamais mis les pieds dans un <strong>club de boxe</strong>.</p>
+        <p>Trois boxeurs professionnels et une trentaine d’amateurs ont été formés sur ces rings. Johnson Suffo et Salomon Kitoko y sont passés professionnels. On peut visiter la salle aux heures d’ouverture, du lundi au samedi, 10h–21h30, sans rendez-vous. Voir les <a href="/disciplines/">cours de boxe</a> et le <a href="/planning-tarifs/">planning</a>.</p>
+      </div>
+    </section>
+  </main>
+
+</Base>

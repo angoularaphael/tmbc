@@ -1,0 +1,162 @@
+---
+import Base from "../layouts/Base.astro";
+import { KEYWORDS } from "../data/site.js";
+---
+<Base
+  title="Planning et tarifs boxe Toulouse | Essai 10 €, rentrée 29 € — TMBC"
+  description="Horaires et tarifs du club de boxe TMBC à Toulouse Minimes. 27 cours/semaine. Essai 10 €, 4 semaines 29 €, saison 259 €, école 295 €. 12 rue de Fenouillet."
+  keywords={KEYWORDS.planning}
+  current="planning"
+  crumbs={[
+    { name: "Accueil", href: "/" },
+    { name: "Planning et tarifs", href: "/planning-tarifs/" },
+  ]}
+>
+  <main id="main">
+<header class="page-hero" data-round-id="01">
+      <img src="/assets/media/cross-rack-1200.webp" alt="Plateau de préparation physique" width="1200" height="800" />
+      <div class="wrap" data-reveal>
+        <p class="kicker">Planning club de boxe Toulouse</p>
+        <h1 class="display" data-punch>27 cours. 16 bandes libres.</h1>
+        <p class="lede">Planning des cours de boxe du club TMBC à Toulouse Minimes, du lundi au samedi. Horaires de boxe anglaise, Boxing Lady, école, camp et accès libre. Filtrez par discipline.</p>
+      </div>
+    </header>
+
+    <section class="section" data-round-id="02" aria-labelledby="t-plan">
+      <div class="wrap">
+        <h2 id="t-plan" class="display" data-reveal>La semaine</h2>
+        <p class="lede" style="margin-bottom:22px">Horaires des cours de boxe anglaise, Boxing Lady, boxe éducative, boxing camp, pieds-poings et accès libre au TMBC, 12 rue de Fenouillet, Toulouse.</p>
+        <div class="filters" id="plan-filters" role="toolbar" aria-label="Filtrer le planning">
+          <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">Tout</button>
+          <button class="chip" type="button" data-filter="anglaise" aria-pressed="false">Anglaise</button>
+          <button class="chip" type="button" data-filter="competiteurs" aria-pressed="false">Compétiteurs</button>
+          <button class="chip" type="button" data-filter="lady" aria-pressed="false">Lady</button>
+          <button class="chip" type="button" data-filter="educative" aria-pressed="false">École</button>
+          <button class="chip" type="button" data-filter="camp" aria-pressed="false">Camp</button>
+          <button class="chip" type="button" data-filter="pieds" aria-pressed="false">Pieds-poings</button>
+          <button class="chip" type="button" data-filter="libre" aria-pressed="false">Accès libre</button>
+        </div>
+
+        <div class="plan-grid" data-stagger>
+          <section class="plan-day">
+            <header><span>Lundi</span><span>Round 1</span></header>
+            <ul>
+              <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="camp"><time>12h40–13h20</time><span>Boxing camp</span><span>adultes</span></li>
+              <li data-disc="libre"><time>13h20–18h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="competiteurs"><time>18h00–19h30</time><span>Boxe compétiteurs</span><span>licenciés · espace 1</span></li>
+              <li data-disc="libre"><time>18h00–19h30</time><span>Accès libre</span><span>espace 2</span></li>
+              <li data-disc="lady"><time>18h30–19h30</time><span>Boxing Lady</span><span>100 % féminin</span></li>
+              <li data-disc="anglaise"><time>19h40–21h00</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+            </ul>
+          </section>
+          <section class="plan-day">
+            <header><span>Mardi</span><span>Round 2</span></header>
+            <ul>
+              <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="anglaise"><time>12h40–13h20</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+              <li data-disc="libre"><time>13h20–18h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="competiteurs"><time>18h00–19h30</time><span>Boxe compétiteurs</span><span>licenciés</span></li>
+              <li data-disc="camp"><time>18h30–19h30</time><span>Boxing camp</span><span>adultes</span></li>
+              <li data-disc="anglaise"><time>19h40–21h00</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+            </ul>
+          </section>
+          <section class="plan-day">
+            <header><span>Mercredi</span><span>Round 3</span></header>
+            <ul>
+              <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="anglaise"><time>12h40–13h20</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+              <li data-disc="libre"><time>13h20–15h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="educative"><time>15h00–16h00</time><span>Éducative enfants</span><span>7/11 ans</span></li>
+              <li data-disc="educative"><time>16h00–17h00</time><span>Éducative ados</span><span>12/16 ans</span></li>
+              <li data-disc="educative"><time>17h00–18h30</time><span>Jeunes compétiteurs</span><span>licenciés</span></li>
+              <li data-disc="lady"><time>18h30–19h30</time><span>Boxing Lady</span><span>100 % féminin</span></li>
+              <li data-disc="pieds"><time>19h40–21h00</time><span>Boxe pieds-poings</span><span>tous niveaux</span></li>
+            </ul>
+          </section>
+          <section class="plan-day">
+            <header><span>Jeudi</span><span>Round 4</span></header>
+            <ul>
+              <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="anglaise"><time>12h40–13h20</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+              <li data-disc="libre"><time>13h20–18h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="competiteurs"><time>18h00–19h30</time><span>Boxe compétiteurs</span><span>licenciés</span></li>
+              <li data-disc="camp"><time>18h30–19h30</time><span>Boxing camp</span><span>adultes</span></li>
+              <li data-disc="anglaise"><time>19h40–21h00</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+            </ul>
+          </section>
+          <section class="plan-day">
+            <header><span>Vendredi</span><span>Round 5</span></header>
+            <ul>
+              <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="camp"><time>12h40–13h20</time><span>Boxing camp</span><span>adultes</span></li>
+              <li data-disc="libre"><time>13h20–18h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="competiteurs"><time>18h00–19h30</time><span>Boxe compétiteurs</span><span>licenciés</span></li>
+              <li data-disc="anglaise"><time>19h40–21h00</time><span>Boxe anglaise loisirs</span><span>tous niveaux</span></li>
+            </ul>
+          </section>
+          <section class="plan-day">
+            <header><span>Samedi</span><span>Round 6</span></header>
+            <ul>
+              <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="camp"><time>11h00–12h00</time><span>Boxing camp</span><span>adultes</span></li>
+              <li data-disc="libre"><time>12h40–14h00</time><span>Accès libre</span><span>autonomie</span></li>
+              <li data-disc="educative"><time>14h15–15h00</time><span>Baby Boxe</span><span>3/6 ans</span></li>
+              <li data-disc="educative"><time>15h00–16h00</time><span>Éducative enfants</span><span>7/11 ans</span></li>
+              <li data-disc="educative"><time>16h00–17h00</time><span>Éducative ados</span><span>12/16 ans</span></li>
+              <li data-disc="educative"><time>17h00–18h30</time><span>Jeunes compétiteurs</span><span>licenciés</span></li>
+              <li data-disc="competiteurs"><time>18h30–19h30</time><span>Open sparring</span><span>licenciés</span></li>
+              <li data-disc="libre"><time>19h40–21h00</time><span>Accès libre</span><span>autonomie</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--steel" data-round-id="03" aria-labelledby="t-tarifs">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Les cartons des juges</p>
+        <h2 id="t-tarifs" class="display" data-reveal>Des offres lisibles.</h2>
+        <div class="price-row" data-stagger style="margin-top:32px">
+          <article class="price is-hot magnet" data-reveal>
+            <p class="kicker">Rentrée</p>
+            <p><s>44 €</s></p>
+            <b>29 €</b>
+            <p>/ personne · 4 semaines illimitées, sans engagement. Chacun 29 €, jamais 29 € pour deux.</p>
+            <a class="btn bell" href="https://boutique.boxingcenter.fr/offre/29"><span>Je prends 29 €</span></a>
+          </article>
+          <article class="price magnet" data-reveal>
+            <p class="kicker">Saison</p>
+            <p><s>400 €</s></p>
+            <b>259 €</b>
+            <p>12 mois, 4× sans frais, accès aux 5 clubs du réseau.</p>
+            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/offre/259"><span>La saison</span></a>
+          </article>
+          <article class="price magnet" data-reveal>
+            <p class="kicker">École</p>
+            <b>295 €</b>
+            <p>/ an, t-shirt inclus. Baby Boxe 3/6 : 250 €.</p>
+            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/abonnements"><span>Inscrire un enfant</span></a>
+          </article>
+          <article class="price magnet" data-reveal>
+            <p class="kicker">Essai</p>
+            <b>10 €</b>
+            <p>Une séance, matériel prêté, sans dossier. Dernière carte si on veut voir avant.</p>
+            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/seance-essai"><span>Réserver 10 €</span></a>
+          </article>
+        </div>
+        <p class="note-media" data-reveal>Matériel prêté pour l’essai. Ensuite, chacun apporte ses gants. Badge d’accès 34,99 € TTC sauf offre particulière.</p>
+      </div>
+    </section>
+
+    <section class="section seo-local" aria-labelledby="seo-tarifs">
+      <div class="wrap prose">
+        <h2 id="seo-tarifs">Tarifs d’un club de boxe à Toulouse — essai, rentrée, saison, école</h2>
+        <p>Combien coûte un <strong>cours de boxe à Toulouse</strong> ? Au TMBC, la <strong>séance d’essai coûte 10 €</strong> : toutes disciplines, gants prêtés, sans dossier. L’<strong>offre rentrée est à 29 € par personne</strong> (au lieu de 44 €) pour 4 semaines illimitées de <strong>salle de boxe</strong>. Ce n’est jamais 29 € pour deux : chacun paie 29 €.</p>
+        <p>La <strong>saison est à 259 €</strong> les 12 mois (au lieu de 400 €), payable en 4× sans frais, avec accès aux 5 clubs du réseau Boxing Center. L’<strong>école de boxe</strong> : <strong>250 € l’année</strong> pour la Baby Boxe 3/6 ans, <strong>295 €</strong> pour l’éducative 7/11 et les ados 12/16, t-shirt du club inclus.</p>
+        <p>Le <strong>planning du club de boxe des Minimes</strong> tourne du lundi au samedi, 10h–21h30, au 12 rue de Fenouillet, 31200 Toulouse. Inscription en ligne sur la <a href="https://boutique.boxingcenter.fr/">boutique Boxing Center</a>. Téléphone 05 62 24 46 82. <a href="/contact/">Venir à la salle</a>.</p>
+      </div>
+    </section>
+  </main>
+
+</Base>

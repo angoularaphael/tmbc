@@ -1,0 +1,84 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE, GEO, OG_IMAGE, OG_ALT, KEYWORDS, clubGraph } from "../data/site.js";
+
+const {
+  title,
+  description,
+  current = "home",
+  home = false,
+  keywords = KEYWORDS.home,
+  ogTitle = title,
+  ogImage = OG_IMAGE,
+  ogAlt = OG_ALT,
+  noindex = false,
+  crumbs = [],
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogAbs = new URL(ogImage, Astro.site).href;
+const schema = JSON.stringify(
+  clubGraph({
+    title,
+    description,
+    url: canonical.href,
+    crumbs: crumbs.length ? crumbs : [{ name: "Accueil", href: "/" }],
+  })
+);
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content={SITE.name} />
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+  <meta name="geo.region" content={GEO.region} />
+  <meta name="geo.placename" content={GEO.placename} />
+  <meta name="geo.position" content={`${GEO.lat};${GEO.lng}`} />
+  <meta name="ICBM" content={`${GEO.lat}, ${GEO.lng}`} />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href={canonical.href} />
+  <link rel="alternate" hreflang="fr" href={canonical.href} />
+  <meta name="theme-color" content="#080808" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical.href} />
+  <meta property="og:image" content={ogAbs} />
+  <meta property="og:image:alt" content={ogAlt} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogAbs} />
+  <meta name="twitter:image:alt" content={ogAlt} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script type="application/ld+json" set:html={schema} />
+  <slot name="head" />
+</head>
+<body class:list={[{ home }]}>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <div class="fx-gong" id="fx-gong" aria-hidden="true"></div>
+  <div class="fx-guard" id="fx-guard" aria-hidden="true"><div class="fx-guard__l"></div><div class="fx-guard__r"></div></div>
+  <canvas class="fx-dust" id="fx-dust" aria-hidden="true"></canvas>
+  <div class="round-hud" aria-hidden="true">ROUND <strong data-round>01</strong></div>
+  <Header current={current} />
+  <slot />
+  <Footer />
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

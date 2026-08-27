@@ -1,0 +1,17 @@
+---
+import { NAV, LINKS, SITE } from "../data/site.js";
+const { current = "home" } = Astro.props;
+---
+<header class="site-header">
+  <a class="brand" href="/">
+    <span class="brand__mark">{SITE.short}</span>
+    <span class="brand__meta">Toulouse Minimes<br>Boxing Club</span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
+  <nav class="nav" id="nav">
+    {NAV.map((item) => (
+      <a class:list={[{ "is-current": item.id === current }]} href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+  <a class="btn cta-header bell" href={LINKS.rentree}><span>Offre 29 €</span></a>
+</header>
