@@ -2,14 +2,35 @@
   document.documentElement.classList.add("js");
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarse = window.matchMedia("(pointer: coarse)").matches;
+  if (coarse) document.documentElement.classList.add("is-touch");
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
   const header = $(".site-header");
   const roundEl = $("[data-round]");
+  const clockEl = $("[data-clock]");
 
   const onScrollHeader = () => {
     if (header) header.classList.toggle("is-solid", window.scrollY > 24);
+  };
+
+  /* Boot: T-M-B-C slam, bell, then open */
+  const boot = () => {
+    const gate = $(".split-gate");
+    const home = document.body.classList.contains("is-home");
+    if (!gate || reduce || !home) {
+      document.body.classList.remove("is-booting");
+      return;
+    }
+    const seen = sessionStorage.getItem("tmbc-boot");
+    if (seen) {
+      document.body.classList.remove("is-booting");
+      return;
+    }
+    sessionStorage.setItem("tmbc-boot", "1");
+    document.body.classList.add("is-booting");
+    setTimeout(() => document.body.classList.add("is-unbooting"), 980);
+    setTimeout(() => document.body.classList.remove("is-booting", "is-unbooting"), 1720);
   };
 
   const toggle = $(".nav-toggle");
@@ -45,11 +66,7 @@
       pointer.y = e.clientY;
       fist.style.left = `${e.clientX}px`;
       fist.style.top = `${e.clientY}px`;
-      if (trail) {
-        trail.style.opacity = "0.7";
-        trail.style.left = `${tx}px`;
-        trail.style.top = `${ty}px`;
-      }
+      if (trail) trail.style.opacity = "0.7";
     }, { passive: true });
     const follow = () => {
       tx += (pointer.x - tx) * 0.18;
@@ -69,143 +86,50 @@
       shock.style.top = `${e.clientY}px`;
       document.body.appendChild(shock);
       setTimeout(() => shock.remove(), 720);
-      $$(".magnet, .shot, .price, .plan-day, .btn").forEach((el) => {
+      $$(".magnet, .shot, .price, .plan-day, .btn, .cfg").forEach((el) => {
         const r = el.getBoundingClientRect();
         const cx = r.left + r.width / 2;
         const cy = r.top + r.height / 2;
-        const dx = cx - e.clientX;
-        const dy = cy - e.clientY;
-        const d = Math.hypot(dx, dy);
+        const d = Math.hypot(cx - e.clientX, cy - e.clientY);
         if (d > 280) return;
-        const force = (1 - d / 280) * 18;
-        el.style.setProperty("--fx", `${(dx / (d || 1)) * force}px`);
-        el.style.setProperty("--fy", `${(dy / (d || 1)) * force}px`);
-        el.style.setProperty("--fr", `${(dx > 0 ? 1 : -1) * 3}deg`);
-        el.classList.remove("is-flinch");
-        void el.offsetWidth;
-        el.classList.add("is-flinch");
+        const force = (1 - d / 280) * 16;
+        const ox = ((cx - e.clientX) / (d || 1)) * force;
+        const oy = ((cy - e.clientY) / (d || 1)) * force;
+        el.style.transition = "transform 0.45s cubic-bezier(0.22,1.55,0.32,1)";
+        el.style.transform = `translate(${ox}px, ${oy}px)`;
+        setTimeout(() => { el.style.transform = ""; }, 420);
       });
     });
     window.addEventListener("pointerup", () => fist.classList.remove("is-down"));
   }
 
-  $$(".btn").forEach((btn) => {
-    btn.addEventListener("pointermove", (e) => {
-      const r = btn.getBoundingClientRect();
-      btn.style.setProperty("--px", `${((e.clientX - r.left) / r.width) * 100}%`);
-      btn.style.setProperty("--py", `${((e.clientY - r.top) / r.height) * 100}%`);
-    });
-  });
-
-  /* Ring ropes follow the fist */
+  /* Physics ropes that sag toward the pointer */
   const ropes = () => {
     const svg = $(".ropes");
-    if (!svg || reduce) return;
+    if (!svg) return;
     const paths = $$("path", svg);
-    const w = () => svg.clientWidth || innerWidth;
-    const sag = [10, 16, 10];
+    if (paths.length < 3) return;
+    const W = () => window.innerWidth;
+    let mx = W() / 2;
+    window.addEventListener("pointermove", (e) => { mx = e.clientX; }, { passive: true });
     const draw = () => {
-      const width = w();
-      const mx = pointer.x / innerWidth;
+      const w = W();
+      const pull = reduce || coarse ? 0 : (mx / w - 0.5) * 28;
       paths.forEach((p, i) => {
-        const y = 6 + i * 8;
-        const cpx = width * mx;
-        const cpy = y + sag[i] + Math.sin(mx * Math.PI) * 6;
-        p.setAttribute("d", `M0 ${y} Q ${cpx} ${cpy} ${width} ${y}`);
+        const y = 6 + i * 7;
+        const sag = 4 + i * 2 + Math.abs(pull) * 0.15;
+        p.setAttribute("d", `M0 ${y} C ${w * 0.33} ${y + sag + pull} ${w * 0.66} ${y + sag - pull} ${w} ${y}`);
       });
+      const red = paths[1];
+      if (red && !reduce) {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        const t = max > 0 ? window.scrollY / max : 0;
+        red.style.strokeDasharray = "12 6";
+        red.style.strokeDashoffset = String(-t * 80);
+      }
       requestAnimationFrame(draw);
     };
     draw();
-    window.addEventListener("resize", () => {
-      svg.setAttribute("viewBox", `0 0 ${innerWidth} 28`);
-    });
-    svg.setAttribute("viewBox", `0 0 ${innerWidth} 28`);
-  };
-
-  /* Hero parallax: boxer vs gym */
-  const parallax = () => {
-    const gym = $(".hero__layer--gym");
-    const boxer = $(".hero__layer--boxer");
-    if (!gym || reduce || coarse) return;
-    window.addEventListener("pointermove", (e) => {
-      const x = (e.clientX / innerWidth - 0.5) * 2;
-      const y = (e.clientY / innerHeight - 0.5) * 2;
-      gym.style.transform = `translate3d(${x * -12}px, ${y * -8}px, 0) scale(1.06)`;
-      if (boxer) boxer.style.transform = `translate3d(${x * 28}px, ${y * 14}px, 0) scale(1.08)`;
-    }, { passive: true });
-  };
-
-  /* Rosin / chalk canvas — punch bursts */
-  const dust = () => {
-    const canvas = $("#fx-dust");
-    const hero = $(".hero");
-    if (!canvas || reduce) return;
-    if (hero) {
-      canvas.hidden = false;
-      hero.appendChild(canvas);
-    }
-    else { canvas.remove(); return; }
-    const ctx = canvas.getContext("2d");
-    let w = 0;
-    let h = 0;
-    const parts = Array.from({ length: 70 }, () => spawn(true));
-    function spawn(randomY) {
-      return {
-        x: Math.random(),
-        y: randomY ? Math.random() : 0.55 + Math.random() * 0.2,
-        r: 0.5 + Math.random() * 1.8,
-        vx: (Math.random() - 0.5) * 0.0004,
-        vy: -0.00008 - Math.random() * 0.0003,
-        a: 0.08 + Math.random() * 0.22,
-        life: 1,
-      };
-    }
-    const burst = (nx, ny) => {
-      for (let i = 0; i < 28; i++) {
-        const p = spawn(false);
-        p.x = nx;
-        p.y = ny;
-        p.vx = (Math.random() - 0.5) * 0.012;
-        p.vy = (Math.random() - 0.65) * 0.012;
-        p.a = 0.35;
-        p.life = 1;
-        parts.push(p);
-      }
-    };
-    const resize = () => {
-      w = canvas.width = hero.clientWidth * devicePixelRatio;
-      h = canvas.height = hero.clientHeight * devicePixelRatio;
-      canvas.style.width = `${hero.clientWidth}px`;
-      canvas.style.height = `${hero.clientHeight}px`;
-    };
-    hero.addEventListener("pointerdown", (e) => {
-      const r = hero.getBoundingClientRect();
-      burst((e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
-    });
-    resize();
-    window.addEventListener("resize", resize);
-    const step = () => {
-      ctx.clearRect(0, 0, w, h);
-      for (let i = parts.length - 1; i >= 0; i--) {
-        const p = parts[i];
-        p.x += p.vx + (pointer.x / innerWidth - 0.5) * 0.0002;
-        p.y += p.vy;
-        p.life -= 0.0015;
-        if (p.y < -0.02) p.y = 1.02;
-        if (p.x < 0) p.x += 1;
-        if (p.x > 1) p.x -= 1;
-        if (p.life <= 0 && parts.length > 70) {
-          parts.splice(i, 1);
-          continue;
-        }
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(244,241,234,${p.a * Math.max(p.life, 0.2)})`;
-        ctx.arc(p.x * w, p.y * h, p.r * devicePixelRatio, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
   };
 
   const splitPunches = () => {
@@ -224,31 +148,30 @@
   };
 
   const armPunches = (root = document) => {
+    root.querySelectorAll?.(".punch-letter")?.forEach((s) => s.classList.add("is-in"));
     root.querySelectorAll?.("[data-punch] .punch-letter").forEach((s) => s.classList.add("is-in"));
   };
 
   const observeReveals = () => {
-    const nodes = $$("[data-combo], [data-stagger], [data-reveal]");
+    const nodes = $$("[data-reveal], [data-stagger], [data-combo]");
     nodes.forEach((n) => {
-      if (!n.hasAttribute("data-combo") && !n.hasAttribute("data-reveal")) {
-        n.setAttribute("data-combo", "jab");
+      if (!n.hasAttribute("data-reveal") && (n.hasAttribute("data-stagger") || n.hasAttribute("data-combo"))) {
+        n.setAttribute("data-reveal", "");
       }
     });
-    const all = $$("[data-combo], [data-reveal]");
+    const all = $$("[data-reveal]");
+    if (!all.length) return;
     if (reduce) {
       all.forEach((n) => n.classList.add("is-in"));
       return;
     }
-    const combos = ["jab", "cross", "hook", "uppercut"];
-    all.forEach((n, i) => {
-      if (!n.hasAttribute("data-combo")) n.setAttribute("data-combo", combos[i % 4]);
-    });
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (!e.isIntersecting) return;
           e.target.classList.add("is-in");
           armPunches(e.target);
+          $$("[data-combo]", e.target).forEach((c) => c.classList.add("is-in"));
           io.unobserve(e.target);
         });
       },
@@ -258,9 +181,10 @@
     requestAnimationFrame(() => {
       all.forEach((n) => {
         const r = n.getBoundingClientRect();
-        if (r.top < innerHeight * 0.92 && r.bottom > 40) {
+        if (r.top < window.innerHeight * 0.92 && r.bottom > 40) {
           n.classList.add("is-in");
           armPunches(n);
+          $$("[data-combo]", n).forEach((c) => c.classList.add("is-in"));
           io.unobserve(n);
         }
       });
@@ -323,77 +247,199 @@
         const r = card.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width;
         const y = (e.clientY - r.top) / r.height;
-        card.style.transform = `perspective(900px) rotateX(${(0.5 - y) * 6}deg) rotateY(${(x - 0.5) * 8}deg) translateZ(12px)`;
+        const rx = (0.5 - y) * 6;
+        const ry = (x - 0.5) * 8;
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
       });
-      card.addEventListener("pointerleave", () => {
-        card.style.transform = "";
-      });
+      card.addEventListener("pointerleave", () => { card.style.transform = ""; });
     });
   };
 
-  const pageName = () => {
-    const file = (location.pathname.split("/").pop() || "index.html").replace(".html", "") || "index";
-    const map = {
-      index: "ACCUEIL",
-      club: "LE CLUB",
-      disciplines: "DISCIPLINES",
-      planning: "PLANNING",
-      galerie: "GALERIE",
-      contact: "CONTACT",
+  const dust = () => {
+    const canvas = $("#fx-dust");
+    const hero = $(".hero");
+    if (!canvas || reduce || !hero) return;
+    const ctx = canvas.getContext("2d");
+    let w = 0;
+    let h = 0;
+    const parts = Array.from({ length: 28 }, () => ({
+      x: Math.random(),
+      y: Math.random(),
+      r: 0.4 + Math.random() * 1.4,
+      vx: (Math.random() - 0.5) * 0.00018,
+      vy: -0.00008 - Math.random() * 0.00024,
+      a: 0.08 + Math.random() * 0.18,
+    }));
+    const resize = () => {
+      w = canvas.width = hero.clientWidth * devicePixelRatio;
+      h = canvas.height = hero.clientHeight * devicePixelRatio;
+      canvas.style.width = `${hero.clientWidth}px`;
+      canvas.style.height = `${hero.clientHeight}px`;
     };
-    return map[file] || "TMBC";
+    resize();
+    window.addEventListener("resize", resize);
+    const step = () => {
+      ctx.clearRect(0, 0, w, h);
+      parts.forEach((p) => {
+        p.x += p.vx + (pointer.x / innerWidth - 0.5) * 0.00018;
+        p.y += p.vy;
+        if (p.y < -0.02) p.y = 1.02;
+        if (p.x < 0) p.x += 1;
+        if (p.x > 1) p.x -= 1;
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(244,241,234,${p.a})`;
+        ctx.arc(p.x * w, p.y * h, p.r * devicePixelRatio, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  const heroParallax = () => {
+    const hero = $(".hero");
+    const photo = $(".hero__photo");
+    const spot = $(".hero__spot");
+    if (!hero || !photo || reduce) return;
+    hero.addEventListener("pointermove", (e) => {
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      hero.classList.add("is-lit");
+      hero.style.setProperty("--sx", `${x * 100}%`);
+      hero.style.setProperty("--sy", `${y * 100}%`);
+      photo.style.transform = `scale(1.08) translate(${(x - 0.5) * -18}px, ${(y - 0.5) * -12}px)`;
+    });
+    hero.addEventListener("pointerleave", () => {
+      hero.classList.remove("is-lit");
+      photo.style.transform = "";
+    });
+    if (spot) { /* used via CSS vars */ }
   };
 
   const guardNav = () => {
-    const card = $(".between__t");
-    if (card) card.textContent = sessionStorage.getItem("tmbc-round") || pageName();
     if (reduce) return;
-    const go = (href, label) => {
-      sessionStorage.setItem("tmbc-round", label);
-      sessionStorage.setItem("tmbc-from-nav", "1");
-      if (card) card.textContent = label;
-      document.documentElement.classList.add("js-guarding");
+    const go = (href) => {
+      document.documentElement.classList.add("is-guarding");
       document.body.classList.add("is-guarding");
-      setTimeout(() => {
-        location.href = href;
-      }, 620);
+      setTimeout(() => { window.location.href = href; }, 640);
     };
-    $$('a[href$=".html"], a[href^="index.html"]').forEach((a) => {
-      const url = new URL(a.href, location.href);
-      if (url.origin !== location.origin) return;
-      if (url.pathname === location.pathname && !url.hash) return;
-      if (url.hash && url.pathname === location.pathname) return;
+    $$('a[href$=".html"], a[href="./"], a[href="index.html"]').forEach((a) => {
+      const url = new URL(a.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname && !url.hash) return;
+      if (url.hash && url.pathname === window.location.pathname) return;
       a.addEventListener("click", (e) => {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === "_blank") return;
         e.preventDefault();
-        const label = (a.textContent || "").trim().toUpperCase() || "ROUND";
-        go(a.href, label);
+        go(a.href);
       });
     });
     window.addEventListener("pageshow", () => {
       document.body.classList.remove("is-guarding");
-      if (sessionStorage.getItem("tmbc-from-nav")) {
-        sessionStorage.removeItem("tmbc-from-nav");
-        document.body.classList.add("is-unguarding");
-        setTimeout(() => document.body.classList.remove("is-unguarding"), 680);
-      }
+      document.body.classList.add("is-unguarding");
+      setTimeout(() => document.body.classList.remove("is-unguarding"), 700);
     });
   };
 
-  const boot = () => {
-    const el = $(".boot");
-    if (!el) return;
-    if (reduce) {
-      el.remove();
-      document.body.classList.remove("is-booting");
-      return;
+  const ticker = () => {
+    const track = $("#marquee");
+    const items = window.TMBC?.ticker;
+    if (!track || !items) return;
+    const row = items.map((i) => `<span>${i}</span>`).join("");
+    track.innerHTML = row + row;
+  };
+
+  const configurator = () => {
+    const list = $("#config-list");
+    const mediaBox = $("#config-media");
+    const body = $("#config-body");
+    const bg = $("#config-bg");
+    const bell = $("#config-bell");
+    const discs = window.TMBC?.disciplines;
+    if (!list || !discs) return;
+    const esc = (s = "") => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+    if (bg) {
+      bg.innerHTML = discs.map((d, i) =>
+        `<div class="media ${i === 0 ? "is-active" : ""}"><img src="${d.img}" alt="" /></div>`
+      ).join("");
     }
-    document.body.classList.add("is-booting");
-    setTimeout(() => {
-      el.classList.add("is-out");
-      document.body.classList.remove("is-booting");
-      setTimeout(() => el.remove(), 720);
-    }, 900);
+    list.innerHTML = discs.map((d, i) => `
+      <button class="cfg ${i === 0 ? "is-active" : ""}" type="button" role="tab"
+        aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" id="cfg-${d.key}" data-i="${i}">
+        <span class="cfg__n">${d.n}</span>
+        <span class="cfg__name">${d.name}</span>
+        <span class="cfg__tag">${d.tag}</span>
+      </button>`).join("");
+    if (mediaBox) {
+      mediaBox.innerHTML = discs.map((d, i) =>
+        `<div class="media ${i === 0 ? "is-active" : ""}"><img src="${d.img}" alt="${esc(d.alt)}" /></div>`
+      ).join("");
+    }
+    const sheet = (d) => `
+      <div class="config__facts">
+        <span><b>Jours</b> ${d.jours}</span>
+        <span><b>Niveau</b> ${d.niveau}</span>
+      </div>
+      <p class="config__desc">${d.teaser}</p>
+      <div class="config__cta">
+        <a class="btn" href="${window.TMBC.boutique.essai}"><span>Essayer · 10 €</span></a>
+        <a class="btn btn--ghost" href="planning.html"><span>Les créneaux</span></a>
+        <a class="btn btn--ghost" href="activites.html#${d.key}"><span>En détail</span></a>
+      </div>`;
+    if (body) body.innerHTML = sheet(discs[0]);
+    let curr = 0;
+    let seq = 0;
+    const select = (i) => {
+      if (i === curr || !discs[i]) return;
+      curr = i;
+      const token = ++seq;
+      const d = discs[i];
+      [...list.children].forEach((b, k) => {
+        b.classList.toggle("is-active", k === i);
+        b.setAttribute("aria-selected", String(k === i));
+        if (k === i) {
+          b.classList.remove("is-hit");
+          void b.offsetWidth;
+          b.classList.add("is-hit");
+        }
+      });
+      if (mediaBox) [...mediaBox.children].forEach((m, k) => m.classList.toggle("is-active", k === i));
+      if (bg) [...bg.children].forEach((m, k) => m.classList.toggle("is-active", k === i));
+      if (bell) {
+        bell.classList.remove("is-ring");
+        void bell.offsetWidth;
+        bell.classList.add("is-ring");
+        setTimeout(() => bell.classList.remove("is-ring"), 720);
+      }
+      if (!body) return;
+      body.classList.add("is-swapping");
+      setTimeout(() => {
+        if (token !== seq) return;
+        body.innerHTML = sheet(d);
+        body.classList.remove("is-swapping");
+      }, reduce ? 0 : 180);
+    };
+    let hoverT = 0;
+    const fine = window.matchMedia("(hover: hover) and (pointer: fine)");
+    list.addEventListener("click", (e) => {
+      const b = e.target.closest(".cfg");
+      if (b) { clearTimeout(hoverT); select(+b.dataset.i); }
+    });
+    list.addEventListener("pointerover", (e) => {
+      if (!fine.matches || e.pointerType === "touch") return;
+      const b = e.target.closest(".cfg");
+      if (!b) return;
+      clearTimeout(hoverT);
+      hoverT = setTimeout(() => select(+b.dataset.i), 90);
+    });
+    list.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+      e.preventDefault();
+      const next = e.key === "ArrowDown" ? (curr + 1) % discs.length : (curr - 1 + discs.length) % discs.length;
+      select(next);
+      list.children[curr]?.focus();
+    });
   };
 
   const filterSet = (rootSel, itemSel, attr) => {
@@ -414,7 +460,7 @@
           if (hit) {
             item.style.animation = "none";
             void item.offsetWidth;
-            item.style.animation = `letter-hit 0.55s var(--ease-hit) ${i * 30}ms both`;
+            item.style.animation = `jab-in 0.55s cubic-bezier(0.16,1,0.3,1) ${i * 28}ms both`;
           }
         });
         $$(".plan-day").forEach((day) => {
@@ -444,9 +490,7 @@
       });
     });
     box.addEventListener("click", close);
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") close();
-    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   };
 
   const pocketVideo = () => {
@@ -462,16 +506,14 @@
   };
 
   const clock = () => {
-    const el = $("[data-clock]");
-    if (!el) return;
+    if (!clockEl || reduce) return;
     let left = 180;
     const stamp = () => {
       const m = String(Math.floor(left / 60)).padStart(2, "0");
       const s = String(left % 60).padStart(2, "0");
-      el.textContent = `${m}:${s}`;
+      clockEl.textContent = `${m}:${s}`;
     };
     stamp();
-    if (reduce) return;
     setInterval(() => {
       left = left <= 0 ? 180 : left - 1;
       stamp();
@@ -488,18 +530,20 @@
     });
   }
 
+  boot();
   onScrollHeader();
   window.addEventListener("scroll", onScrollHeader, { passive: true });
-  boot();
-  ropes();
-  parallax();
-  dust();
   splitPunches();
   observeReveals();
   roundWatcher();
   scoreboards();
   magnets();
+  dust();
+  heroParallax();
+  ropes();
   guardNav();
+  ticker();
+  configurator();
   filterSet("#plan-filters", ".plan-day li", "data-disc");
   filterSet("#gal-filters", ".gallery-grid .shot", "data-zone");
   lightbox();

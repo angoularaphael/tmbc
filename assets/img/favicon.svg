@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#1B212C"/>
-  <polygon fill="#D21F1E" points="16,3 19.1,12.2 29,12.2 21,18 24,27.5 16,21.8 8,27.5 11,18 3,12.2 12.9,12.2"/>
+  <rect width="16" height="32" fill="#1a2129"/>
+  <rect x="16" width="16" height="32" fill="#d32027"/>
+  <text x="16" y="23" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="11" font-weight="900" fill="#f4f1ea">T</text>
 </svg>

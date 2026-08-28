@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planning & tarifs — TMBC | 27 cours, offre 29 €</title>
-  <meta name="description" content="Planning TMBC du lundi au samedi. Offre rentrée 29 € / 4 semaines, saison 259 €, école 295 €, essai 10 €. 12 rue de Fenouillet, Toulouse." />
+  <title>Planning — TMBC | 27 cours du lundi au samedi</title>
+  <meta name="description" content="Planning TMBC du lundi au samedi. 27 cours, 16 bandes d’accès libre. Pas d’anglaise loisirs le samedi. 12 rue de Fenouillet, Toulouse." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07090d" />
+  <meta name="theme-color" content="#07080a" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -21,7 +21,7 @@
   <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
   <div class="hud hud--tl">TMBC · PLANNING<strong data-round>01</strong></div>
   <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="between" aria-hidden="true"><div class="between__card"><p class="between__k">Between rounds</p><p class="between__t">PLANNING</p></div></div>
+  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
 
   <header class="site-header">
     <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
@@ -29,12 +29,14 @@
     <nav class="nav" id="nav">
       <a href="index.html">Accueil</a>
       <a href="club.html">Le club</a>
-      <a href="disciplines.html">Disciplines</a>
-      <a class="is-current" href="planning.html">Planning</a>
+      <a href="activites.html">Activités</a>
+      <a href="coachs.html">Coachs</a>
       <a href="galerie.html">Galerie</a>
+      <a class="is-current" href="planning.html">Planning</a>
+      <a href="tarifs.html">Tarifs</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
   </header>
 
   <main id="main">
@@ -121,50 +123,17 @@
             <ul>
               <li data-disc="libre"><time>10h00–12h00</time><span>Accès libre</span><span>autonomie</span></li>
               <li data-disc="camp"><time>11h00–12h00</time><span>Boxing camp</span><span>adultes</span></li>
+              <li data-disc="libre"><time>12h40–14h00</time><span>Accès libre</span><span>autonomie</span></li>
               <li data-disc="educative"><time>14h15–15h00</time><span>Baby Boxe</span><span>3/6 ans</span></li>
               <li data-disc="educative"><time>15h00–16h00</time><span>Éducative enfants</span><span>7/11 ans</span></li>
               <li data-disc="educative"><time>16h00–17h00</time><span>Éducative ados</span><span>12/16 ans</span></li>
               <li data-disc="educative"><time>17h00–18h30</time><span>Jeunes compétiteurs</span><span>licenciés</span></li>
               <li data-disc="competiteurs"><time>18h30–19h30</time><span>Open sparring</span><span>licenciés</span></li>
+              <li data-disc="libre"><time>19h40–21h00</time><span>Accès libre</span><span>autonomie</span></li>
             </ul>
           </section>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--navy" data-round-id="03">
-      <div class="wrap">
-        <p class="kicker" data-combo="jab">Les cartons des juges</p>
-        <h2 class="display" data-combo="jab">Des offres lisibles.</h2>
-        <div class="price-row" data-stagger style="margin-top:32px">
-          <article class="price is-hot magnet" data-combo="jab">
-            <p class="kicker">Rentrée</p>
-            <p><s>44 €</s></p>
-            <b>29 €</b>
-            <p>/ personne · 4 semaines illimitées, sans engagement.</p>
-            <a class="btn" href="https://boutique.boxingcenter.fr/offre/29">Je prends 29 €</a>
-          </article>
-          <article class="price magnet" data-combo="cross">
-            <p class="kicker">Saison</p>
-            <p><s>400 €</s></p>
-            <b>259 €</b>
-            <p>12 mois, 4× sans frais, accès aux 5 clubs du réseau.</p>
-            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/offre/259">La saison</a>
-          </article>
-          <article class="price magnet" data-combo="hook">
-            <p class="kicker">École</p>
-            <b>295 €</b>
-            <p>/ an, t-shirt inclus. Baby Boxe 3/6 : 250 €.</p>
-            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/abonnements">Inscrire un enfant</a>
-          </article>
-          <article class="price magnet" data-combo="uppercut">
-            <p class="kicker">Essai</p>
-            <b>10 €</b>
-            <p>Une séance, matériel prêté, sans dossier.</p>
-            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/seance-essai">Réserver 10 €</a>
-          </article>
-        </div>
-        <p class="note" data-combo="jab" style="margin-top:22px">Matériel prêté pour l’essai. Ensuite, chacun apporte ses gants. Badge d’accès 34,99 € TTC sauf offre particulière.</p>
+        <p class="note" style="margin-top:22px">Ouvert 6 j/7, 10h–21h30. Fermé le dimanche. Accès libre : rings et sacs en autonomie, sans réservation.</p>
       </div>
     </section>
   </main>
@@ -177,10 +146,11 @@
       </div>
       <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
       <div><p class="kicker">Contact</p><p><a href="tel:+33562244682">05 62 24 46 82</a></p></div>
-      <div><p class="kicker">Suite</p><p><a href="contact.html">Venir à la salle</a></p></div>
+      <div><p class="kicker">Suite</p><p><a href="tarifs.html">Tarifs</a></p></div>
     </div>
     <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30</span></div>
   </footer>
+  <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

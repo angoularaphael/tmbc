@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07090d" />
+  <meta name="theme-color" content="#07080a" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -21,7 +21,7 @@
   <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
   <div class="hud hud--tl">TMBC · CONTACT<strong data-round>01</strong></div>
   <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="between" aria-hidden="true"><div class="between__card"><p class="between__k">Between rounds</p><p class="between__t">CONTACT</p></div></div>
+  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
 
   <header class="site-header">
     <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
@@ -29,12 +29,14 @@
     <nav class="nav" id="nav">
       <a href="index.html">Accueil</a>
       <a href="club.html">Le club</a>
-      <a href="disciplines.html">Disciplines</a>
-      <a href="planning.html">Planning</a>
+      <a href="activites.html">Activités</a>
+      <a href="coachs.html">Coachs</a>
       <a href="galerie.html">Galerie</a>
+      <a href="planning.html">Planning</a>
+      <a href="tarifs.html">Tarifs</a>
       <a class="is-current" href="contact.html">Contact</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
   </header>
 
   <main id="main">
@@ -45,8 +47,8 @@
         <h1 class="display" data-punch>Trois minutes du métro.</h1>
         <p class="lede">12 rue de Fenouillet, 31200 Toulouse. Téléphone 05 62 24 46 82. E-mail boxingcenter31@gmail.com.</p>
         <p class="btn-row" style="margin-top:22px">
-          <a class="btn" href="tel:+33562244682">Appeler la salle</a>
-          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=12+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener">Itinéraire</a>
+          <a class="btn" href="tel:+33562244682"><span>Appeler la salle</span></a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=12+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener"><span>Itinéraire</span></a>
         </p>
       </div>
     </header>
@@ -61,7 +63,7 @@
             <li>Bus 70 / 27 — arrêt Minimes-Roquelaine</li>
             <li>Quartiers : Minimes, Lalande, Borderouge, Bonnefoy, Sept Deniers, Aucamville, Launaguet</li>
           </ul>
-          <p><strong>Horaires</strong><br />Lundi–samedi 10h00–21h30<br />Dimanche fermé<br />GPS 43.6256, 1.4309</p>
+          <p><strong>Horaires</strong><br />Lundi–samedi 10h00–21h30<br />Dimanche fermé</p>
         </div>
         <iframe class="map-frame" title="Carte — 12 rue de Fenouillet, Toulouse" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=12%20rue%20de%20Fenouillet%2031200%20Toulouse&z=16&output=embed"></iframe>
       </div>
@@ -70,47 +72,44 @@
     <section class="section section--navy" data-round-id="03">
       <div class="wrap split">
         <div data-combo="jab">
-          <p class="kicker">Écrire au club</p>
-          <h2 class="display">Une question avant de <span class="tint">venir.</span></h2>
-          <p>Maquette : le formulaire n’envoie pas encore de mail. Pour une vraie réponse, appelez le 05 62 24 46 82.</p>
-        </div>
-        <div data-combo="cross">
+          <p class="kicker">Écrire à la salle</p>
+          <h2 class="display">On vous <span class="tint">rappelle.</span></h2>
           <form class="form" id="contact-form">
             <label>Prénom <input name="prenom" required autocomplete="given-name" /></label>
-            <label>E-mail <input type="email" name="email" required autocomplete="email" /></label>
-            <label>Téléphone <input type="tel" name="tel" autocomplete="tel" /></label>
-            <label>Message <textarea name="message" rows="4" required></textarea></label>
-            <button class="btn" type="submit">Envoyer</button>
+            <label>Téléphone <input name="tel" type="tel" required autocomplete="tel" /></label>
+            <label>E-mail <input name="email" type="email" required autocomplete="email" /></label>
+            <label>Message <textarea name="msg" rows="4" placeholder="Créneau, niveau, question…"></textarea></label>
+            <button class="btn" type="submit"><span>Envoyer</span></button>
           </form>
-          <p class="note" id="form-ok" hidden>Message simulé. Appelez la salle pour confirmer un créneau.</p>
+          <div class="form-ok" id="form-ok" hidden>
+            <p class="kicker">Message reçu</p>
+            <p>Maquette : le formulaire ne part pas encore. En vrai, appelez le 05 62 24 46 82.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" data-round-id="04">
-      <div class="wrap faq">
-        <p class="kicker" data-combo="jab">Questions du vestiaire</p>
-        <h2 class="display" data-combo="jab">FAQ</h2>
-        <details open>
-          <summary>Je n’ai jamais boxé. Je peux venir ?</summary>
-          <p>Oui. Créneaux débutants, Boxing camp, cardio boxing sans aucun coup reçu. L’essai est à 10 €, matériel prêté.</p>
-        </details>
-        <details>
-          <summary>Quelle est la spécialité de la salle ?</summary>
-          <p>La boxe anglaise. C’est la salle historique du groupe, le berceau de plusieurs boxeurs professionnels et amateurs — avec plusieurs rings dédiés.</p>
-        </details>
-        <details>
-          <summary>Y a-t-il des cours pour les enfants ?</summary>
-          <p>Oui, dès 3 ans : Baby Boxe 3/6, éducative 7/11, ados 12/16, puis compétiteurs. 250 € l’année pour la Baby Boxe, 295 € au-delà, t-shirt inclus.</p>
-        </details>
-        <details>
-          <summary>Il y a des cours pour les femmes ?</summary>
-          <p>Le Boxing Lady est 100 % féminin : lundi et mercredi 18h30. Tous les autres cours sont mixtes et ouverts.</p>
-        </details>
-        <details>
-          <summary>On m’oblige à sparrer ?</summary>
-          <p>Non. Personne ne monte sur le ring sans l’avoir demandé. Le seul sparring hebdomadaire est l’open sparring du samedi 18h30, entre licenciés compétiteurs.</p>
-        </details>
+        <div class="faq" data-combo="cross">
+          <p class="kicker">Questions du vestiaire</p>
+          <h2 class="display" style="font-size:clamp(1.8rem,4vw,3rem)">FAQ</h2>
+          <details open>
+            <summary>Je n’ai jamais boxé. Je peux venir ?</summary>
+            <p>Oui. Créneaux débutants, Boxing camp, cardio boxing sans aucun coup reçu. L’essai est à 10 €, matériel prêté.</p>
+          </details>
+          <details>
+            <summary>Quelle est la spécialité de la salle ?</summary>
+            <p>La boxe anglaise. C’est la salle historique du groupe, le berceau de plusieurs boxeurs professionnels et amateurs.</p>
+          </details>
+          <details>
+            <summary>Y a-t-il des cours pour les enfants ?</summary>
+            <p>Oui, dès 3 ans : Baby Boxe 3/6, éducative 7/11, ados 12/16. 250 € l’année pour la Baby Boxe, 295 € au-delà, t-shirt inclus.</p>
+          </details>
+          <details>
+            <summary>Il y a des cours pour les femmes ?</summary>
+            <p>Le Boxing Lady est 100 % féminin : lundi et mercredi 18h30. Tous les autres cours sont mixtes et ouverts.</p>
+          </details>
+          <details>
+            <summary>On m’oblige à sparrer ?</summary>
+            <p>Non. Personne ne monte sur le ring sans l’avoir demandé. Le seul sparring hebdomadaire est l’open sparring du samedi 18h30, entre licenciés compétiteurs.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -119,14 +118,15 @@
     <div class="wrap foot-grid">
       <div>
         <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise.</p>
+        <p>Toulouse Minimes Boxing Club — association sportive.</p>
       </div>
-      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet<br />31200 Toulouse</p></div>
-      <div><p class="kicker">Contact</p><p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p></div>
-      <div><p class="kicker">Club</p><p><a href="planning.html">Planning & tarifs</a></p></div>
+      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
+      <div><p class="kicker">Contact</p><p><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p></div>
+      <div><p class="kicker">GPS</p><p>43.6256, 1.4309</p></div>
     </div>
-    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30 · GPS 43.6256, 1.4309</span></div>
+    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30</span></div>
   </footer>
+  <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
