@@ -1438,6 +1438,202 @@ html.fx .offer.is-hot {
 
 .home-faq { max-width: 72ch; }
 
+/* ——— Tirage offre (tableau, pas une roue) ——— */
+.draw {
+  position: fixed;
+  inset: 0;
+  z-index: 8800;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background: rgba(12, 14, 18, 0.88);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-out);
+}
+.draw.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.draw__panel {
+  position: relative;
+  width: min(100%, 420px);
+  padding: 1.6rem 1.4rem 1.4rem;
+  background: var(--navy);
+  color: #f4f1ea;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+}
+.draw__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.draw__close:hover { background: rgba(255, 255, 255, 0.1); }
+.draw__eyebrow {
+  display: block;
+  font: 700 0.72rem/1 var(--f-display);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.55rem;
+}
+.draw__title {
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0 0 0.4rem;
+}
+.draw__lead {
+  color: #c9c4ba;
+  font-size: 0.95rem;
+  margin: 0 0 1.2rem;
+}
+.draw__board {
+  position: relative;
+  height: 168px;
+  overflow: hidden;
+  margin: 0 auto 1.2rem;
+  border: 1.5px solid rgba(246, 243, 238, 0.18);
+  border-radius: 6px;
+  background: #0c0e12;
+}
+.draw__board::before,
+.draw__board::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 36%;
+  pointer-events: none;
+}
+.draw__board::before {
+  top: 0;
+  background: linear-gradient(#0c0e12, transparent);
+}
+.draw__board::after {
+  bottom: 0;
+  background: linear-gradient(transparent, #0c0e12);
+}
+.draw__window {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.draw__mark {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 50%;
+  height: 56px;
+  margin-top: -28px;
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 3;
+}
+.draw__strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  will-change: transform;
+}
+.draw__row {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #9aa0a8;
+}
+.draw__row b { font: inherit; color: inherit; }
+.draw__row.is-hit { color: #fff; }
+.draw.is-landed .draw__row.is-hit { color: var(--red); }
+.draw__actions { display: grid; gap: 0.55rem; }
+.draw__actions .btn { width: 100%; }
+.draw__alt {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: #9aa0a8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.draw__alt:hover { color: #fff; }
+
+/* ——— Barre inscription (remonte en bas, y compris PC) ——— */
+.dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7600;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem 1rem;
+  padding: 0.75rem var(--gut) calc(0.75rem + env(safe-area-inset-bottom));
+  background: rgba(27, 33, 44, 0.96);
+  color: #f4f1ea;
+  border-top: 2px solid var(--red);
+  transform: translateY(110%);
+  transition: transform 0.45s var(--ease-out);
+}
+.dock.is-on { transform: none; }
+.dock__copy {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.dock__copy span {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--f-ui);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #c9c4ba;
+}
+.dock__btns { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.dock .btn { min-height: 44px; padding: 0.7em 1.15em; }
+.dock .btn--ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+body.has-dock { padding-bottom: 5.5rem; }
+body.has-dock .totop { bottom: 5.6rem; }
+body.draw-open { overflow: hidden; }
+
+@media (min-width: 900px) {
+  .dock {
+    padding-inline: max(var(--gut), calc(50% - 36rem));
+  }
+  .dock__copy { font-size: 1.05rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .wipe { display: none !important; }
@@ -1445,4 +1641,6 @@ html.fx .offer.is-hot {
   html.fx [data-reveal],
   html.fx .reveal-mask > span,
   html.fx [data-reveal-group] > * { opacity: 1 !important; transform: none !important; }
+  .draw__strip { transition: none !important; }
+  .dock { transition: none !important; }
 }
