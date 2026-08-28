@@ -1,58 +1,15 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Le club — TMBC | Toulouse Minimes Boxing Club</title>
-  <meta name="description" content="Histoire de l’association TMBC, salle ouverte en 2016, équipements, affiliations FFBoxe. 12 rue de Fenouillet, Toulouse Minimes." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#f6f3ee" />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
-  
-</head>
-<body>
-  <a class="skip" href="#main">Aller au contenu</a>
-  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
-  <header class="nav" id="nav">
-    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <nav class="nav__links">
-      <a href="index.html">Accueil</a>
-      <a href="club.html" aria-current="page">Le club</a>
-      <a href="activites.html">Activités</a>
-      <a href="coachs.html">Coachs</a>
-      <a href="planning.html">Planning</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="contact.html">Contact</a>
-      <a href="galerie.html">Galerie</a>
-    </nav>
-    <div class="nav__right">
-      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-  <div class="menu" id="menu" hidden>
-    <div></div>
-    <nav class="menu__nav">
-      <a class="menu__link" href="index.html">Accueil</a>
-      <a class="menu__link" href="club.html">Le club</a>
-      <a class="menu__link" href="activites.html">Activités</a>
-      <a class="menu__link" href="coachs.html">Coachs</a>
-      <a class="menu__link" href="planning.html">Planning</a>
-      <a class="menu__link" href="tarifs.html">Tarifs</a>
-      <a class="menu__link" href="contact.html">Contact</a>
-      <a class="menu__link" href="galerie.html">Galerie</a>
-    </nav>
-    <div class="menu__foot">
-      <a href="tel:+33562244682">05 62 24 46 82</a>
-      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
-    </div>
-  </div>
-  <main id="main">
+---
+import Base from '../layouts/Base.astro';
+const title = 'Le club — TMBC | Toulouse Minimes Boxing Club';
+const description = 'Histoire de l’association TMBC, salle ouverte en 2016, équipements, affiliations FFBoxe. 12 rue de Fenouillet, Toulouse Minimes.';
+const path = '/club';
+const preloadHero = false;
+const jsonLd = undefined;
+---
+<Base title={title} description={description} path={path} preloadHero={preloadHero} jsonLd={jsonLd}>
+<main id="main">
     <header class="phero">
-      <img src="assets/media/salle-plongee-1200.webp" alt="Plateau vu de haut, sacs alignés sous la verrière" width="1200" height="800" />
+      <img src="/assets/media/salle-plongee-1200.webp" alt="Plateau vu de haut, sacs alignés sous la verrière" width="1200" height="800" />
       <div class="wrap" data-reveal>
         <p class="eyebrow">Association sportive · depuis 2017</p>
         <h1 class="display">La salle de boxe des Minimes</h1>
@@ -95,15 +52,15 @@
     <section class="section">
       <div class="wrap split">
         <div class="frame" data-reveal>
-          <img src="assets/media/ring-principal-1200.webp" alt="Ring principal aux cordes rouges" width="1200" height="800" loading="lazy" />
+          <img src="/assets/media/ring-principal-1200.webp" alt="Ring principal aux cordes rouges" width="1200" height="800" loading="lazy" />
         </div>
         <div data-reveal>
           <p class="eyebrow">500 m²</p>
           <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Plusieurs rings. 12 sacs. <span class="tint">Prépa à l’étage.</span></h2>
           <p class="lead" style="margin-top:1rem">Vestiaires H/F. Matériel prêté à l’essai. Accès libre hors cours, du lundi au samedi.</p>
           <p class="btn-row" style="margin-top:1.4rem">
-            <a class="btn btn--primary" href="galerie.html">Voir la salle</a>
-            <a class="btn" href="coachs.html">Les coachs</a>
+            <a class="btn btn--primary" href="/galerie">Voir la salle</a>
+            <a class="btn" href="/coachs">Les coachs</a>
           </p>
         </div>
       </div>
@@ -130,39 +87,4 @@
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap foot-grid">
-      <div>
-        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
-        <p class="sisters">
-          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
-        </p>
-      </div>
-      <div>
-        <p class="eyebrow">Salle</p>
-        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
-      </div>
-      <div>
-        <p class="eyebrow">Contact</p>
-        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcentertls@gmail.com">boxingcentertls@gmail.com</a></p>
-      </div>
-      <div>
-        <p class="eyebrow">Sites officiels</p>
-        <p class="net-links">
-          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
-        </p>
-      </div>
-    </div>
-    <div class="wrap legal">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <span>Lun–sam 10h–21h30</span>
-    </div>
-  </footer>
-  <script src="assets/js/data.js?v=5" defer></script>
-  <script src="assets/js/main.js?v=5" defer></script>
-</body>
-</html>
+</Base>

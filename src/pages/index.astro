@@ -1,103 +1,20 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TMBC — Boxe à Toulouse Minimes | Essai 10 € · 4 semaines 29 €</title>
-  <meta name="description" content="Toulouse Minimes Boxing Club, 12 rue de Fenouillet. Essai 10 €, 4 semaines illimitées à 29 €, saison 259 €. Métro B Barrière de Paris, 3 min." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#f6f3ee" />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
-  <link rel="preload" as="image" href="assets/img/hero.png" fetchpriority="high" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsClub",
-    "name": "Toulouse Minimes Boxing Club",
-    "alternateName": "TMBC",
-    "url": "https://toulouse-minimes-boxing-club.fr/",
-    "email": "boxingcentertls@gmail.com",
-    "telephone": "+33562244682",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 rue de Fenouillet",
-      "addressLocality": "Toulouse",
-      "postalCode": "31200",
-      "addressCountry": "FR"
-    },
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Boxing Center",
-      "url": "https://boxingcenter.fr/"
-    },
-    "sameAs": [
-      "https://boxe-toulouse.com/",
-      "https://boxingcenter.fr/"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Je n’ai jamais boxé. Je peux venir ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Boxing camp, cardio boxing, anglaise loisirs. Personne ne vous met en opposition. Essai 10 €, gants prêtés."}},
-      {"@type": "Question", "name": "Combien coûte l’essai ?", "acceptedAnswer": {"@type": "Answer", "text": "10 € la séance, toutes activités. Aucun dossier, aucun certificat. Gants et casque prêtés."}},
-      {"@type": "Question", "name": "C’est quoi l’offre 29 € ?", "acceptedAnswer": {"@type": "Answer", "text": "4 semaines illimitées, toutes les activités, 29 € par personne, sans engagement."}},
-      {"@type": "Question", "name": "On m’oblige à sparrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le seul open sparring est le samedi 18h30, entre licenciés du cours compétiteurs."}},
-      {"@type": "Question", "name": "Il y a des cours enfants ?", "acceptedAnswer": {"@type": "Answer", "text": "Dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus."}},
-      {"@type": "Question", "name": "Où est la salle, et quels horaires ?", "acceptedAnswer": {"@type": "Answer", "text": "12 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30."}}
-    ]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip" href="#main">Aller au contenu</a>
-  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
-  <header class="nav" id="nav">
-    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <nav class="nav__links">
-      <a href="index.html" aria-current="page">Accueil</a>
-      <a href="club.html">Le club</a>
-      <a href="activites.html">Activités</a>
-      <a href="coachs.html">Coachs</a>
-      <a href="planning.html">Planning</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="contact.html">Contact</a>
-      <a href="galerie.html">Galerie</a>
-    </nav>
-    <div class="nav__right">
-      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-  <div class="menu" id="menu" hidden>
-    <div></div>
-    <nav class="menu__nav">
-      <a class="menu__link" href="index.html">Accueil</a>
-      <a class="menu__link" href="club.html">Le club</a>
-      <a class="menu__link" href="activites.html">Activités</a>
-      <a class="menu__link" href="coachs.html">Coachs</a>
-      <a class="menu__link" href="planning.html">Planning</a>
-      <a class="menu__link" href="tarifs.html">Tarifs</a>
-      <a class="menu__link" href="contact.html">Contact</a>
-      <a class="menu__link" href="galerie.html">Galerie</a>
-    </nav>
-    <div class="menu__foot">
-      <a href="tel:+33562244682">05 62 24 46 82</a>
-      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
-    </div>
-  </div>
-  <main id="main">
+---
+import Base from '../layouts/Base.astro';
+const title = 'TMBC — Toulouse Minimes Boxing Club | Boxe à Toulouse Minimes';
+const description = 'Toulouse Minimes Boxing Club, 12 rue de Fenouillet. Essai 10 €, 4 semaines illimitées à 29 €, saison 259 €. Métro B Barrière de Paris, 3 min.';
+const path = '/';
+const preloadHero = true;
+const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je n’ai jamais boxé. Je peux venir ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Boxing camp, cardio boxing, anglaise loisirs. Personne ne vous met en opposition. Essai 10 €, gants prêtés."}}, {"@type": "Question", "name": "Combien coûte l’essai ?", "acceptedAnswer": {"@type": "Answer", "text": "10 € la séance, toutes activités. Aucun dossier, aucun certificat. Gants et casque prêtés."}}, {"@type": "Question", "name": "C’est quoi l’offre 29 € ?", "acceptedAnswer": {"@type": "Answer", "text": "4 semaines illimitées, toutes les activités, 29 € par personne, sans engagement."}}, {"@type": "Question", "name": "On m’oblige à sparrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le seul open sparring est le samedi 18h30, entre licenciés du cours compétiteurs."}}, {"@type": "Question", "name": "Il y a des cours enfants ?", "acceptedAnswer": {"@type": "Answer", "text": "Dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus."}}, {"@type": "Question", "name": "Où est la salle, et quels horaires ?", "acceptedAnswer": {"@type": "Answer", "text": "12 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30."}}]};
+---
+<Base title={title} description={description} path={path} preloadHero={preloadHero} jsonLd={jsonLd}>
+<main id="main">
     <header class="hero" aria-label="Toulouse Minimes Boxing Club">
-      <img class="hero__bg" src="assets/img/hero.png" width="1920" height="1080" alt="TMBC — salle de boxe Toulouse Minimes, depuis 2017" fetchpriority="high" />
+      <img class="hero__bg" src="/assets/img/hero.png" width="1920" height="1080" alt="TMBC — salle de boxe Toulouse Minimes, depuis 2017" fetchpriority="high" />
       <div class="hero__veil"></div>
-      <div class="hero__pitch">
-        <h1>Boxez aux Minimes.<br />Essai 10 €.</h1>
-        <p>Association TMBC, 12 rue de Fenouillet. Coach dès la première séance. Gants prêtés. Pas de sparring imposé.</p>
+        <div class="hero__pitch">
+        <p class="wordmark" aria-hidden="true"><span>T</span><span>M</span><span>B</span><span>C</span></p>
+        <h1>Toulouse Minimes Boxing Club</h1>
+        <p>Essai 10 €. Coach dès la première séance. Gants prêtés. Pas de sparring imposé.</p>
       </div>
       <div class="hero__foot">
         <ul class="hero__facts" data-reveal>
@@ -169,11 +86,11 @@
           </ul>
           <p class="btn-row">
             <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai — 10 €</a>
-            <a class="btn" href="club.html">Voir la salle</a>
+            <a class="btn" href="/club">Voir la salle</a>
           </p>
         </div>
         <div class="frame" data-reveal>
-          <img src="assets/media/salle-plongee-1200.webp" alt="Plateau de boxe TMBC, sacs alignés sous la verrière" width="1200" height="800" />
+          <img src="/assets/media/salle-plongee-1200.webp" alt="Plateau de boxe TMBC, sacs alignés sous la verrière" width="1200" height="800" />
           <span class="frame__tag">500 m² · 12 rue de Fenouillet</span>
         </div>
       </div>
@@ -184,20 +101,20 @@
         <p class="eyebrow" data-reveal>Pour qui</p>
         <h2 class="heading" data-reveal>Débutant, Lady ou enfant : une porte d’entrée claire</h2>
         <div class="doors" data-reveal-group style="margin-top:1.6rem">
-          <a class="door" href="activites.html#camp">
-            <img src="assets/media/jumps-groupe-1200.webp" alt="Cours de boxing camp" width="800" height="1000" loading="lazy" />
+          <a class="door" href="/activites#camp">
+            <img src="/assets/media/jumps-groupe-1200.webp" alt="Cours de boxing camp" width="800" height="1000" loading="lazy" />
             <p class="eyebrow">Vous n’avez jamais boxé</p>
             <h3>Débutant</h3>
             <p>Boxing camp, cardio boxing, anglaise loisirs. Personne ne vous met en opposition.</p>
           </a>
-          <a class="door" href="activites.html#lady">
-            <img src="assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady" width="800" height="1000" loading="lazy" />
+          <a class="door" href="/activites#lady">
+            <img src="/assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady" width="800" height="1000" loading="lazy" />
             <p class="eyebrow">Lundi &amp; mercredi 18h30</p>
             <h3>Boxing Lady</h3>
             <p>Cours 100 % féminin. Technique, sac, cardio. Un vrai cours de boxe.</p>
           </a>
-          <a class="door" href="activites.html#educative">
-            <img src="assets/media/ecole-medailles-1200.webp" alt="École de boxe TMBC" width="800" height="1000" loading="lazy" />
+          <a class="door" href="/activites#educative">
+            <img src="/assets/media/ecole-medailles-1200.webp" alt="École de boxe TMBC" width="800" height="1000" loading="lazy" />
             <p class="eyebrow">Dès 3 ans · t-shirt inclus</p>
             <h3>Enfants</h3>
             <p>Baby Boxe 250 €, éducative 295 €. Aucun coup porté chez les petits.</p>
@@ -211,16 +128,16 @@
         <p class="eyebrow" data-reveal>Les cours</p>
         <h2 class="heading" data-reveal>Les créneaux, sans jargon</h2>
         <div class="courses" style="margin-top:1.2rem">
-          <a class="course" href="activites.html#anglaise"><span class="course__n">01</span><div><h3>Boxe anglaise</h3><p>7 créneaux · midi 12h40 et soir 19h40 · tous niveaux</p></div><span>Voir →</span></a>
-          <a class="course" href="activites.html#lady"><span class="course__n">02</span><div><h3>Boxing Lady</h3><p>Lundi et mercredi 18h30 · 100 % féminin</p></div><span>Voir →</span></a>
-          <a class="course" href="activites.html#educative"><span class="course__n">03</span><div><h3>École dès 3 ans</h3><p>Mercredi et samedi · Baby, éducative, ados</p></div><span>Voir →</span></a>
-          <a class="course" href="activites.html#camp"><span class="course__n">04</span><div><h3>Boxing camp</h3><p>5 créneaux / semaine · aucune technique exigée</p></div><span>Voir →</span></a>
-          <a class="course" href="activites.html#competiteurs"><span class="course__n">05</span><div><h3>Compétiteurs</h3><p>Lun mar jeu ven 18h · open sparring samedi 18h30</p></div><span>Voir →</span></a>
-          <a class="course" href="activites.html#pieds"><span class="course__n">06</span><div><h3>Pieds-poings</h3><p>Mercredi 19h40 · un créneau, tous niveaux</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#anglaise"><span class="course__n">01</span><div><h3>Boxe anglaise</h3><p>7 créneaux · midi 12h40 et soir 19h40 · tous niveaux</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#lady"><span class="course__n">02</span><div><h3>Boxing Lady</h3><p>Lundi et mercredi 18h30 · 100 % féminin</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#educative"><span class="course__n">03</span><div><h3>École dès 3 ans</h3><p>Mercredi et samedi · Baby, éducative, ados</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#camp"><span class="course__n">04</span><div><h3>Boxing camp</h3><p>5 créneaux / semaine · aucune technique exigée</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#competiteurs"><span class="course__n">05</span><div><h3>Compétiteurs</h3><p>Lun mar jeu ven 18h · open sparring samedi 18h30</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#pieds"><span class="course__n">06</span><div><h3>Pieds-poings</h3><p>Mercredi 19h40 · un créneau, tous niveaux</p></div><span>Voir →</span></a>
         </div>
         <p class="btn-row" style="margin-top:1.4rem">
-          <a class="btn btn--primary" href="planning.html">Voir le planning</a>
-          <a class="btn" href="activites.html">Toutes les activités</a>
+          <a class="btn btn--primary" href="/planning">Voir le planning</a>
+          <a class="btn" href="/activites">Toutes les activités</a>
         </p>
       </div>
     </section>
@@ -231,23 +148,23 @@
         <h2 class="heading" data-reveal>4 coachs diplômés. Vous n’êtes jamais seul sur le plateau.</h2>
         <div class="coachrow__grid" data-reveal-group>
           <article class="coachcard">
-            <div class="coachcard__media"><img src="assets/media/coach-mehdi-photo.webp" alt="Portrait de Mehdi, coach principal TMBC" width="768" height="512" loading="lazy" /></div>
+            <div class="coachcard__media"><img src="/assets/media/coach-mehdi-photo.webp" alt="Portrait de Mehdi, coach principal TMBC" width="768" height="512" loading="lazy" /></div>
             <div class="coachcard__body"><p class="coachcard__tag">Principal</p><h3 class="coachcard__name">Mehdi</h3><p class="coachcard__role">Anglaise, éducative, compétiteurs</p></div>
           </article>
           <article class="coachcard">
-            <div class="coachcard__media"><img src="assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady aux Minimes" width="800" height="1000" loading="lazy" /></div>
+            <div class="coachcard__media"><img src="/assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady aux Minimes" width="800" height="1000" loading="lazy" /></div>
             <div class="coachcard__body"><p class="coachcard__tag">Lady</p><h3 class="coachcard__name">Chloé</h3><p class="coachcard__role">Lundi et mercredi 18h30</p></div>
           </article>
           <article class="coachcard">
-            <div class="coachcard__media"><img src="assets/media/pieds-poings-1200.webp" alt="Cours pieds-poings aux Minimes" width="1200" height="800" loading="lazy" /></div>
+            <div class="coachcard__media"><img src="/assets/media/pieds-poings-1200.webp" alt="Cours pieds-poings aux Minimes" width="1200" height="800" loading="lazy" /></div>
             <div class="coachcard__body"><p class="coachcard__tag">Lady · pieds-poings</p><h3 class="coachcard__name">David</h3><p class="coachcard__role">Mercredi soir</p></div>
           </article>
           <article class="coachcard">
-            <div class="coachcard__media"><img src="assets/media/jumps-groupe-1200.webp" alt="Boxing camp TMBC" width="800" height="1000" loading="lazy" /></div>
+            <div class="coachcard__media"><img src="/assets/media/jumps-groupe-1200.webp" alt="Boxing camp TMBC" width="800" height="1000" loading="lazy" /></div>
             <div class="coachcard__body"><p class="coachcard__tag">Camp</p><h3 class="coachcard__name">Clément</h3><p class="coachcard__role">Boxing camp et cross</p></div>
           </article>
         </div>
-        <p style="margin-top:1.6rem" data-reveal><a class="btn" href="coachs.html">Voir les coachs</a></p>
+        <p style="margin-top:1.6rem" data-reveal><a class="btn" href="/coachs">Voir les coachs</a></p>
       </div>
     </section>
 
@@ -291,32 +208,32 @@
         <p class="lead" data-reveal>Gants, casque, bandes, protections. Commande en ligne, retrait aux Minimes.</p>
         <div class="shopgrid" data-reveal-group>
           <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/gants-cuir-sparring-metal-boxe" target="_blank" rel="noopener">
-            <img src="assets/shop/gants.jpg" alt="Gants de sparring Metal Boxe 14 oz" width="400" height="400" loading="lazy" />
+            <img src="/assets/shop/gants.jpg" alt="Gants de sparring Metal Boxe 14 oz" width="400" height="400" loading="lazy" />
             <h3>Gants</h3>
             <p>Sparring cuir · Metal Boxe</p>
           </a>
           <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/casque-d-entrainement-boxe-adulte-metal-boxe" target="_blank" rel="noopener">
-            <img src="assets/shop/casque.jpg" alt="Casque d’entraînement boxe adulte" width="400" height="400" loading="lazy" />
+            <img src="/assets/shop/casque.jpg" alt="Casque d’entraînement boxe adulte" width="400" height="400" loading="lazy" />
             <h3>Casque</h3>
             <p>Entraînement adulte</p>
           </a>
           <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/bandes-de-boxe-4m-metal-boxe" target="_blank" rel="noopener">
-            <img src="assets/shop/bandes.jpg" alt="Bandes de boxe 4 mètres" width="400" height="400" loading="lazy" />
+            <img src="/assets/shop/bandes.jpg" alt="Bandes de boxe 4 mètres" width="400" height="400" loading="lazy" />
             <h3>Bandes</h3>
             <p>4 m · poignets tenus</p>
           </a>
           <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/protege-dents-gel-metal-boxe" target="_blank" rel="noopener">
-            <img src="assets/shop/protege-dents.jpg" alt="Protège-dents gel" width="400" height="400" loading="lazy" />
+            <img src="/assets/shop/protege-dents.jpg" alt="Protège-dents gel" width="400" height="400" loading="lazy" />
             <h3>Protège-dents</h3>
             <p>Gel, moulé à chaud</p>
           </a>
           <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/protege-tibias-pieds-blade-metal-boxe" target="_blank" rel="noopener">
-            <img src="assets/shop/protege-tibias.jpg" alt="Protège-tibias et pieds Blade" width="400" height="400" loading="lazy" />
+            <img src="/assets/shop/protege-tibias.jpg" alt="Protège-tibias et pieds Blade" width="400" height="400" loading="lazy" />
             <h3>Protège-tibias</h3>
             <p>Pieds-poings · Blade</p>
           </a>
           <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/short-boxe-thai-et-kick-boxing-noir-or-metal-boxe" target="_blank" rel="noopener">
-            <img src="assets/shop/short-thai.jpg" alt="Short de boxe thaï noir et or" width="400" height="400" loading="lazy" />
+            <img src="/assets/shop/short-thai.jpg" alt="Short de boxe thaï noir et or" width="400" height="400" loading="lazy" />
             <h3>Short thaï</h3>
             <p>Kick / pieds-poings</p>
           </a>
@@ -367,7 +284,7 @@
     </section>
 
     <section class="closer" aria-label="Inscription">
-      <img data-parallax src="assets/media/ring-principal-1200.webp" alt="Ring principal TMBC" width="1600" height="1000" />
+      <img data-parallax src="/assets/media/ring-principal-1200.webp" alt="Ring principal TMBC" width="1600" height="1000" />
       <div class="wrap">
         <p class="eyebrow">Inscription en ligne</p>
         <h2 class="display">4 semaines illimitées à 29 €</h2>
@@ -379,39 +296,4 @@
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap foot-grid">
-      <div>
-        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
-        <p class="sisters">
-          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
-        </p>
-      </div>
-      <div>
-        <p class="eyebrow">Salle</p>
-        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
-      </div>
-      <div>
-        <p class="eyebrow">Contact</p>
-        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcentertls@gmail.com">boxingcentertls@gmail.com</a></p>
-      </div>
-      <div>
-        <p class="eyebrow">Sites officiels</p>
-        <p class="net-links">
-          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
-        </p>
-      </div>
-    </div>
-    <div class="wrap legal">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <span>Lun–sam 10h–21h30</span>
-    </div>
-  </footer>
-  <script src="assets/js/data.js?v=5" defer></script>
-  <script src="assets/js/main.js?v=5" defer></script>
-</body>
-</html>
+</Base>

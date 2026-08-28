@@ -1,10 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "installCommand": null,
-  "buildCommand": "rm -rf dist && mkdir -p dist && cp -R assets robots.txt sitemap.xml dist/ && cp *.html dist/",
-  "outputDirectory": "dist",
-  "cleanUrls": false,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/css/(.*)",
@@ -20,10 +16,16 @@
     }
   ],
   "redirects": [
-    {
-      "source": "/disciplines.html",
-      "destination": "/activites.html",
-      "permanent": true
-    }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/club.html", "destination": "/club", "permanent": true },
+    { "source": "/activites.html", "destination": "/activites", "permanent": true },
+    { "source": "/disciplines.html", "destination": "/activites", "permanent": true },
+    { "source": "/disciplines", "destination": "/activites", "permanent": true },
+    { "source": "/coachs.html", "destination": "/coachs", "permanent": true },
+    { "source": "/planning.html", "destination": "/planning", "permanent": true },
+    { "source": "/tarifs.html", "destination": "/tarifs", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/galerie.html", "destination": "/galerie", "permanent": true },
+    { "source": "/mentions-legales.html", "destination": "/mentions-legales", "permanent": true }
   ]
 }

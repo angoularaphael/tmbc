@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+const title = 'Galerie — TMBC | Photos et vidéo de la salle';
+const description = 'Galerie TMBC : rings, sacs, Boxing Lady, école, sparring. Photos et clip de la salle des Minimes.';
+const path = '/galerie';
+const preloadHero = false;
+const jsonLd = undefined;
+---
+<Base title={title} description={description} path={path} preloadHero={preloadHero} jsonLd={jsonLd}>
+<main id="main">
+    <div id="lightbox" aria-hidden="true"><img alt="" /></div>
+    <header class="phero">
+      <img src="/assets/media/allee-sacs-1200.webp" alt="Allée des sacs de frappe" width="1200" height="800" />
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">Photos &amp; vidéo</p>
+        <h1 class="display">La salle, les cours, les rings</h1>
+        <p class="lead">Cliquez pour agrandir. D’autres photos sur <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>.</p>
+      </div>
+    </header>
+    <aside class="juice">
+      <div class="wrap">
+        <p>La <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a>, réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+      </div>
+    </aside>
+    <section class="section">
+      <div class="wrap">
+        <div class="filters" id="gal-filters">
+          <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">Tout</button>
+          <button class="chip" type="button" data-filter="salle" aria-pressed="false">La salle</button>
+          <button class="chip" type="button" data-filter="anglaise" aria-pressed="false">Anglaise</button>
+          <button class="chip" type="button" data-filter="lady" aria-pressed="false">Lady</button>
+          <button class="chip" type="button" data-filter="ecole" aria-pressed="false">École</button>
+          <button class="chip" type="button" data-filter="technique" aria-pressed="false">Technique</button>
+          <button class="chip" type="button" data-filter="pieds" aria-pressed="false">Pieds-poings</button>
+        </div>
+        <div class="gallery-grid" style="margin-top:1.6rem">
+          <a class="shot" data-zone="salle" data-full="/assets/media/salle-plongee-1200.webp" href="/assets/media/salle-plongee-1200.webp"><img src="/assets/media/salle-plongee-1200.webp" alt="Vue plongeante" loading="lazy" /></a>
+          <a class="shot" data-zone="salle" data-full="/assets/media/ring-principal-1200.webp" href="/assets/media/ring-principal-1200.webp"><img src="/assets/media/ring-principal-1200.webp" alt="Ring principal" loading="lazy" /></a>
+          <a class="shot" data-zone="salle" data-full="/assets/media/allee-sacs-1200.webp" href="/assets/media/allee-sacs-1200.webp"><img src="/assets/media/allee-sacs-1200.webp" alt="Allée des sacs" loading="lazy" /></a>
+          <a class="shot" data-zone="anglaise" data-full="/assets/media/cours-assaut-1200.webp" href="/assets/media/cours-assaut-1200.webp"><img src="/assets/media/cours-assaut-1200.webp" alt="Cours d’anglaise" loading="lazy" /></a>
+          <a class="shot" data-zone="anglaise" data-full="/assets/media/cours-collectif-700.webp" href="/assets/media/cours-collectif-700.webp"><img src="/assets/media/cours-collectif-700.webp" alt="Cours collectif" loading="lazy" /></a>
+          <a class="shot" data-zone="technique" data-full="/assets/media/sparring-graff-1200.webp" href="/assets/media/sparring-graff-1200.webp"><img src="/assets/media/sparring-graff-1200.webp" alt="Sparring" loading="lazy" /></a>
+          <a class="shot" data-zone="lady" data-full="/assets/media/lady-garde-1200.webp" href="/assets/media/lady-garde-1200.webp"><img src="/assets/media/lady-garde-1200.webp" alt="Boxing Lady" loading="lazy" /></a>
+          <a class="shot" data-zone="lady" data-full="/assets/media/coach-lady-1200.webp" href="/assets/media/coach-lady-1200.webp"><img src="/assets/media/coach-lady-1200.webp" alt="Coach Lady" loading="lazy" /></a>
+          <a class="shot" data-zone="pieds" data-full="/assets/media/pieds-poings-1200.webp" href="/assets/media/pieds-poings-1200.webp"><img src="/assets/media/pieds-poings-1200.webp" alt="Pieds-poings" loading="lazy" /></a>
+          <a class="shot" data-zone="ecole" data-full="/assets/media/ecole-medailles-1200.webp" href="/assets/media/ecole-medailles-1200.webp"><img src="/assets/media/ecole-medailles-1200.webp" alt="École" loading="lazy" /></a>
+          <a class="shot" data-zone="ecole" data-full="/assets/media/sparring-ados-700.webp" href="/assets/media/sparring-ados-700.webp"><img src="/assets/media/sparring-ados-700.webp" alt="Ados" loading="lazy" /></a>
+          <a class="shot" data-zone="technique" data-full="/assets/media/pattes-ours-1200.webp" href="/assets/media/pattes-ours-1200.webp"><img src="/assets/media/pattes-ours-1200.webp" alt="Pattes d’ours" loading="lazy" /></a>
+          <a class="shot" data-zone="salle" data-full="/assets/media/cross-rack-1200.webp" href="/assets/media/cross-rack-1200.webp"><img src="/assets/media/cross-rack-1200.webp" alt="Prépa physique" loading="lazy" /></a>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>Vidéo</p>
+        <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Un extrait de <span class="tint">cours</span></h2>
+        <div class="video-pocket" data-reveal style="margin-top:1.4rem">
+          <video src="/assets/media/clip-sparring.mp4" muted loop playsinline preload="none" poster="/assets/media/sparring-graff-1200.webp"></video>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Venez voir la salle. Essai 10 €</h2>
+        <p>Ou 4 semaines illimitées à 29 €. Inscription en ligne.</p>
+        <p class="btn-row">
+          <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
+          <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Essai 10 €</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</Base>

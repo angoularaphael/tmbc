@@ -1,0 +1,155 @@
+---
+const SITE = 'https://toulouse-minimes-boxing-club.fr';
+const {
+  title,
+  description,
+  path = '/',
+  ogTitle = title,
+  jsonLd,
+  preloadHero = false,
+} = Astro.props;
+
+const canonical = path === '/' ? `${SITE}/` : `${SITE}${path}`;
+const ogImage = `${SITE}/assets/img/hero.png`;
+const current = (Astro.url.pathname.replace(/\/$/, '') || '/');
+
+const nav = [
+  { href: '/', label: 'Accueil' },
+  { href: '/club', label: 'Le club' },
+  { href: '/activites', label: 'Activités' },
+  { href: '/coachs', label: 'Coachs' },
+  { href: '/planning', label: 'Planning' },
+  { href: '/tarifs', label: 'Tarifs' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/galerie', label: 'Galerie' },
+];
+
+const sportsClub = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsClub',
+  name: 'Toulouse Minimes Boxing Club',
+  alternateName: 'TMBC',
+  url: `${SITE}/`,
+  email: 'boxingcentertls@gmail.com',
+  telephone: '+33562244682',
+  image: ogImage,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '12 rue de Fenouillet',
+    addressLocality: 'Toulouse',
+    postalCode: '31200',
+    addressCountry: 'FR',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 43.6256, longitude: 1.4309 },
+  openingHours: 'Mo-Sa 10:00-21:30',
+  memberOf: { '@type': 'Organization', name: 'Boxing Center', url: 'https://boxingcenter.fr/' },
+  sameAs: ['https://boxe-toulouse.com/', 'https://boxingcenter.fr/'],
+};
+
+function isCurrent(href) {
+  if (href === '/') return current === '/';
+  return current === href || current.startsWith(`${href}/`);
+}
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Toulouse Minimes Boxing Club" />
+  <meta name="keywords" content="boxe Toulouse, club de boxe Minimes, TMBC, Toulouse Minimes Boxing Club, Boxing Center Minimes, essai boxe 10€, salle de boxe Barrière de Paris, boxe anglaise Toulouse, Boxing Lady Toulouse" />
+  <meta name="geo.region" content="FR-31" />
+  <meta name="geo.placename" content="Toulouse — Minimes" />
+  <meta name="geo.position" content="43.6256;1.4309" />
+  <meta name="ICBM" content="43.6256, 1.4309" />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  {preloadHero && <link rel="preload" as="image" href="/assets/img/hero.png" fetchpriority="high" />}
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="TMBC — Toulouse Minimes Boxing Club" />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:alt" content="TMBC — salle de boxe Toulouse Minimes" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <script type="application/ld+json" set:html={JSON.stringify(sportsClub)} />
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="/"><img class="nav__logo" src="/assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <nav class="nav__links">
+      {nav.map((item) => (
+        <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+      ))}
+    </nav>
+    <div class="nav__right">
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="menu" id="menu" hidden>
+    <div></div>
+    <nav class="menu__nav">
+      {nav.map((item) => (
+        <a class="menu__link" href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
+    </div>
+  </div>
+  <slot />
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="nav__brand" href="/" style="margin-bottom:12px"><img class="nav__logo" src="/assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
+        <p class="sisters">
+          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcentertls@gmail.com">boxingcentertls@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Sites officiels</p>
+        <p class="net-links">
+          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
+        </p>
+      </div>
+    </div>
+    <div class="wrap legal">
+      <a href="/mentions-legales">Mentions légales</a>
+      <span>Lun–sam 10h–21h30</span>
+    </div>
+  </footer>
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

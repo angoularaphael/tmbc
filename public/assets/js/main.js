@@ -115,8 +115,8 @@
       <p class="config__desc">${d.teaser}</p>
       <div class="config__cta">
         <a class="btn btn--primary" href="${window.TMBC.boutique.essai}">Essayer · 10 €</a>
-        <a class="btn" href="planning.html">Les créneaux</a>
-        <a class="btn" href="activites.html#${d.key}">En détail</a>
+        <a class="btn" href="/planning">Les créneaux</a>
+        <a class="btn" href="/activites#${d.key}">En détail</a>
       </div>`;
     if (body) body.innerHTML = sheet(discs[0]);
     let curr = 0;
@@ -162,7 +162,9 @@
       document.body.classList.add("is-leaving");
       setTimeout(() => { window.location.href = href; }, 460);
     };
-    $$('a[href$=".html"]').forEach((a) => {
+    $$("a[href]").forEach((a) => {
+      const raw = a.getAttribute("href") || "";
+      if (!raw.startsWith("/") && !raw.endsWith(".html")) return;
       const url = new URL(a.href, location.href);
       if (url.origin !== location.origin) return;
       if (url.pathname === location.pathname && !url.hash) return;
@@ -243,6 +245,15 @@
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      const fd = new FormData(form);
+      const prenom = String(fd.get("prenom") || "").trim();
+      const tel = String(fd.get("tel") || "").trim();
+      const email = String(fd.get("email") || "").trim();
+      const msg = String(fd.get("msg") || "").trim();
+      const body = encodeURIComponent(
+        `Prénom : ${prenom}\nTéléphone : ${tel}\nE-mail : ${email}\n\n${msg}`
+      );
+      window.location.href = `mailto:boxingcentertls@gmail.com?subject=${encodeURIComponent("Contact TMBC — " + prenom)}&body=${body}`;
       form.hidden = true;
       const ok = $("#form-ok");
       if (ok) ok.hidden = false;

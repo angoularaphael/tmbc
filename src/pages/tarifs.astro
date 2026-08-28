@@ -1,0 +1,77 @@
+---
+import Base from '../layouts/Base.astro';
+const title = 'Tarifs — TMBC | Offre 29 €, saison 259 €, essai 10 €';
+const description = 'Tarifs TMBC : offre rentrée 29 €, saison 259 €, école 295 €, Baby Boxe 250 €, essai 10 €.';
+const path = '/tarifs';
+const preloadHero = false;
+const jsonLd = undefined;
+---
+<Base title={title} description={description} path={path} preloadHero={preloadHero} jsonLd={jsonLd}>
+<main id="main">
+    <header class="phero">
+      <img src="/assets/media/ring-cours-rouge-1200.webp" alt="Cours sur le ring" width="1200" height="800" />
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">Tarifs</p>
+        <h1 class="display">29 € les 4 premières semaines</h1>
+        <p class="lead">Essai 10 €. Saison 259 €. École 295 €. Inscriptions aussi sur <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a> et <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+      </div>
+    </header>
+    <aside class="juice">
+      <div class="wrap">
+        <p>Tarifs de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a>, réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+      </div>
+    </aside>
+    <section class="section">
+      <div class="wrap">
+        <div class="price-grid" data-reveal-group>
+          <article class="price is-hot"><p class="eyebrow">Rentrée</p><b><s>44 €</s> 29 €</b><p>Par personne. 4 semaines illimitées, sans engagement.</p><a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris — 29 €</a></article>
+          <article class="price"><p class="eyebrow">Saison</p><b><s>400 €</s> 259 €</b><p>12 mois. 4× sans frais. Accès aux 5 clubs du <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">réseau Boxing Center</a>.</p><a class="btn" href="https://boutique.boxingcenter.fr/offre/259">Prendre la saison</a></article>
+          <article class="price"><p class="eyebrow">École</p><b>295 €</b><p>L’année, t-shirt inclus. Baby Boxe : 250 €.</p><a class="btn" href="https://boutique.boxingcenter.fr/abonnements">Inscrire un enfant</a></article>
+          <article class="price"><p class="eyebrow">Essai</p><b>10 €</b><p>Une séance. Gants prêtés. Sans dossier.</p><a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai</a></article>
+        </div>
+      </div>
+    </section>
+    <section class="section band-tint">
+      <div class="wrap split">
+        <div data-reveal>
+          <p class="eyebrow">Avant de payer</p>
+          <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Ce qu’il faut <span class="tint">savoir</span></h2>
+          <ul class="list-check" style="margin-top:1rem">
+            <li>L’offre rentrée se compte par personne : 29 € chacun, jamais 29 € pour deux.</li>
+            <li>La saison 259 € ouvre les 5 salles du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</li>
+            <li>Matériel prêté pour l’essai. Ensuite, chacun apporte ses gants.</li>
+            <li>Le t-shirt du club est inclus dans toute inscription enfant.</li>
+          </ul>
+        </div>
+        <div data-reveal>
+          <blockquote><p>« Très belle salle de boxe. Matos au top, coach et staff accueillant. »</p><footer>Hamed S.</footer></blockquote>
+          <blockquote style="margin-top:0.7rem"><p>« Superbe salle, très bonne ambiance. Je pratique les cours de boxe anglaise loisir. »</p><footer>Pascal L.</footer></blockquote>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="boutique">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>La boutique</p>
+        <h2 class="heading" data-reveal>Gants, casque, bandes</h2>
+        <div class="shopgrid" data-reveal-group>
+          <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/gants-cuir-sparring-metal-boxe" target="_blank" rel="noopener">
+            <img src="/assets/shop/gants.jpg" alt="Gants de sparring" width="400" height="400" loading="lazy" />
+            <h3>Gants</h3>
+            <p>Sparring cuir</p>
+          </a>
+          <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/casque-d-entrainement-boxe-adulte-metal-boxe" target="_blank" rel="noopener">
+            <img src="/assets/shop/casque.jpg" alt="Casque d’entraînement" width="400" height="400" loading="lazy" />
+            <h3>Casque</h3>
+            <p>Entraînement adulte</p>
+          </a>
+          <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/bandes-de-boxe-4m-metal-boxe" target="_blank" rel="noopener">
+            <img src="/assets/shop/bandes.jpg" alt="Bandes de boxe" width="400" height="400" loading="lazy" />
+            <h3>Bandes</h3>
+            <p>4 mètres</p>
+          </a>
+        </div>
+        <p class="btn-row" style="margin-top:1.3rem"><a class="btn" href="https://boutique.boxingcenter.fr/materiel" target="_blank" rel="noopener">Toute la boutique</a></p>
+      </div>
+    </section>
+  </main>
+</Base>

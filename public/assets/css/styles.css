@@ -1,5 +1,5 @@
-/* TMBC — maquette commerciale. Crème + photos. Titres Barlow Condensed,
-   corps Manrope. Rouge / navy du logo. Pas de marquee ni de configurateur. */
+/* TMBC — crème + photos. Titres Montserrat Black (géométrie du logo),
+   corps Manrope. Rouge / navy du logo. */
 
 :root {
   --red: #d31f26;
@@ -28,9 +28,9 @@
   --ink-rgb: 27, 33, 44;
   --spark-rgb: 211, 31, 38;
   --navy-rgb: 27, 33, 44;
-  --f-display: "Archivo Black", "Arial Black", sans-serif;
+  --f-display: "Montserrat", "Arial Black", sans-serif;
   --f-ui: "Manrope", system-ui, sans-serif;
-  --f-mono: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-mono: "Montserrat", "Arial Narrow", sans-serif;
   --step--1: clamp(0.78rem, 0.72rem + 0.3vw, 0.9rem);
   --step-0: clamp(1rem, 0.94rem + 0.3vw, 1.12rem);
   --step-1: clamp(1.2rem, 1.02rem + 0.9vw, 1.65rem);
@@ -124,26 +124,26 @@ ul { list-style: none; }
 
 .eyebrow {
   display: inline-block;
-  font: 700 0.85rem/1 var(--f-display);
-  letter-spacing: 0.18em;
+  font: 700 0.72rem/1 var(--f-display);
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--spark);
 }
 
 .display {
   font-family: var(--f-display);
-  font-weight: 400;
+  font-weight: 900;
   line-height: 0.92;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   text-transform: uppercase;
   font-size: var(--step-3);
   color: var(--ink);
 }
 .heading {
   font-family: var(--f-display);
-  font-weight: 400;
+  font-weight: 900;
   font-size: clamp(1.85rem, 3.6vw, 2.85rem);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
   line-height: 1.05;
 }
@@ -275,7 +275,7 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
   align-items: center;
   min-height: 44px;
   padding: 0.5em 0.75em;
-  font: 400 0.92rem/1 var(--f-display);
+  font: 700 0.82rem/1 var(--f-display);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #f4f1ea;
@@ -319,7 +319,7 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
 .nav.is-scrolled .burger span { background: var(--navy); }
 @media (min-width: 1120px) {
   .nav__links { display: flex; }
-  .nav__links a[href="index.html"] { display: none; }
+  .nav__links a[href="/"] { display: none; }
   .burger { display: none; }
 }
 
@@ -341,9 +341,8 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
 .menu__nav { align-self: center; display: flex; flex-direction: column; gap: 0.2rem; }
 .menu__link {
   font-family: var(--f-display);
-  font-weight: 700;
-  font-size: clamp(2.2rem, 8vw, 4.4rem);
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  letter-spacing: -0.06em;
   line-height: 1.05;
   color: #f4f1ea;
 }
@@ -367,26 +366,26 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 40%;
-  transform: scale(1.08);
-  transform-origin: 50% 40%;
+  object-position: 50% 46%;
+  transform: scale(1.04);
+  transform-origin: 50% 46%;
 }
 html.fx .hero__bg { animation: ken-m 28s ease-in-out infinite alternate; }
 @keyframes ken-m {
-  from { transform: scale(1.06); }
-  to { transform: scale(1.12); }
+  from { transform: scale(1.02); }
+  to { transform: scale(1.06); }
 }
 @media (min-width: 900px) {
   .hero { min-height: 100svh; height: 100svh; }
   .hero__bg {
-    transform: scale(1.32);
-    transform-origin: 50% 38%;
-    object-position: 50% 38%;
+    transform: scale(1.05);
+    transform-origin: 50% 48%;
+    object-position: 50% 46%;
   }
   html.fx .hero__bg { animation-name: ken-d; }
   @keyframes ken-d {
-    from { transform: scale(1.28); }
-    to { transform: scale(1.38); }
+    from { transform: scale(1.03); }
+    to { transform: scale(1.08); }
   }
 }
 .hero__veil {
@@ -404,15 +403,26 @@ html.fx .hero__bg { animation: ken-m 28s ease-in-out infinite alternate; }
   margin-inline: auto;
   padding: 0 0 1.2rem;
 }
-.hero__pitch h1 {
+.wordmark {
   font-family: var(--f-display);
-  font-weight: 400;
-  font-size: clamp(2.6rem, 7vw, 5rem);
-  line-height: 0.9;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  font-size: clamp(3.4rem, 14vw, 8.4rem);
+  line-height: 0.8;
+  letter-spacing: -0.08em;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 2px 28px rgba(0,0,0,.5);
+  text-shadow: 0 2px 28px rgba(0,0,0,.45);
+}
+.wordmark span:nth-child(even) { color: var(--red); }
+.hero__pitch h1 {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: clamp(0.78rem, 1.8vw, 1.05rem);
+  line-height: 1.2;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 0.55rem;
 }
 .hero__pitch p {
   margin-top: 0.85rem;
@@ -732,7 +742,7 @@ html.fx .is-in .frame img {
 }
 .coachcard__body { padding: 0.95rem 1rem 1.1rem; }
 .coachcard__tag { font: 600 0.58rem/1 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--spark); }
-.coachcard__name { font-family: var(--f-display); font-weight: 700; font-size: var(--step-1); margin-top: 0.45rem; }
+.coachcard__name { font-family: var(--f-display); font-weight: 900; font-size: var(--step-1); margin-top: 0.45rem; }
 .coachcard__role { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
 
 /* ——— Essai / quotes / gong ——— */
@@ -1336,8 +1346,9 @@ html.fx .offer.is-hot {
 .netcard:hover { transform: translateY(-5px); border-top-color: var(--red); color: inherit; }
 .netcard b {
   font-family: var(--f-display);
+  font-weight: 900;
   font-size: 1.45rem;
-  letter-spacing: 0.06em;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 .netcard p { color: var(--muted); font-size: 0.9rem; }
