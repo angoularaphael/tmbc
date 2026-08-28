@@ -28,7 +28,7 @@
   --ink-rgb: 27, 33, 44;
   --spark-rgb: 211, 31, 38;
   --navy-rgb: 27, 33, 44;
-  --f-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-display: "Archivo Black", "Arial Black", sans-serif;
   --f-ui: "Manrope", system-ui, sans-serif;
   --f-mono: "Barlow Condensed", "Arial Narrow", sans-serif;
   --step--1: clamp(0.78rem, 0.72rem + 0.3vw, 0.9rem);
@@ -132,20 +132,20 @@ ul { list-style: none; }
 
 .display {
   font-family: var(--f-display);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   font-size: var(--step-3);
   color: var(--ink);
 }
 .heading {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(1.85rem, 3.6vw, 2.85rem);
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  line-height: 1.08;
+  line-height: 1.05;
 }
 .lead a { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
 .lead {
@@ -275,7 +275,7 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
   align-items: center;
   min-height: 44px;
   padding: 0.5em 0.75em;
-  font: 700 0.92rem/1 var(--f-display);
+  font: 400 0.92rem/1 var(--f-display);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #f4f1ea;
@@ -406,10 +406,10 @@ html.fx .hero__bg { animation: ken-m 28s ease-in-out infinite alternate; }
 }
 .hero__pitch h1 {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 5rem);
-  line-height: 0.92;
-  letter-spacing: 0.03em;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0 2px 28px rgba(0,0,0,.5);
@@ -710,7 +710,15 @@ html.fx .is-in .frame img {
 }
 .coachcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .coachcard__media { aspect-ratio: 4/4.6; overflow: hidden; background: var(--navy); }
-.coachcard__media img { width: 100%; height: 100%; object-fit: cover; }
+.coachcard__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+.frame--coach {
+  aspect-ratio: 4 / 5;
+  background: #0c0e12;
+}
+.frame--coach img {
+  object-fit: cover;
+  object-position: 50% 18%;
+}
 .coachcard__media--tile {
   display: grid;
   place-items: center;
@@ -1336,11 +1344,67 @@ html.fx .offer.is-hot {
 .netcard em {
   margin-top: auto;
   font-style: normal;
-  font: 700 0.78rem/1 var(--f-display);
+  font: 400 0.78rem/1 var(--f-display);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--red);
 }
+
+.shopgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  margin-top: 1.6rem;
+}
+@media (min-width: 800px) { .shopgrid { grid-template-columns: repeat(3, 1fr); } }
+.shopcard {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  color: inherit;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s;
+}
+.shopcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); color: inherit; }
+.shopcard img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #fff;
+  padding: 0.8rem;
+}
+.shopcard h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem 0;
+}
+.shopcard p { padding: 0.25rem 1rem 1.1rem; color: var(--muted); font-size: 0.88rem; }
+
+.totop {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.1rem;
+  z-index: 7000;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background: var(--navy);
+  color: #fff;
+  font: 400 1.15rem/1 var(--f-display);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.totop.is-on { opacity: 1; pointer-events: auto; transform: none; }
+.totop:hover { background: var(--red); }
+
+.home-faq { max-width: 72ch; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }

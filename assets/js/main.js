@@ -273,4 +273,15 @@
   filterSet("#gal-filters", ".gallery-grid .shot", "data-zone");
   lightbox();
   parallax();
+
+  const totop = document.createElement("button");
+  totop.className = "totop";
+  totop.type = "button";
+  totop.setAttribute("aria-label", "Retour en haut de la page");
+  totop.textContent = "↑";
+  document.body.appendChild(totop);
+  const tickTop = () => totop.classList.toggle("is-on", window.scrollY > 480);
+  window.addEventListener("scroll", tickTop, { passive: true });
+  tickTop();
+  totop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
 })();
