@@ -17,52 +17,16 @@ window.TMBC = {
     abo: "https://boutique.boxingcenter.fr/abonnements",
   },
   network: {
+    minimes: {
+      name: "Boxing Center Minimes",
+      url: "https://boxe-toulouse.com/",
+      text: "salle de boxe Toulouse Minimes",
+    },
     groupe: {
       name: "Boxing Center",
       url: "https://boxingcenter.fr/",
       text: "Boxing Center — site officiel",
     },
-    boutique: {
-      name: "Boutique",
-      url: "https://boutique.boxingcenter.fr/",
-      text: "Boutique Boxing Center",
-    },
-    salles: [
-      {
-        id: "minimes",
-        name: "Minimes · TMBC",
-        feat: "Salle historique · 3 rings · école dès 3 ans",
-        url: null,
-        wp: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-minimes/",
-        self: true,
-      },
-      {
-        id: "portet",
-        name: "Portet-sur-Garonne",
-        feat: "600 m² · ring · cage MMA",
-        url: "https://www.boxing-center-portet.fr/",
-      },
-      {
-        id: "st-cyprien",
-        name: "Saint-Cyprien",
-        feat: "1 200 m² · un seul niveau",
-        url: "https://bc-st-cyprien.vercel.app/",
-        wp: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-saint-cyprien/",
-      },
-      {
-        id: "ramonville",
-        name: "Ramonville",
-        feat: "Octogone 7 m · extérieur couvert",
-        url: "https://bc-ramonville.vercel.app/",
-        wp: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-ramonville/",
-      },
-      {
-        id: "etats-unis",
-        name: "Toulouse États-Unis",
-        feat: "La plus grande salle de France dédiée aux sports de combat",
-        url: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/",
-      },
-    ],
   },
   ticker: [
     "Essai 10 €",

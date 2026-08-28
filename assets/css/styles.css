@@ -340,16 +340,17 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
   position: fixed;
   inset: 0;
   z-index: 7990;
-  background: var(--navy);
-  color: #f4f1ea;
-  display: grid;
+  display: none;
   grid-template-rows: auto 1fr auto;
   padding: clamp(1.2rem, 3vw, 2rem) var(--gut);
-  clip-path: inset(0 0 100% 0);
+  background: var(--navy);
+  color: #f4f1ea;
   pointer-events: none;
-  transition: clip-path 0.65s var(--ease-out);
 }
-.menu.is-open { clip-path: inset(0 0 0 0); pointer-events: auto; }
+.menu.is-open {
+  display: grid;
+  pointer-events: auto;
+}
 .menu__nav { align-self: center; display: flex; flex-direction: column; gap: 0.2rem; }
 .menu__link {
   font-family: var(--f-display);
@@ -1243,6 +1244,29 @@ html.fx .offer.is-hot {
 .cta-band p { color: var(--ink-soft); }
 .cta-band .btn-row { margin-top: 1.1rem; }
 
+.juice {
+  padding: 1.1rem 0;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.juice p {
+  margin: 0;
+  max-width: 72ch;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+.juice a {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.netgrid--duo {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) { .netgrid--duo { grid-template-columns: 1fr 1fr; } }
+
 .net-links {
   display: grid;
   gap: 0.35rem;
@@ -1281,8 +1305,7 @@ html.fx .offer.is-hot {
   gap: 0.7rem;
   margin-top: 0.8rem;
 }
-@media (min-width: 720px) { .netgrid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1100px) { .netgrid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 800px) { .netgrid--duo { grid-template-columns: 1fr 1fr; } }
 .netcard {
   display: flex;
   flex-direction: column;
@@ -1314,6 +1337,8 @@ html.fx .offer.is-hot {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .wipe { display: none !important; }
+  .menu:not(.is-open) { display: none !important; }
   html.fx [data-reveal],
   html.fx .reveal-mask > span,
   html.fx [data-reveal-group] > * { opacity: 1 !important; transform: none !important; }

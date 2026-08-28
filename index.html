@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
   <link rel="preload" as="image" href="assets/img/hero.png" fetchpriority="high" />
   <script type="application/ld+json">
   {
@@ -32,7 +32,11 @@
       "@type": "Organization",
       "name": "Boxing Center",
       "url": "https://boxingcenter.fr/"
-    }
+    },
+    "sameAs": [
+      "https://boxe-toulouse.com/",
+      "https://boxingcenter.fr/"
+    ]
   }
   </script>
 </head>
@@ -56,7 +60,7 @@
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
-  <div class="menu" id="menu">
+  <div class="menu" id="menu" hidden>
     <div></div>
     <nav class="menu__nav">
       <a class="menu__link" href="index.html">Accueil</a>
@@ -104,6 +108,12 @@
       </div>
     </aside>
 
+    <aside class="juice">
+      <div class="wrap">
+        <p>TMBC est l’association de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> (Boxing Center Minimes). Le club appartient au réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+      </div>
+    </aside>
+
     <section class="section">
       <div class="wrap">
         <p class="eyebrow" data-reveal>Les formules</p>
@@ -124,7 +134,7 @@
           <article class="offer">
             <h3>Saison</h3>
             <b><s>400 €</s> <span data-count="259">0</span> €</b>
-            <p>12 mois, payable en 4× sans frais. Accès aux 5 salles du <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">réseau Boxing Center</a>.</p>
+            <p>12 mois, payable en 4× sans frais. Accès aux 5 salles du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
             <a class="btn" href="https://boutique.boxingcenter.fr/offre/259">Prendre la saison</a>
           </article>
         </div>
@@ -136,6 +146,7 @@
         <div data-reveal>
           <p class="eyebrow">Pourquoi TMBC</p>
           <h2 class="heading">Vous êtes encadré dès la première séance</h2>
+          <p class="lead" style="margin-top:1rem">TMBC est l’association de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> — première salle du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
           <ul class="why">
             <li><b>01</b><span>Un coach diplômé vous place : pieds, garde, jab. Vous n’arrivez pas « dans le tas ».</span></li>
             <li><b>02</b><span>Gants et casque prêtés à l’essai. Vous venez en tenue de sport.</span></li>
@@ -249,40 +260,23 @@
 
     <section class="section" id="reseau">
       <div class="wrap">
-        <p class="eyebrow" data-reveal>Le réseau Boxing Center</p>
-        <h2 class="heading" data-reveal>Un abonnement, 5 salles à Toulouse</h2>
-        <p class="lead" data-reveal>La saison à 259 € ouvre toutes les salles. TMBC est le club des Minimes.</p>
-        <a class="net-mother" href="https://boxingcenter.fr/" target="_blank" rel="noopener" data-reveal>
-          <span>Site officiel du groupe</span>
-          <strong>boxingcenter.fr</strong>
-          <span>Salles, actualités, inscriptions — le site WordPress Boxing Center</span>
-        </a>
-        <div class="netgrid" data-reveal-group>
-          <a class="netcard" href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">
-            <b>Portet-sur-Garonne</b>
-            <p>600 m², ring de boxe anglaise, cage MMA. Le vaisseau amiral au sud de Toulouse.</p>
-            <em>Voir le site →</em>
+        <p class="eyebrow" data-reveal>Sites officiels</p>
+        <h2 class="heading" data-reveal>La salle Minimes, et le réseau</h2>
+        <p class="lead" data-reveal>TMBC pointe vers les deux sites de référence. C’est là que se trouvent le planning officiel, les inscriptions et l’actualité du groupe.</p>
+        <div class="netgrid netgrid--duo" data-reveal-group>
+          <a class="netcard" href="https://boxe-toulouse.com/" target="_blank" rel="noopener">
+            <span class="eyebrow">Minimes</span>
+            <b>boxe-toulouse.com</b>
+            <p>Le site officiel de la salle de boxe Toulouse Minimes : cours, planning, essai 10 €, offre 29 €.</p>
+            <em>Aller sur boxe-toulouse.com →</em>
           </a>
-          <a class="netcard" href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">
-            <b>Saint-Cyprien</b>
-            <p>1 200 m² sur un seul niveau. Rive gauche, métro A à 4 min.</p>
-            <em>Voir le site →</em>
-          </a>
-          <a class="netcard" href="https://bc-ramonville.vercel.app/" target="_blank" rel="noopener">
-            <b>Ramonville</b>
-            <p>Octogone 7 m, 300 m² d’extérieur couvert. Terminus du métro B.</p>
-            <em>Voir le site →</em>
-          </a>
-          <a class="netcard" href="https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/" target="_blank" rel="noopener">
-            <b>États-Unis</b>
-            <p>La plus grande salle de France dédiée aux sports de combat. Quartier États-Unis.</p>
-            <em>Voir la fiche →</em>
+          <a class="netcard" href="https://boxingcenter.fr/" target="_blank" rel="noopener">
+            <span class="eyebrow">Le groupe</span>
+            <b>boxingcenter.fr</b>
+            <p>Le site principal Boxing Center : les 5 salles, actualités, inscriptions et le réseau.</p>
+            <em>Aller sur boxingcenter.fr →</em>
           </a>
         </div>
-        <p class="btn-row" style="margin-top:1.3rem" data-reveal>
-          <a class="btn" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">Boutique Boxing Center</a>
-          <a class="btn" href="https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-minimes/" target="_blank" rel="noopener">Fiche Minimes sur boxingcenter.fr</a>
-        </p>
       </div>
     </section>
 
@@ -306,8 +300,8 @@
         <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
         <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
         <p class="sisters">
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center — site officiel</a>
-          <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">Boutique</a>
+          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">boxe-toulouse.com — Minimes</a>
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
         </p>
       </div>
       <div>
@@ -319,14 +313,10 @@
         <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
       </div>
       <div>
-        <p class="eyebrow">Le réseau</p>
+        <p class="eyebrow">Sites officiels</p>
         <p class="net-links">
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center — site officiel</a>
-          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Salle de boxe Portet-sur-Garonne</a>
-          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Boxing Center Saint-Cyprien</a>
-          <a href="https://bc-ramonville.vercel.app/" target="_blank" rel="noopener">Boxing Center Ramonville</a>
-          <a href="https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/" target="_blank" rel="noopener">Boxing Center États-Unis</a>
-          <a href="https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-minimes/" target="_blank" rel="noopener">Fiche Minimes (WordPress)</a>
+          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Salle de boxe Toulouse Minimes — boxe-toulouse.com</a>
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center — boxingcenter.fr</a>
         </p>
       </div>
     </div>
@@ -335,7 +325,7 @@
       <span>Lun–sam 10h–21h30</span>
     </div>
   </footer>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/data.js?v=3" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>

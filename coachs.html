@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
   
 </head>
 <body>
@@ -33,7 +33,7 @@
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
-  <div class="menu" id="menu">
+  <div class="menu" id="menu" hidden>
     <div></div>
     <nav class="menu__nav">
       <a class="menu__link" href="index.html">Accueil</a>
@@ -56,9 +56,14 @@
       <div class="wrap" data-reveal>
         <p class="eyebrow">4 coachs diplômés</p>
         <h1 class="display">Un coach dès votre première séance</h1>
-        <p class="lead">Diplômés d’État, licenciés FFBoxe. Dès le premier jour : pieds, poings, garde. Essai 10 €.</p>
+        <p class="lead">Diplômés d’État, licenciés FFBoxe. Encadrement présenté aussi sur <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">boxe-toulouse.com</a>. Essai 10 €.</p>
       </div>
     </header>
+    <aside class="juice">
+      <div class="wrap">
+        <p>Les coachs de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a>, réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+      </div>
+    </aside>
     <section class="section">
       <div class="wrap split">
         <div class="frame" data-reveal><img src="assets/media/coach-mehdi.webp" alt="Portrait de Mehdi" width="400" height="500" /></div>
@@ -114,8 +119,8 @@
         <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
         <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
         <p class="sisters">
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center — site officiel</a>
-          <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">Boutique</a>
+          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">boxe-toulouse.com — Minimes</a>
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
         </p>
       </div>
       <div>
@@ -127,14 +132,10 @@
         <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
       </div>
       <div>
-        <p class="eyebrow">Le réseau</p>
+        <p class="eyebrow">Sites officiels</p>
         <p class="net-links">
-          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center — site officiel</a>
-          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Salle de boxe Portet-sur-Garonne</a>
-          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Boxing Center Saint-Cyprien</a>
-          <a href="https://bc-ramonville.vercel.app/" target="_blank" rel="noopener">Boxing Center Ramonville</a>
-          <a href="https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/" target="_blank" rel="noopener">Boxing Center États-Unis</a>
-          <a href="https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-minimes/" target="_blank" rel="noopener">Fiche Minimes (WordPress)</a>
+          <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Salle de boxe Toulouse Minimes — boxe-toulouse.com</a>
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center — boxingcenter.fr</a>
         </p>
       </div>
     </div>
@@ -143,7 +144,7 @@
       <span>Lun–sam 10h–21h30</span>
     </div>
   </footer>
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/data.js?v=3" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>

@@ -2,9 +2,23 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": null,
-  "buildCommand": "echo static",
-  "outputDirectory": ".",
+  "buildCommand": "rm -rf dist && mkdir -p dist && cp -R assets robots.txt sitemap.xml dist/ && cp *.html dist/",
+  "outputDirectory": "dist",
   "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/assets/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/assets/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/disciplines.html",

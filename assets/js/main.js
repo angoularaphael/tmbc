@@ -16,10 +16,13 @@
   if (burger && menu) {
     const close = () => {
       menu.classList.remove("is-open");
+      menu.hidden = true;
       burger.setAttribute("aria-expanded", "false");
     };
     burger.addEventListener("click", () => {
-      const open = menu.classList.toggle("is-open");
+      const open = !menu.classList.contains("is-open");
+      menu.classList.toggle("is-open", open);
+      menu.hidden = !open;
       burger.setAttribute("aria-expanded", String(open));
     });
     menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
