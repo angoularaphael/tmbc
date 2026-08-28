@@ -16,13 +16,54 @@ window.TMBC = {
     essai: "https://boutique.boxingcenter.fr/seance-essai",
     abo: "https://boutique.boxingcenter.fr/abonnements",
   },
-  network: [
-    { name: "Boxing Center", url: "https://boxingcenter.fr/" },
-    { name: "Portet", url: "https://www.boxing-center-portet.fr/" },
-    { name: "Saint-Cyprien", url: "https://bc-st-cyprien.vercel.app/" },
-    { name: "Ramonville", url: "https://boxingcenter.fr/" },
-    { name: "États-Unis", url: "https://boxingcenter.fr/" },
-  ],
+  network: {
+    groupe: {
+      name: "Boxing Center",
+      url: "https://boxingcenter.fr/",
+      text: "Boxing Center — site officiel",
+    },
+    boutique: {
+      name: "Boutique",
+      url: "https://boutique.boxingcenter.fr/",
+      text: "Boutique Boxing Center",
+    },
+    salles: [
+      {
+        id: "minimes",
+        name: "Minimes · TMBC",
+        feat: "Salle historique · 3 rings · école dès 3 ans",
+        url: null,
+        wp: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-minimes/",
+        self: true,
+      },
+      {
+        id: "portet",
+        name: "Portet-sur-Garonne",
+        feat: "600 m² · ring · cage MMA",
+        url: "https://www.boxing-center-portet.fr/",
+      },
+      {
+        id: "st-cyprien",
+        name: "Saint-Cyprien",
+        feat: "1 200 m² · un seul niveau",
+        url: "https://bc-st-cyprien.vercel.app/",
+        wp: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-saint-cyprien/",
+      },
+      {
+        id: "ramonville",
+        name: "Ramonville",
+        feat: "Octogone 7 m · extérieur couvert",
+        url: "https://bc-ramonville.vercel.app/",
+        wp: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-toulouse-ramonville/",
+      },
+      {
+        id: "etats-unis",
+        name: "Toulouse États-Unis",
+        feat: "La plus grande salle de France dédiée aux sports de combat",
+        url: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/",
+      },
+    ],
+  },
   ticker: [
     "Essai 10 €",
     "4 semaines 29 €",
