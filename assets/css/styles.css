@@ -189,19 +189,6 @@ html.fx [data-reveal-group].is-in > *:nth-child(4) { transition-delay: 0.24s; }
 html.fx [data-reveal-group].is-in > *:nth-child(5) { transition-delay: 0.32s; }
 html.fx [data-reveal-group].is-in > *:nth-child(6) { transition-delay: 0.4s; }
 
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9000;
-  height: 3px;
-  width: 100%;
-  background: var(--red);
-  transform: scaleX(0);
-  transform-origin: left;
-  pointer-events: none;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -367,6 +354,7 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
 .hero {
   position: relative;
   min-height: 100svh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -379,18 +367,33 @@ body.is-entered .wipe i:last-child { transform-origin: right; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 46%;
+  object-position: 50% 40%;
+  transform: scale(1.08);
+  transform-origin: 50% 40%;
 }
-html.fx .hero__bg { animation: ken 28s ease-in-out infinite alternate; }
-@keyframes ken {
-  from { transform: scale(1.02); }
-  to { transform: scale(1.07); }
+html.fx .hero__bg { animation: ken-m 28s ease-in-out infinite alternate; }
+@keyframes ken-m {
+  from { transform: scale(1.06); }
+  to { transform: scale(1.12); }
+}
+@media (min-width: 900px) {
+  .hero { min-height: 100svh; height: 100svh; }
+  .hero__bg {
+    transform: scale(1.32);
+    transform-origin: 50% 38%;
+    object-position: 50% 38%;
+  }
+  html.fx .hero__bg { animation-name: ken-d; }
+  @keyframes ken-d {
+    from { transform: scale(1.28); }
+    to { transform: scale(1.38); }
+  }
 }
 .hero__veil {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(12,14,18,.35) 0%, transparent 22%, transparent 48%, rgba(12,14,18,.72) 100%);
+    linear-gradient(180deg, rgba(12,14,18,.22) 0%, transparent 18%, transparent 52%, rgba(12,14,18,.58) 100%);
   pointer-events: none;
 }
 .hero::after { display: none; }
@@ -454,8 +457,8 @@ html.fx .hero__bg { animation: ken 28s ease-in-out infinite alternate; }
   color: #f4f1ea;
 }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 0.7rem; }
-@media (max-height: 720px) {
-  .hero { min-height: auto; padding-top: 5.5rem; }
+@media (max-height: 560px) {
+  .hero { min-height: 100svh; height: 100svh; }
   .hero__pitch h1 { font-size: clamp(2.1rem, 8vw, 3.2rem); }
 }
 
@@ -1011,8 +1014,10 @@ blockquote footer {
 }
 .note { color: var(--muted); font-size: 0.9rem; }
 .prose { max-width: 68ch; }
-.prose h2 { font-family: var(--f-display); font-size: var(--step-2); margin-bottom: 0.8rem; }
+.prose h2 { font-family: var(--f-display); font-size: var(--step-2); margin: 2rem 0 0.8rem; }
+.prose h2:first-child { margin-top: 0; }
 .prose p { color: var(--ink-soft); margin-bottom: 0.9rem; }
+.prose a { text-decoration: underline; text-underline-offset: 0.15em; }
 
 .site-footer {
   padding: 3.4rem 0 1.6rem;
@@ -1038,6 +1043,8 @@ blockquote footer {
   color: #9aa0a8;
   font-size: 0.78rem;
 }
+.legal a { color: #d5cfc4; }
+.legal a:hover { color: #fff; }
 .sisters { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; margin-top: 0.9rem; font-size: 0.85rem; }
 .sisters a:hover { text-decoration: underline; color: #ff6b70; }
 

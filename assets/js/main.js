@@ -249,22 +249,6 @@
     });
   }
 
-  const progress = () => {
-    let bar = $(".scroll-progress");
-    if (!bar) {
-      bar = document.createElement("div");
-      bar.className = "scroll-progress";
-      bar.setAttribute("aria-hidden", "true");
-      document.body.prepend(bar);
-    }
-    const tick = () => {
-      const h = document.documentElement.scrollHeight - innerHeight;
-      bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`;
-    };
-    window.addEventListener("scroll", tick, { passive: true });
-    tick();
-  };
-
   const parallax = () => {
     if (reduce) return;
     const nodes = $$("[data-parallax]");
@@ -288,6 +272,5 @@
   filterSet("#plan-filters", ".plan-day li", "data-disc");
   filterSet("#gal-filters", ".gallery-grid .shot", "data-zone");
   lightbox();
-  progress();
   parallax();
 })();
