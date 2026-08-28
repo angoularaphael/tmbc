@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": null,
+  "buildCommand": "echo static",
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/disciplines.html",
+      "destination": "/activites.html",
+      "permanent": true
+    }
+  ]
+}
