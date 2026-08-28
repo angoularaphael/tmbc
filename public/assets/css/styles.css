@@ -204,78 +204,22 @@ p { margin: 0 0 1.15em; }
 }
 
 .ring3d {
-  position: relative;
-  height: min(340px, 56vw);
-  perspective: 900px;
-}
-
-.ring3d__stage {
-  position: absolute;
-  inset: 12% 8%;
-  transform-style: preserve-3d;
-  transform: rotateX(58deg) rotateZ(-8deg);
-  animation: ring-idle 9s ease-in-out infinite alternate;
-}
-
-@keyframes ring-idle {
-  from { transform: rotateX(58deg) rotateZ(-8deg) rotateY(-12deg); }
-  to { transform: rotateX(62deg) rotateZ(-4deg) rotateY(14deg); }
-}
-
-.ring3d__canvas {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(#1a1a1a, #0c0c0c);
-  box-shadow:
-    0 30px 50px rgba(0, 0, 0, 0.55),
-    inset 0 0 0 10px #141414,
-    inset 0 0 40px rgba(196, 18, 18, 0.12);
-}
-
-.ring3d__rope {
-  position: absolute;
-  left: 6%;
-  right: 6%;
-  height: 5px;
-  border-radius: 99px;
-  background: linear-gradient(90deg, #6a0c0c, #e11d2e, #6a0c0c);
-  box-shadow: 0 3px 0 #2a0505, 0 8px 16px rgba(196, 18, 18, 0.35);
-  transform: translateZ(18px);
-}
-
-.ring3d__rope--1 { top: 18%; }
-.ring3d__rope--2 { top: 46%; }
-.ring3d__rope--3 { top: 74%; }
-
-.ring3d__post {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: #c4c4c4;
-  box-shadow: 0 0 0 3px #8a0b0b, 0 8px 16px rgba(0, 0, 0, 0.4);
-  transform: translateZ(22px);
-}
-
-.ring3d__post--nw { top: 8%; left: 8%; }
-.ring3d__post--ne { top: 8%; right: 8%; }
-.ring3d__post--sw { bottom: 8%; left: 8%; }
-.ring3d__post--se { bottom: 8%; right: 8%; }
-
-html.js .ring3d__stage { animation: none; }
-
-.ring3d__cap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
   margin: 0;
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--mute);
+  display: grid;
+  place-items: center;
+}
+
+.ring3d img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  animation: ring-float 8s ease-in-out infinite alternate;
+}
+
+@keyframes ring-float {
+  from { transform: translateY(4px); }
+  to { transform: translateY(-10px); }
 }
 
 .site-header {
@@ -1974,8 +1918,7 @@ body.bag-open .float-dock { visibility: hidden; pointer-events: none; }
   .fx-dust,
   .fx-gong,
   .hero__ropes,
-  .floor3d,
-  .ring3d { display: none; }
+  .floor3d { display: none; }
   .bag-trap__mini b,
   .bag-inline__dummy { animation: none; }
 }

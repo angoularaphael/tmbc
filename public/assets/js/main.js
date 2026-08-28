@@ -241,18 +241,6 @@
     });
   };
 
-  const ringSpin = () => {
-    const ring = $("[data-ring3d] .ring3d__stage");
-    if (!ring || reduce) return;
-    const tick = () => {
-      const t = performance.now() / 3800;
-      const s = window.scrollY / 800;
-      ring.style.transform = `rotateX(${58 + Math.sin(t) * 5}deg) rotateZ(${-8 + Math.cos(t) * 4}deg) rotateY(${-18 + Math.sin(t + s) * 24}deg)`;
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  };
-
   const filterSet = (rootSel, itemSel, attr) => {
     const root = $(rootSel);
     if (!root) return;
@@ -446,7 +434,6 @@
   magnets();
   dust();
   guardNav();
-  ringSpin();
   filterSet("#plan-filters", ".plan-day li", "data-disc");
   filterSet("#gal-filters", ".gallery-grid .shot", "data-zone");
   lightbox();
