@@ -778,11 +778,32 @@ html.fx .is-in .frame img {
 @media (min-width: 860px) { .essai { grid-template-columns: 1.4fr auto; } }
 
 .quotes {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.7rem;
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.45rem;
+  scrollbar-width: none;
 }
-@media (min-width: 800px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+.quotes::-webkit-scrollbar { display: none; }
+.quotes > blockquote {
+  flex: 0 0 min(78vw, 19.5rem);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+@media (min-width: 800px) {
+  .quotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+    gap: 0.7rem;
+  }
+  .quotes > blockquote { flex: none; }
+}
 blockquote {
   margin: 0;
   padding: 1.4rem;
