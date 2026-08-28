@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TMBC — Toulouse Minimes Boxing Club | Salle de boxe à Toulouse</title>
+  <meta name="description" content="Association TMBC, salle de boxe anglaise à Toulouse Minimes. 12 rue de Fenouillet. Cours tous niveaux, Boxing Lady, école dès 3 ans. Essai 10 €, offre 29 €." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="theme-color" content="#07090d" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="is-home">
+  <a class="skip" href="#main">Aller au contenu</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="fist" aria-hidden="true"></div>
+  <div class="fist-trail" aria-hidden="true"></div>
+  <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
+  <div class="hud hud--tl">TMBC · MINIMES<strong data-round>01</strong></div>
+  <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
+  <div class="between" aria-hidden="true">
+    <div class="between__card">
+      <p class="between__k">Between rounds</p>
+      <p class="between__t">TMBC</p>
+    </div>
+  </div>
+  <div class="boot" aria-hidden="true"><i class="boot__ring"></i><i class="boot__star"></i></div>
+  <canvas id="fx-dust" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
+    <nav class="nav" id="nav">
+      <a class="is-current" href="index.html">Accueil</a>
+      <a href="club.html">Le club</a>
+      <a href="disciplines.html">Disciplines</a>
+      <a href="planning.html">Planning</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" data-round-id="01" aria-label="Toulouse Minimes Boxing Club">
+      <div class="hero__layer hero__layer--gym" role="img" aria-label="Visuel TMBC : boxeur, salle et marque Toulouse Minimes Boxing Center"></div>
+      <div class="hero__layer hero__layer--boxer" aria-hidden="true"></div>
+      <div class="hero__vignette"></div>
+      <div class="hero__bar">
+        <div class="wrap">
+          <p class="hero__meta">Association sportive · Toulouse Minimes<br /><b>12 rue de Fenouillet · 31200</b></p>
+          <p class="btn-row">
+            <a class="btn" href="https://boutique.boxingcenter.fr/offre/29">Je prends 29 €</a>
+            <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/seance-essai">Essai 10 €</a>
+            <a class="btn btn--ghost" href="club.html">Entrer dans le club</a>
+          </p>
+        </div>
+      </div>
+      <p class="scroll-cue">Descendre le ring<i></i></p>
+    </section>
+
+    <section class="section" data-round-id="02">
+      <div class="wrap weigh" data-stagger>
+        <article data-combo="jab"><b><span data-count="500">0</span><em> m²</em></b><span>de plateau</span></article>
+        <article data-combo="cross"><b><span data-count="4">0</span></b><span>coachs diplômés</span></article>
+        <article data-combo="hook"><b><span data-count="12">0</span></b><span>sacs lourds</span></article>
+        <article data-combo="uppercut"><b>3<em> min</em></b><span>du métro B</span></article>
+      </div>
+    </section>
+
+    <section class="section section--navy" data-round-id="03">
+      <div class="wrap split">
+        <div data-combo="jab">
+          <p class="kicker">L’association</p>
+          <h1 class="display" data-punch>Pas un fitness. Un club.</h1>
+          <p class="lede">Le Toulouse Minimes Boxing Club est l’association de la salle historique des Minimes — première salle du réseau Boxing Center. On y vient pour le geste, pas pour le miroir.</p>
+          <p class="btn-row" style="margin-top:28px">
+            <a class="btn" href="club.html">L’histoire TMBC</a>
+            <a class="btn btn--ghost" href="disciplines.html">Les 9 disciplines</a>
+          </p>
+        </div>
+        <div class="shot" data-combo="cross">
+          <img src="assets/media/salle-plongee-1200.webp" alt="Vue plongeante sur le plateau de boxe, sacs alignés sous la verrière" width="1200" height="800" />
+          <span class="tape">Le plateau</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-round-id="04">
+      <div class="wrap">
+        <p class="kicker" data-combo="jab">Portes d’entrée</p>
+        <h2 class="display" data-combo="jab" data-punch>Trouvez votre round.</h2>
+        <div class="disc-grid" data-stagger style="margin-top:32px">
+          <a class="disc magnet" href="disciplines.html#anglaise" data-combo="jab">
+            <img src="assets/media/cours-assaut-1200.webp" alt="Cours de boxe anglaise" width="1200" height="800" />
+            <div class="disc__body"><span class="disc__n">01</span><h3>Boxe anglaise</h3><p>La spécialité maison. Midi et soir, tous niveaux. Gants prêtés le temps de l’essai.</p></div>
+          </a>
+          <a class="disc magnet" href="disciplines.html#lady" data-combo="cross">
+            <img src="assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady" width="1200" height="800" />
+            <div class="disc__body"><span class="disc__n">02</span><h3>Boxing Lady</h3><p>100 % féminin. Lundi et mercredi 18h30. Un vrai cours, pas une version allégée.</p></div>
+          </a>
+          <a class="disc magnet" href="disciplines.html#educative" data-combo="hook">
+            <img src="assets/media/ecole-medailles-1200.webp" alt="École de boxe, jeunes médaillées" width="1200" height="800" />
+            <div class="disc__body"><span class="disc__n">03</span><h3>École dès 3 ans</h3><p>Baby Boxe, éducative, ados. Le respect avant le crochet. Aucun coup porté chez les petits.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--stripe" data-round-id="05">
+      <div class="wrap split">
+        <div class="shot" data-combo="jab">
+          <img src="assets/media/coach-garde-v2-1200.webp" alt="Un coach corrige la garde d’un boxeur" width="1200" height="800" />
+          <span class="tape">Dès la première</span>
+        </div>
+        <div data-combo="cross">
+          <p class="kicker">Première séance</p>
+          <h2 class="display" data-punch>Jamais mis un gant ?</h2>
+          <ul class="list-check">
+            <li>Tenue de sport. On prête gants, casque, protections.</li>
+            <li>Un coach place vos pieds et votre garde dès le premier round.</li>
+            <li>Personne ne vous jette sur le ring. L’opposition, c’est vous qui la demandez.</li>
+            <li>Essai 10 €. Offre rentrée : 4 semaines illimitées à 29 € par personne.</li>
+          </ul>
+          <p class="btn-row" style="margin-top:24px">
+            <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Tester · 10 €</a>
+            <a class="btn btn--ghost" href="planning.html">Voir le planning</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-round-id="06">
+      <div class="wrap">
+        <p class="kicker" data-combo="jab">Le vestiaire parle</p>
+        <h2 class="display" data-combo="jab" data-punch>Ce qu’en disent les adhérents.</h2>
+        <div class="quotes" data-stagger style="margin-top:32px">
+          <blockquote data-combo="jab">
+            <p>« Je n’avais jamais fait de sport de combat. En trois séances, j’avais compris la garde et le direct. Personne ne se moque. »</p>
+            <footer>Thomas L. · Boxe anglaise loisir</footer>
+          </blockquote>
+          <blockquote data-combo="cross">
+            <p>« Le cours Lady est ce qui m’a fait rester. On y travaille sérieusement, sans se sentir jugée, et la coach corrige vraiment chaque geste. »</p>
+            <footer>Sarah M. · Boxing Lady</footer>
+          </blockquote>
+          <blockquote data-combo="hook">
+            <p>« Mon fils y va depuis ses 6 ans. Il a gagné en confiance et en calme — et il n’a jamais pris un coup qu’il n’avait pas choisi. »</p>
+            <footer>Karim B. · Parent, boxe éducative</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--navy" data-round-id="07">
+      <div class="wrap cta-band" data-combo="uppercut">
+        <div>
+          <p class="kicker">Votre place vous attend</p>
+          <h2 class="display" style="font-size:clamp(2rem,5vw,3.6rem)">Quatre semaines. Toutes disciplines. 29 €.</h2>
+          <p class="lede">Sans engagement. Matériel prêté le temps de vous équiper. Ouvert lundi–samedi, 10h–21h30.</p>
+        </div>
+        <p class="btn-row">
+          <a class="btn" href="https://boutique.boxingcenter.fr/offre/29">Je profite · 29 €</a>
+          <a class="btn btn--ghost" href="contact.html">Venir à la salle</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. Salle historique du réseau Boxing Center.</p>
+      </div>
+      <div>
+        <p class="kicker">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="kicker">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="kicker">Club</p>
+        <p><a href="club.html">Le club</a><br /><a href="planning.html">Planning & tarifs</a><br /><a href="galerie.html">Galerie</a></p>
+      </div>
+    </div>
+    <div class="wrap legal">
+      <span>toulouse-minimes-boxing-club.fr · maquette</span>
+      <span>Lun–sam 10h–21h30 · GPS 43.6256, 1.4309</span>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
