@@ -33,7 +33,7 @@ export const NAV = [
 ];
 
 export const SALLES = [
-  { name: "Minimes", tag: "Le berceau", url: "https://boxe-toulouse.com/" },
+  { name: "Minimes", tag: "Le club historique", url: "https://boxe-toulouse.com/" },
   { name: "Portet-sur-Garonne", tag: "Le vaisseau amiral", url: "https://boxingcenter.fr/salle-de-sport-toulouse/salle-de-boxe-portet-sur-garonne-2/" },
   { name: "États-Unis", tag: "Le colosse", url: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-etats-unis/" },
   { name: "Saint-Cyprien", tag: "La rive gauche", url: "https://boxingcenter.fr/salle-de-sport-toulouse/boxing-center-salle-de-toulouse-saint-cyprien/" },

@@ -4,8 +4,10 @@ import { SITE, LINKS, NAV, SALLES } from "../data/site.js";
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div>
-      <p class="brand__mark">{SITE.short}</p>
-      <p class="foot-lead">{SITE.name} — association de boxe anglaise, berceau du réseau Boxing Center.</p>
+      <a class="brand" href="/">
+        <img class="brand__logo" src="/assets/img/logo-tmbc.png" width="1423" height="545" alt="TMBC — Toulouse Minimes Boxing Club" />
+      </a>
+      <p class="foot-lead">Club de boxe anglaise aux Minimes. Essai 10 €, 4 semaines à 29 €, saison à 259 €.</p>
       <p>{SITE.address}<br>{SITE.zip} {SITE.city}<br>{SITE.hours} · dimanche fermé</p>
       <p class="btn-row foot-cta">
         <a class="btn" href={LINKS.rentree}><span>4 semaines · 29 €</span></a>

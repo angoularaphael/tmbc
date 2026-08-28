@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#0a0a0a"/>
-  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#c41212" stroke-width="3"/>
-  <text x="32" y="42" text-anchor="middle" fill="#efe8dc" font-family="Arial Black, Impact, sans-serif" font-size="18" font-weight="900" letter-spacing="1">TMBC</text>
+  <rect width="64" height="64" fill="#0e141c"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="15" font-weight="900" letter-spacing="-0.5">
+    <tspan fill="#1c2430">T</tspan><tspan fill="#c61616">M</tspan><tspan fill="#d8dee6">B</tspan><tspan fill="#c61616">C</tspan>
+  </text>
 </svg>
