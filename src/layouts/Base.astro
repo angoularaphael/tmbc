@@ -71,7 +71,7 @@ function isCurrent(href) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3" />
   {preloadHero && <link rel="preload" as="image" href="/assets/img/hero.png" fetchpriority="high" />}
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
@@ -95,10 +95,14 @@ function isCurrent(href) {
   <div class="wipe" aria-hidden="true"><i></i><i></i></div>
   <header class="nav" id="nav">
     <a class="nav__brand" href="/"><img class="nav__logo" src="/assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <nav class="nav__links">
-      {nav.map((item) => (
-        <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
-      ))}
+    <nav class="nav__links" aria-label="Pages du club">
+      <ul>
+        {nav.map((item) => (
+          <li class={item.href === '/' ? 'nav__home' : undefined}>
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
     </nav>
     <div class="nav__right">
       <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>

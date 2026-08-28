@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://toulouse-minimes-boxing-club.fr',
   trailingSlash: 'never',
-  compressHTML: true,
+  compressHTML: false,
   build: { format: 'directory' },
   integrations: [
     sitemap({
