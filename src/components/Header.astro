@@ -3,13 +3,15 @@ import { NAV, LINKS, SITE } from "../data/site.js";
 const { current = "home" } = Astro.props;
 ---
 <header class="site-header">
-  {current !== "home" && (
-    <button class="back-page" type="button" data-back aria-label="Retour à la page précédente">← <em>Retour</em></button>
-  )}
-  <a class="brand" href="/">
-    <span class="brand__mark">{SITE.short}</span>
-    <span class="brand__meta">Toulouse Minimes<br>Boxing Club</span>
-  </a>
+  <div class="header__lead">
+    {current !== "home" && (
+      <button class="back-page" type="button" data-back aria-label="Retour à la page précédente">← <em>Retour</em></button>
+    )}
+    <a class="brand" href="/">
+      <span class="brand__mark">{SITE.short}</span>
+      <span class="brand__meta">Toulouse Minimes<br>Boxing Club</span>
+    </a>
+  </div>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
   <nav class="nav" id="nav">
     {NAV.map((item) => (

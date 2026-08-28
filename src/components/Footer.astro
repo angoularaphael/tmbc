@@ -6,8 +6,7 @@ import { SITE, LINKS, NAV, SALLES } from "../data/site.js";
     <div>
       <p class="brand__mark">{SITE.short}</p>
       <p class="foot-lead">{SITE.name} — association de boxe anglaise, berceau du réseau Boxing Center.</p>
-      <p>{SITE.address}<br>{SITE.zip} {SITE.city}</p>
-      <p>{SITE.hours} · dimanche fermé</p>
+      <p>{SITE.address}<br>{SITE.zip} {SITE.city}<br>{SITE.hours} · dimanche fermé</p>
       <p class="btn-row foot-cta">
         <a class="btn" href={LINKS.rentree}><span>4 semaines · 29 €</span></a>
         <a class="btn btn--ghost" href={LINKS.saison}><span>Saison · 259 €</span></a>
@@ -31,16 +30,6 @@ import { SITE, LINKS, NAV, SALLES } from "../data/site.js";
         <li><a href={LINKS.saison} target="_blank" rel="noopener">Saison 12 mois · 259 €</a></li>
         <li><a href={LINKS.essai} target="_blank" rel="noopener">Séance d’essai · 10 €</a></li>
         <li><a href={LINKS.abos} target="_blank" rel="noopener">Abonnements & école</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="foot-title">Réseau</p>
-      <ul class="foot-list">
-        <li><a href="https://boxingcenter.fr/salle-de-sport-toulouse/" target="_blank" rel="noopener">Toutes les salles</a></li>
-        {SALLES.map((salle) => (
-          <li><a href={salle.url} target="_blank" rel="noopener">{salle.name}</a></li>
-        ))}
       </ul>
     </div>
 

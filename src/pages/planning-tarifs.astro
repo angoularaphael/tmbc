@@ -114,13 +114,11 @@ import { KEYWORDS } from "../data/site.js";
       </div>
     </section>
 
-    <BagInline />
-
     <section class="section section--steel" data-round-id="03" aria-labelledby="t-tarifs">
       <div class="wrap">
         <p class="kicker" data-reveal>Les cartons des juges</p>
         <h2 id="t-tarifs" class="display" data-reveal>Des offres lisibles.</h2>
-        <div class="price-row" data-stagger style="margin-top:32px">
+        <div class="price-row price-row--lead" data-stagger style="margin-top:32px">
           <article class="price is-hot magnet" data-reveal>
             <p class="kicker">Rentrée</p>
             <p><s>44 €</s></p>
@@ -135,6 +133,8 @@ import { KEYWORDS } from "../data/site.js";
             <p>12 mois, 4× sans frais, accès aux 5 clubs du réseau.</p>
             <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/offre/259"><span>La saison</span></a>
           </article>
+        </div>
+        <div class="price-row price-row--side" data-stagger>
           <article class="price magnet" data-reveal>
             <p class="kicker">École</p>
             <b>295 €</b>
@@ -151,6 +151,8 @@ import { KEYWORDS } from "../data/site.js";
         <p class="note-media" data-reveal>Matériel prêté pour l’essai. Ensuite, chacun apporte ses gants. Badge d’accès 34,99 € TTC sauf offre particulière.</p>
       </div>
     </section>
+
+    <BagInline />
 
     <section class="section seo-local" aria-labelledby="seo-tarifs">
       <div class="wrap prose">

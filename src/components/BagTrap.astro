@@ -1,14 +1,15 @@
 ---
 import { LINKS } from "../data/site.js";
 ---
-<button class="to-top" type="button" data-totop hidden aria-label="Retour en haut de page">Haut</button>
-
-<aside class="bag-trap" id="bag-trap">
+<div class="float-dock">
   <button class="bag-trap__fab" type="button" data-bag-open aria-expanded="false" aria-controls="bag-stage">
     <span class="bag-trap__mini" aria-hidden="true"><i></i><b></b></span>
     <span>3 coups</span>
   </button>
+  <button class="to-top" type="button" data-totop hidden aria-label="Retour en haut de page">Haut</button>
+</div>
 
+<aside class="bag-trap" id="bag-trap">
   <div class="bag-trap__overlay" id="bag-stage" hidden>
     <div class="bag-trap__box" role="dialog" aria-labelledby="bag-title" aria-modal="true">
       <button class="bag-trap__close" type="button" data-bag-close aria-label="Fermer">×</button>

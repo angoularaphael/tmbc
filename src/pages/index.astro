@@ -1,6 +1,5 @@
 ---
 import Base from "../layouts/Base.astro";
-import BagInline from "../components/BagInline.astro";
 import { LINKS, KEYWORDS } from "../data/site.js";
 ---
 <Base
@@ -18,8 +17,10 @@ import { LINKS, KEYWORDS } from "../data/site.js";
       <div class="hero__veil" aria-hidden="true"></div>
       <div class="hero__bar">
         <div class="hero__ropes" aria-hidden="true"><i></i><i></i><i></i></div>
-        <h1 class="hero__title">Club de boxe à Toulouse Minimes</h1>
-        <p class="hero__place">12 rue de Fenouillet · métro B Barrière de Paris · 3 min</p>
+        <div class="hero__copy">
+          <h1 class="hero__title">Club de boxe à Toulouse Minimes</h1>
+          <p class="hero__place">12 rue de Fenouillet · métro B Barrière de Paris · 3 min</p>
+        </div>
         <div class="hero__actions">
           <a class="btn bell" href={LINKS.rentree}><span>4 semaines · 29 €</span></a>
           <a class="btn btn--ghost" href={LINKS.saison}><span>Saison · 259 €</span></a>
@@ -35,19 +36,17 @@ import { LINKS, KEYWORDS } from "../data/site.js";
           <p class="kicker">Le manifeste</p>
           <h2 id="t-asso" class="display">Pas un plateau de fitness.</h2>
           <p class="lede">TMBC — Toulouse Minimes Boxing Club — est un club de boxe à Toulouse, une association de boxe anglaise aux Minimes. On y apprend le geste juste, sur de vrais rings, avec des coachs diplômés. Le premier cours suffit à comprendre pourquoi on revient.</p>
+          <p>Ouverte en 2016, la salle des Minimes est le berceau du réseau Boxing Center. On y forme des débutants complets et des compétiteurs. Johnson Suffo et Salomon Kitoko y sont passés professionnels. Une trentaine d’amateurs ont appris ici avant de monter sur un gala.</p>
+          <p class="muted">12 rue de Fenouillet, 31200 Toulouse · métro B Barrière de Paris, 3 minutes à pied · ouvert lundi–samedi 10h–21h30.</p>
+          <p class="btn-row">
+            <a class="btn" href="/club/"><span>L’association</span></a>
+            <a class="btn btn--ghost" href="/contact/"><span>Venir à la salle</span></a>
+          </p>
         </div>
         <div class="card3d magnet" data-reveal>
           <img src="/assets/media/salle-plongee-1200.webp" alt="Salle de boxe à Toulouse Minimes : plateau, sacs et charpente du club TMBC" width="1200" height="800" />
           <span class="card3d__edge" aria-hidden="true"></span>
         </div>
-      </div>
-      <div class="wrap stack" data-reveal>
-        <p>Ouverte en 2016, la salle des Minimes est le berceau du réseau Boxing Center. On y forme des débutants complets et des compétiteurs. Johnson Suffo et Salomon Kitoko y sont passés professionnels. Une trentaine d’amateurs ont appris ici avant de monter sur un gala.</p>
-        <p class="muted">12 rue de Fenouillet, 31200 Toulouse · métro B Barrière de Paris, 3 minutes à pied · ouvert lundi–samedi 10h–21h30.</p>
-        <p class="btn-row">
-          <a class="btn" href="/club/"><span>L’association</span></a>
-          <a class="btn btn--ghost" href="/contact/"><span>Venir à la salle</span></a>
-        </p>
       </div>
     </section>
 
@@ -169,6 +168,31 @@ import { LINKS, KEYWORDS } from "../data/site.js";
       </div>
     </section>
 
+    <section class="gong-cta gong-cta--ring" data-round-id="08" aria-label="Rejoindre le club">
+      <img src="/assets/media/ring-cours-rouge-1200.webp" alt="" width="1200" height="800" loading="lazy" />
+      <div class="wrap gong-cta__grid">
+        <div data-reveal>
+          <p class="kicker">Prêt à commencer</p>
+          <h2 class="display">Votre place vous <span class="tint">attend.</span></h2>
+          <p class="lede">Quatre semaines illimitées à 29 € par personne — sans engagement. La saison à 259 €. Ou une séance d’essai à 10 €, matériel prêté.</p>
+          <div class="btn-row">
+            <a class="btn btn--lg bell" href={LINKS.rentree}><span>Je prends 29 €</span></a>
+            <a class="btn btn--ghost btn--lg" href={LINKS.saison}><span>Saison · 259 €</span></a>
+            <a class="btn btn--ghost btn--lg" href={LINKS.essai}><span>Tester · 10 €</span></a>
+          </div>
+        </div>
+        <div class="gong-cta__bag" data-reveal>
+          <p class="kicker">Le sac</p>
+          <p class="gong-cta__bag-title">Trois coups. Le juge tranche 29 € ou 259 €.</p>
+          <div class="bag-inline__preview" aria-hidden="true">
+            <span class="heavy-bag__chain"></span>
+            <span class="heavy-bag__body bag-inline__dummy"><span>SAC</span></span>
+          </div>
+          <button class="btn bell" type="button" data-bag-open><span>Frapper le sac</span></button>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--steel seo-local" aria-labelledby="seo-title">
       <div class="wrap prose">
         <h2 id="seo-title">Club de boxe à Toulouse — salle de boxe anglaise aux Minimes (31200)</h2>
@@ -176,22 +200,6 @@ import { LINKS, KEYWORDS } from "../data/site.js";
         <p>C’est une vraie <strong>salle de boxe à Toulouse nord</strong> : plusieurs rings, douze sacs lourds, prépa à l’étage. On y pratique d’abord la <strong>boxe anglaise à Toulouse</strong> — loisirs et compétition. Le club propose aussi le <strong>Boxing Lady</strong> (cours de boxe femme, lundi et mercredi 18h30), une <strong>école de boxe dès 3 ans</strong> (Baby Boxe, 7/11 ans, ados 12/16), le boxing camp, la boxe pieds-poings, le cardio boxing et le cross training en accès libre.</p>
         <p>Les <strong>cours de boxe à Toulouse</strong> accueillent les débutants complets : aucun niveau demandé, matériel prêté à l’essai. La <strong>séance d’essai est à 10 €</strong>. L’<strong>offre rentrée est à 29 € par personne</strong> pour 4 semaines illimitées. L’abonnement saison est à <strong>259 €</strong> les 12 mois. Horaires : <strong>lundi au samedi, 10h–21h30</strong>. Téléphone : 05 62 24 46 82.</p>
         <p>Le <strong>club de boxe des Minimes</strong> dessert Toulouse nord : Les Minimes, Barrière de Paris, Lalande, Borderouge, Bonnefoy, Sept Deniers, Aucamville et Launaguet. Affiliations FFBoxe, FFKMDA et FMMAF. Voir le <a href="/planning-tarifs/">planning et les tarifs</a>, les <a href="/disciplines/">disciplines</a> ou <a href="/contact/">l’accès à la salle</a>.</p>
-      </div>
-    </section>
-
-    <BagInline />
-
-    <section class="gong-cta" data-round-id="08" aria-label="Rejoindre le club">
-      <img src="/assets/media/ring-cours-rouge-1200.webp" alt="" width="1200" height="800" loading="lazy" />
-      <div class="wrap" data-reveal>
-        <p class="kicker">Prêt à commencer</p>
-        <h2 class="display">Votre place vous <span class="tint">attend.</span></h2>
-        <p class="lede lede--center">Quatre semaines illimitées à 29 € par personne — sans engagement. La saison à 259 €. Ou une séance d’essai à 10 €, matériel prêté.</p>
-        <div class="btn-row">
-          <a class="btn btn--lg bell" href={LINKS.rentree}><span>Je prends 29 €</span></a>
-          <a class="btn btn--ghost btn--lg" href={LINKS.saison}><span>Saison · 259 €</span></a>
-          <a class="btn btn--ghost btn--lg" href={LINKS.essai}><span>Tester · 10 €</span></a>
-        </div>
       </div>
     </section>
   </main>
