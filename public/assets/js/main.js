@@ -310,13 +310,30 @@
     bar.className = "dock";
     bar.setAttribute("role", "region");
     bar.setAttribute("aria-label", "Inscription");
+    const prices = ["29&nbsp;€", "259&nbsp;€"];
     bar.innerHTML = `
-      <p class="dock__copy">Offre rentrée<span>29 € / 4 semaines · ou saison 259 €</span></p>
+      <p class="dock__copy"><span class="dock__live"><i></i>Tirage</span>Offre rentrée<span>4 semaines ou saison</span></p>
+      <div class="dock__reel" aria-hidden="true"><span class="dock__mark"></span><div class="dock__strip">${Array.from({ length: 8 }, (_, i) => `<div class="dock__row">${prices[i % 2]}</div>`).join("")}</div></div>
       <p class="dock__btns">
-        <a class="btn btn--primary" href="${offre29}">29 €</a>
-        <a class="btn btn--ghost" href="${offre259}">259 €</a>
+        <a class="btn btn--primary" data-dock-29 href="${offre29}">29 €</a>
+        <a class="btn btn--ghost" data-dock-259 href="${offre259}">259 €</a>
       </p>`;
     document.body.appendChild(bar);
+    const btn29 = $("[data-dock-29]", bar);
+    const btn259 = $("[data-dock-259]", bar);
+    const hotSwap = () => {
+      if (reduce) return;
+      const hot29 = Math.random() < 0.5;
+      btn29.classList.toggle("btn--primary", hot29);
+      btn29.classList.toggle("btn--ghost", !hot29);
+      btn29.classList.toggle("is-hot", hot29);
+      btn29.classList.toggle("is-dim", !hot29);
+      btn259.classList.toggle("btn--primary", !hot29);
+      btn259.classList.toggle("btn--ghost", hot29);
+      btn259.classList.toggle("is-hot", !hot29);
+      btn259.classList.toggle("is-dim", hot29);
+    };
+    if (!reduce) setInterval(hotSwap, 2800);
     const show = () => {
       const drawOpen = !!document.querySelector(".draw.is-open");
       const on = !drawOpen && (window.scrollY > 280 || document.body.classList.contains("dock-ready"));
