@@ -4,105 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Les coachs — TMBC | Mehdi, Chloé, David, Clément</title>
-  <meta name="description" content="Coachs diplômés TMBC : Mehdi (anglaise, éducative, compétiteurs), Chloé (Boxing Lady), David (Lady et pieds-poings), Clément (boxing camp)." />
+  <meta name="description" content="Coachs diplômés TMBC : Mehdi, Chloé, David, Clément. Encadrement dès la première séance." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07080a" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="fist" aria-hidden="true"></div>
-  <div class="fist-trail" aria-hidden="true"></div>
-  <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
-  <div class="hud hud--tl">TMBC · COACHS<strong data-round>01</strong></div>
-  <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
-
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
-    <nav class="nav" id="nav">
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <nav class="nav__links">
       <a href="index.html">Accueil</a>
       <a href="club.html">Le club</a>
       <a href="activites.html">Activités</a>
-      <a class="is-current" href="coachs.html">Coachs</a>
-      <a href="galerie.html">Galerie</a>
+      <a href="coachs.html" aria-current="page">Coachs</a>
       <a href="planning.html">Planning</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="contact.html">Contact</a>
+      <a href="galerie.html">Galerie</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
+    <div class="nav__right">
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </header>
-
+  <div class="menu" id="menu">
+    <div></div>
+    <nav class="menu__nav">
+      <a class="menu__link" href="index.html">Accueil</a>
+      <a class="menu__link" href="club.html">Le club</a>
+      <a class="menu__link" href="activites.html">Activités</a>
+      <a class="menu__link" href="coachs.html">Coachs</a>
+      <a class="menu__link" href="planning.html">Planning</a>
+      <a class="menu__link" href="tarifs.html">Tarifs</a>
+      <a class="menu__link" href="contact.html">Contact</a>
+      <a class="menu__link" href="galerie.html">Galerie</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    </div>
+  </div>
   <main id="main">
-    <header class="page-hero" data-round-id="01">
+    <header class="phero">
       <img src="assets/media/coach-garde-v2-1200.webp" alt="Un coach corrige la garde d’un boxeur" width="1200" height="800" />
-      <div class="wrap" data-combo="uppercut">
-        <p class="kicker">L’encadrement</p>
-        <h1 class="display" data-punch>Un coach dès la première.</h1>
-        <p class="lede">Personne ne vous laisse frapper dans le vide. Le premier jour, un coach vient placer vos pieds, vos poings et votre garde. Diplômés d’État, licenciés FFBoxe.</p>
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">L’encadrement</p>
+        <h1 class="display">Un coach dès la première.</h1>
+        <p class="lead">Diplômés d’État, licenciés FFBoxe. Le premier jour, un coach place vos pieds, vos poings et votre garde.</p>
       </div>
     </header>
-
-    <section class="section" data-round-id="02">
+    <section class="section">
       <div class="wrap split">
-        <article class="coach magnet" data-combo="jab" style="padding:0">
-          <img src="assets/media/coach-mehdi.webp" alt="Portrait de Mehdi, coach principal TMBC" width="400" height="500" />
-        </article>
-        <div data-combo="cross">
-          <p class="kicker">Coach principal</p>
-          <h2 class="display">Mehdi</h2>
-          <p>Boxe anglaise, éducative, compétiteurs, Baby Boxe, boxing camp, open sparring. Ancien compétiteur de haut niveau. C’est lui qui tient le fil du club : du premier jab d’un débutant à la prep d’un gala.</p>
+        <div class="frame" data-reveal><img src="assets/media/coach-mehdi.webp" alt="Portrait de Mehdi" width="400" height="500" /></div>
+        <div data-reveal>
+          <p class="eyebrow">Coach principal</p>
+          <h2 class="display" style="font-size:clamp(2.2rem,5vw,4rem)">Mehdi</h2>
+          <p class="lead" style="margin-top:1rem">Boxe anglaise, éducative, compétiteurs, Baby Boxe, boxing camp, open sparring. Du premier jab d’un débutant à la prep d’un gala.</p>
         </div>
       </div>
     </section>
-
-    <section class="section section--navy" data-round-id="03">
+    <section class="section band-tint">
       <div class="wrap">
-        <div class="coach-grid" data-stagger>
-          <article class="coach coach--ghost magnet" data-combo="jab">
-            <h3>Chloé</h3>
-            <p>Boxing Lady. Préparation physique. Encadre le cours 100 % féminin, lundi et mercredi 18h30.</p>
-          </article>
-          <article class="coach coach--ghost magnet" data-combo="cross">
-            <h3>David</h3>
-            <p>Boxing Lady et boxe pieds-poings. Le mercredi soir, c’est son créneau pieds-poings — le seul de la semaine.</p>
-          </article>
-          <article class="coach coach--ghost magnet" data-combo="hook">
-            <h3>Clément</h3>
-            <p>Boxing camp et cross training. La condition physique, sans opposition obligatoire.</p>
-          </article>
-          <article class="coach magnet" data-combo="uppercut">
-            <img src="assets/media/coach-lady-1200.webp" alt="Une coach accompagne une pratiquante" width="1200" height="800" loading="lazy" />
-            <h3>Le staff</h3>
-            <p>Valentin Guth et Johnson interviennent aussi en loisirs / éducative.</p>
-          </article>
+        <div class="coachrow__grid" data-reveal-group>
+          <article class="coachcard"><div class="coachcard__media coachcard__media--tile"><span>C</span></div><div class="coachcard__body"><p class="coachcard__tag">Boxing Lady</p><h3 class="coachcard__name">Chloé</h3><p class="coachcard__role">Lundi et mercredi 18h30</p></div></article>
+          <article class="coachcard"><div class="coachcard__media coachcard__media--tile"><span>D</span></div><div class="coachcard__body"><p class="coachcard__tag">Lady · pieds-poings</p><h3 class="coachcard__name">David</h3><p class="coachcard__role">Mercredi soir, le créneau pieds-poings</p></div></article>
+          <article class="coachcard"><div class="coachcard__media coachcard__media--tile"><span>C</span></div><div class="coachcard__body"><p class="coachcard__tag">Camp</p><h3 class="coachcard__name">Clément</h3><p class="coachcard__role">Boxing camp et cross training</p></div></article>
+          <article class="coachcard"><div class="coachcard__media"><img src="assets/media/coach-lady-1200.webp" alt="Coach et pratiquante" loading="lazy" /></div><div class="coachcard__body"><p class="coachcard__tag">Staff</p><h3 class="coachcard__name">L’équipe</h3><p class="coachcard__role">Valentin Guth et Johnson en loisirs</p></div></article>
         </div>
-        <p class="note" data-reveal style="margin-top:22px">Seul le portrait de Mehdi est publié : les autres coachs n’ont pas de photo attribuée.</p>
+        <p class="note" style="margin-top:1.2rem" data-reveal>Seul le portrait de Mehdi est publié.</p>
       </div>
     </section>
-
-    <section class="section" data-round-id="04">
+    <section class="section">
       <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">Première séance</p>
-          <h2 class="display">Personne ne vous jette sur le <span class="tint">ring.</span></h2>
-          <ul class="list-check">
+        <div data-reveal>
+          <p class="eyebrow">Première séance</p>
+          <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Personne ne vous jette sur le <span class="tint">ring.</span></h2>
+          <ul class="list-check" style="margin-top:1rem">
             <li>Arriver un quart d’heure avant. Dire que c’est une première.</li>
-            <li>Aucun dossier, aucun certificat médical pour l’essai.</li>
+            <li>Aucun dossier, aucun certificat pour l’essai.</li>
             <li>Gants prêtés. Échauffement, garde, jab, sac.</li>
-            <li>Pas de sparring imposé. Pas de test de niveau.</li>
+            <li>Pas de sparring imposé. Rien à signer en sortant.</li>
           </ul>
-          <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai"><span>Essai 10 €</span></a>
+          <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/seance-essai" style="margin-top:1.2rem">Essai 10 €</a>
         </div>
-        <div class="shot develop magnet" data-combo="cross">
-          <img src="assets/media/pattes-ours-1200.webp" alt="Travail aux pattes d’ours" width="1200" height="800" loading="lazy" />
-        </div>
+        <div class="frame" data-reveal><img src="assets/media/pattes-ours-1200.webp" alt="Travail aux pattes d’ours" width="1200" height="800" loading="lazy" /></div>
       </div>
     </section>
   </main>
@@ -110,14 +101,31 @@
   <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
-        <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive.</p>
+        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
+        <p class="sisters">
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Le réseau</a>
+          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Portet</a>
+          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Saint-Cyprien</a>
+        </p>
       </div>
-      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
-      <div><p class="kicker">Contact</p><p><a href="tel:+33562244682">05 62 24 46 82</a></p></div>
-      <div><p class="kicker">Suite</p><p><a href="planning.html">Planning</a></p></div>
+      <div>
+        <p class="eyebrow">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Club</p>
+        <p><a href="club.html">Le club</a><br /><a href="planning.html">Planning</a><br /><a href="tarifs.html">Tarifs</a><br /><a href="galerie.html">Galerie</a></p>
+      </div>
     </div>
-    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30</span></div>
+    <div class="wrap legal">
+      <span>toulouse-minimes-boxing-club.fr · maquette</span>
+      <span>Lun–sam 10h–21h30</span>
+    </div>
   </footer>
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>

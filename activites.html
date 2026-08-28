@@ -8,137 +8,90 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07080a" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="fist" aria-hidden="true"></div>
-  <div class="fist-trail" aria-hidden="true"></div>
-  <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
-  <div class="hud hud--tl">TMBC · ACTIVITÉS<strong data-round>01</strong></div>
-  <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
-
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
-    <nav class="nav" id="nav">
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <nav class="nav__links">
       <a href="index.html">Accueil</a>
       <a href="club.html">Le club</a>
-      <a class="is-current" href="activites.html">Activités</a>
+      <a href="activites.html" aria-current="page">Activités</a>
       <a href="coachs.html">Coachs</a>
-      <a href="galerie.html">Galerie</a>
       <a href="planning.html">Planning</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="contact.html">Contact</a>
+      <a href="galerie.html">Galerie</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
+    <div class="nav__right">
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </header>
-
+  <div class="menu" id="menu">
+    <div></div>
+    <nav class="menu__nav">
+      <a class="menu__link" href="index.html">Accueil</a>
+      <a class="menu__link" href="club.html">Le club</a>
+      <a class="menu__link" href="activites.html">Activités</a>
+      <a class="menu__link" href="coachs.html">Coachs</a>
+      <a class="menu__link" href="planning.html">Planning</a>
+      <a class="menu__link" href="tarifs.html">Tarifs</a>
+      <a class="menu__link" href="contact.html">Contact</a>
+      <a class="menu__link" href="galerie.html">Galerie</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    </div>
+  </div>
   <main id="main">
-    <header class="page-hero" data-round-id="01">
+    <header class="phero">
       <img src="assets/media/ring-principal-1200.webp" alt="Ring principal aux cordes rouges" width="1200" height="800" />
-      <div class="wrap" data-combo="uppercut">
-        <p class="kicker">Neuf portes d’entrée</p>
-        <h1 class="display" data-punch>Choisissez l’impact.</h1>
-        <p class="lede">Cours de boxe à Toulouse Minimes : six disciplines ont un créneau au planning. Trois se pratiquent en accès libre. Aucune n’impose le contact.</p>
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">Neuf portes d’entrée</p>
+        <h1 class="display">Choisissez l’impact.</h1>
+        <p class="lead">Six disciplines ont un créneau au planning. Trois se pratiquent en accès libre. Aucune n’impose le contact.</p>
       </div>
     </header>
-
-    <article class="section" id="anglaise" data-round-id="02">
-      <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">01 · 7 créneaux</p>
-          <h2 class="display">Boxe <span class="tint">anglaise</span></h2>
-          <p>La spécialité maison. Du grand débutant au licencié. Midi 12h40–13h20 (mar, mer, jeu). Soir 19h40–21h00 (lun, mar, jeu, ven). Gants prêtés le temps de l’essai.</p>
-        </div>
-        <div class="shot develop magnet" data-combo="cross">
-          <img src="assets/media/cours-assaut-1200.webp" alt="Cours d’anglaise, travail d’assaut" width="1200" height="800" loading="lazy" />
-        </div>
-      </div>
-    </article>
-
-    <article class="section section--navy" id="competiteurs" data-round-id="03">
-      <div class="wrap split">
-        <div class="shot develop magnet" data-combo="jab">
-          <img src="assets/media/sparring-graff-1200.webp" alt="Sparring encadré" width="1200" height="800" loading="lazy" />
-        </div>
-        <div data-combo="cross">
-          <p class="kicker">02 · 4 créneaux + open</p>
-          <h2 class="display">Compéti<span class="tint">teurs</span></h2>
-          <p>Pour les licenciés, et ceux que le coach juge prêts. 18h00–19h30 lun, mar, jeu, ven. Open sparring samedi 18h30–19h30 — le seul sparring de la semaine, entre licenciés.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="section" id="educative" data-round-id="04">
-      <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">03 · dès 3 ans</p>
-          <h2 class="display">Boxe <span class="tint">éducative</span></h2>
-          <p>Baby Boxe 3/6 samedi 14h15. Enfants 7/11 et ados 12/16 mercredi et samedi. Jeunes compétiteurs 17h00–18h30. Aucun coup porté chez les plus petits : jeu, coordination, règles d’abord.</p>
-        </div>
-        <div class="shot develop magnet" data-combo="cross">
-          <img src="assets/media/ecole-medailles-1200.webp" alt="Jeunes du club après une compétition" width="1200" height="800" loading="lazy" />
-        </div>
-      </div>
-    </article>
-
-    <article class="section section--ink" id="lady" data-round-id="05">
-      <div class="wrap split">
-        <div class="shot develop magnet" data-combo="jab">
-          <img src="assets/media/lady-garde-1200.webp" alt="Boxing Lady, garde face à face" width="1200" height="800" loading="lazy" />
-        </div>
-        <div data-combo="cross">
-          <p class="kicker">04 · 100 % féminin</p>
-          <h2 class="display">Boxing <span class="tint">Lady</span></h2>
-          <p>Lundi et mercredi 18h30–19h30. Sac, technique, cardio. Pas une version allégée : le contenu d’un vrai cours de boxe, encadré par une coach, sans opposition obligatoire.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="section" id="camp" data-round-id="06">
-      <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">05 · 5 créneaux</p>
-          <h2 class="display">Boxing <span class="tint">camp</span></h2>
-          <p>Adultes, tous niveaux, aucune technique exigée. Lun/ven 12h40, mar/jeu 18h30, samedi 11h00. Fondamentaux + prépa. Idéal pour une première si on ne sait rien faire.</p>
-        </div>
-        <div class="shot develop magnet" data-combo="cross">
-          <img src="assets/media/jumps-groupe-1200.webp" alt="Groupe en préparation physique" width="1200" height="800" loading="lazy" />
-        </div>
-      </div>
-    </article>
-
-    <article class="section section--navy" id="pieds" data-round-id="07">
-      <div class="wrap" data-combo="hook">
-        <p class="kicker">06 · 1 créneau</p>
-        <h2 class="display">Pieds-<span class="tint">poings</span></h2>
-        <p class="lede">Mercredi 19h40–21h00. Tous niveaux. Le seul créneau pieds-poings de la semaine.</p>
-      </div>
-    </article>
-
-    <section class="section" data-round-id="08">
+    <article class="section" id="anglaise"><div class="wrap split">
+      <div data-reveal><p class="eyebrow">01 · 7 créneaux</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">Boxe <span class="tint">anglaise</span></h2><p class="lead" style="margin-top:1rem">La spécialité maison. Midi 12h40 (mar, mer, jeu). Soir 19h40 (lun, mar, jeu, ven).</p></div>
+      <div class="frame" data-reveal><img src="assets/media/cours-assaut-1200.webp" alt="Cours d’anglaise" width="1200" height="800" loading="lazy" /></div>
+    </div></article>
+    <article class="section band-tint" id="competiteurs"><div class="wrap split">
+      <div class="frame" data-reveal><img src="assets/media/sparring-graff-1200.webp" alt="Sparring encadré" width="1200" height="800" loading="lazy" /></div>
+      <div data-reveal><p class="eyebrow">02 · licenciés</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">Compéti<span class="tint">teurs</span></h2><p class="lead" style="margin-top:1rem">18h00–19h30 lun, mar, jeu, ven. Open sparring samedi 18h30 — le seul sparring de la semaine.</p></div>
+    </div></article>
+    <article class="section" id="educative"><div class="wrap split">
+      <div data-reveal><p class="eyebrow">03 · dès 3 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">Boxe <span class="tint">éducative</span></h2><p class="lead" style="margin-top:1rem">Baby Boxe 3/6, éducative 7/11, ados 12/16. Aucun coup porté chez les petits.</p></div>
+      <div class="frame" data-reveal><img src="assets/media/ecole-medailles-1200.webp" alt="Jeunes du club" width="1200" height="800" loading="lazy" /></div>
+    </div></article>
+    <article class="section band-tint" id="lady"><div class="wrap split">
+      <div class="frame" data-reveal><img src="assets/media/lady-garde-1200.webp" alt="Boxing Lady" width="1200" height="800" loading="lazy" /></div>
+      <div data-reveal><p class="eyebrow">04 · 100 % féminin</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">Boxing <span class="tint">Lady</span></h2><p class="lead" style="margin-top:1rem">Lundi et mercredi 18h30. Un vrai cours de boxe, pas une version allégée.</p></div>
+    </div></article>
+    <article class="section" id="camp"><div class="wrap split">
+      <div data-reveal><p class="eyebrow">05 · 5 créneaux</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">Boxing <span class="tint">camp</span></h2><p class="lead" style="margin-top:1rem">Aucune technique exigée. Idéal pour une première.</p></div>
+      <div class="frame" data-reveal><img src="assets/media/jumps-groupe-1200.webp" alt="Groupe en préparation physique" width="1200" height="800" loading="lazy" /></div>
+    </div></article>
+    <article class="section band-tint" id="pieds"><div class="wrap" data-reveal>
+      <p class="eyebrow">06 · 1 créneau</p>
+      <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">Pieds-<span class="tint">poings</span></h2>
+      <p class="lead" style="margin-top:1rem">Mercredi 19h40–21h00. Tous niveaux. Le seul créneau de la semaine.</p>
+    </div></article>
+    <section class="section">
       <div class="wrap">
-        <p class="kicker" data-combo="jab">Sans créneau dédié</p>
-        <h2 class="display" data-combo="jab">Le reste se gagne en <span class="tint">accès libre.</span></h2>
-        <div class="disc-grid" data-stagger style="margin-top:28px">
-          <article class="disc magnet" data-combo="jab">
-            <img src="assets/media/pattes-ours-1200.webp" alt="Pattes d’ours" width="1200" height="800" loading="lazy" />
-            <div class="disc__body"><span class="disc__n">07</span><h3>PAOS</h3><p>Tête-à-tête avec le coach, dans le cours d’anglaise. Pas un cours à part.</p></div>
-          </article>
-          <article class="disc magnet" data-combo="cross">
-            <img src="assets/media/cross-rack-1200.webp" alt="Plateau de cross training" width="1200" height="800" loading="lazy" />
-            <div class="disc__body"><span class="disc__n">08</span><h3>Cross training</h3><p>Étage, 10h–12h et 13h20–18h. Gainage, explosivité, zéro contact.</p></div>
-          </article>
-          <article class="disc magnet" data-combo="hook">
-            <img src="assets/media/ballon-vitesse-1200.webp" alt="Travail de vitesse" width="1200" height="800" loading="lazy" />
-            <div class="disc__body"><span class="disc__n">09</span><h3>Cardio boxing</h3><p>Le geste, aucun coup reçu, sur les douze sacs. La version encadrée, c’est le camp.</p></div>
-          </article>
+        <p class="eyebrow" data-reveal>Sans créneau dédié</p>
+        <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Le reste se gagne en <span class="tint">accès libre.</span></h2>
+        <div class="disc-grid" data-reveal-group>
+          <article class="disc"><img src="assets/media/pattes-ours-1200.webp" alt="Pattes d’ours" /><div class="disc__body"><span class="disc__n">07</span><h3>PAOS</h3><p>Dans le cours d’anglaise. Pas un cours à part.</p></div></article>
+          <article class="disc"><img src="assets/media/cross-rack-1200.webp" alt="Cross training" /><div class="disc__body"><span class="disc__n">08</span><h3>Cross training</h3><p>Étage, 10h–12h et 13h20–18h. Zéro contact.</p></div></article>
+          <article class="disc"><img src="assets/media/ballon-vitesse-1200.webp" alt="Cardio boxing" /><div class="disc__body"><span class="disc__n">09</span><h3>Cardio boxing</h3><p>Le geste, aucun coup reçu, sur les douze sacs.</p></div></article>
         </div>
       </div>
     </section>
@@ -147,14 +100,31 @@
   <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
-        <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive.</p>
+        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
+        <p class="sisters">
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Le réseau</a>
+          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Portet</a>
+          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Saint-Cyprien</a>
+        </p>
       </div>
-      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
-      <div><p class="kicker">Contact</p><p><a href="tel:+33562244682">05 62 24 46 82</a></p></div>
-      <div><p class="kicker">Suite</p><p><a href="planning.html">Planning</a><br /><a href="tarifs.html">Tarifs</a></p></div>
+      <div>
+        <p class="eyebrow">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Club</p>
+        <p><a href="club.html">Le club</a><br /><a href="planning.html">Planning</a><br /><a href="tarifs.html">Tarifs</a><br /><a href="galerie.html">Galerie</a></p>
+      </div>
     </div>
-    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30</span></div>
+    <div class="wrap legal">
+      <span>toulouse-minimes-boxing-club.fr · maquette</span>
+      <span>Lun–sam 10h–21h30</span>
+    </div>
   </footer>
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>

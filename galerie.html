@@ -4,55 +4,65 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galerie — TMBC | Photos et vidéo de la salle</title>
-  <meta name="description" content="Galerie TMBC : rings, sacs, Boxing Lady, école, sparring. Photos et clip issus du pool Boxing Center Minimes." />
+  <meta name="description" content="Galerie TMBC : rings, sacs, Boxing Lady, école, sparring. Photos et clip de la salle des Minimes." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07080a" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="fist" aria-hidden="true"></div>
-  <div class="fist-trail" aria-hidden="true"></div>
-  <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
-  <div class="hud hud--tl">TMBC · GALERIE<strong data-round>01</strong></div>
-  <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
-  <div id="lightbox" aria-hidden="true"><img alt="" /></div>
-
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
-    <nav class="nav" id="nav">
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <nav class="nav__links">
       <a href="index.html">Accueil</a>
       <a href="club.html">Le club</a>
       <a href="activites.html">Activités</a>
       <a href="coachs.html">Coachs</a>
-      <a class="is-current" href="galerie.html">Galerie</a>
       <a href="planning.html">Planning</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="contact.html">Contact</a>
+      <a href="galerie.html" aria-current="page">Galerie</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
+    <div class="nav__right">
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </header>
-
+  <div class="menu" id="menu">
+    <div></div>
+    <nav class="menu__nav">
+      <a class="menu__link" href="index.html">Accueil</a>
+      <a class="menu__link" href="club.html">Le club</a>
+      <a class="menu__link" href="activites.html">Activités</a>
+      <a class="menu__link" href="coachs.html">Coachs</a>
+      <a class="menu__link" href="planning.html">Planning</a>
+      <a class="menu__link" href="tarifs.html">Tarifs</a>
+      <a class="menu__link" href="contact.html">Contact</a>
+      <a class="menu__link" href="galerie.html">Galerie</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    </div>
+  </div>
   <main id="main">
-    <header class="page-hero" data-round-id="01">
+    <div id="lightbox" aria-hidden="true"><img alt="" /></div>
+    <header class="phero">
       <img src="assets/media/allee-sacs-1200.webp" alt="Allée des sacs de frappe" width="1200" height="800" />
-      <div class="wrap" data-combo="uppercut">
-        <p class="kicker">En images</p>
-        <h1 class="display" data-punch>La salle, telle qu’elle est.</h1>
-        <p class="lede">Rings, sacs, Lady, école, technique. Cliquez pour agrandir. Le clip se lance tout seul quand il entre dans le cadre.</p>
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">En images</p>
+        <h1 class="display">La salle, telle qu’elle est.</h1>
+        <p class="lead">Rings, sacs, Lady, école, technique. Cliquez pour agrandir.</p>
       </div>
     </header>
-
-    <section class="section" data-round-id="02">
+    <section class="section">
       <div class="wrap">
-        <div class="filters" id="gal-filters" role="toolbar" aria-label="Filtrer la galerie">
+        <div class="filters" id="gal-filters">
           <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">Tout</button>
           <button class="chip" type="button" data-filter="salle" aria-pressed="false">La salle</button>
           <button class="chip" type="button" data-filter="anglaise" aria-pressed="false">Anglaise</button>
@@ -60,52 +70,27 @@
           <button class="chip" type="button" data-filter="ecole" aria-pressed="false">École</button>
           <button class="chip" type="button" data-filter="technique" aria-pressed="false">Technique</button>
         </div>
-        <div class="gallery-grid" data-stagger style="margin-top:28px">
-          <a class="shot thumb develop" data-zone="salle" data-full="assets/media/salle-plongee-1200.webp" href="assets/media/salle-plongee-1200.webp">
-            <img src="assets/media/salle-plongee-1200.webp" alt="Vue plongeante sur le plateau" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="salle" data-full="assets/media/ring-principal-1200.webp" href="assets/media/ring-principal-1200.webp">
-            <img src="assets/media/ring-principal-1200.webp" alt="Ring principal aux cordes rouges" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="salle" data-full="assets/media/allee-sacs-1200.webp" href="assets/media/allee-sacs-1200.webp">
-            <img src="assets/media/allee-sacs-1200.webp" alt="Allée des sacs" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="anglaise" data-full="assets/media/cours-assaut-1200.webp" href="assets/media/cours-assaut-1200.webp">
-            <img src="assets/media/cours-assaut-1200.webp" alt="Cours d’anglaise" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="anglaise" data-full="assets/media/cours-collectif-700.webp" href="assets/media/cours-collectif-700.webp">
-            <img src="assets/media/cours-collectif-700.webp" alt="Cours collectif" width="700" height="700" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="technique" data-full="assets/media/sparring-graff-1200.webp" href="assets/media/sparring-graff-1200.webp">
-            <img src="assets/media/sparring-graff-1200.webp" alt="Sparring encadré" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="lady" data-full="assets/media/lady-garde-1200.webp" href="assets/media/lady-garde-1200.webp">
-            <img src="assets/media/lady-garde-1200.webp" alt="Boxing Lady" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="lady" data-full="assets/media/coach-lady-1200.webp" href="assets/media/coach-lady-1200.webp">
-            <img src="assets/media/coach-lady-1200.webp" alt="Coach et pratiquante Lady" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="ecole" data-full="assets/media/ecole-medailles-1200.webp" href="assets/media/ecole-medailles-1200.webp">
-            <img src="assets/media/ecole-medailles-1200.webp" alt="École de boxe" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="ecole" data-full="assets/media/sparring-ados-700.webp" href="assets/media/sparring-ados-700.webp">
-            <img src="assets/media/sparring-ados-700.webp" alt="Ados en sparring" width="700" height="700" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="technique" data-full="assets/media/pattes-ours-1200.webp" href="assets/media/pattes-ours-1200.webp">
-            <img src="assets/media/pattes-ours-1200.webp" alt="Pattes d’ours" width="1200" height="800" loading="lazy" />
-          </a>
-          <a class="shot thumb develop" data-zone="salle" data-full="assets/media/cross-rack-1200.webp" href="assets/media/cross-rack-1200.webp">
-            <img src="assets/media/cross-rack-1200.webp" alt="Plateau de prépa physique" width="1200" height="800" loading="lazy" />
-          </a>
+        <div class="gallery-grid" style="margin-top:1.6rem">
+          <a class="shot" data-zone="salle" data-full="assets/media/salle-plongee-1200.webp" href="assets/media/salle-plongee-1200.webp"><img src="assets/media/salle-plongee-1200.webp" alt="Vue plongeante" loading="lazy" /></a>
+          <a class="shot" data-zone="salle" data-full="assets/media/ring-principal-1200.webp" href="assets/media/ring-principal-1200.webp"><img src="assets/media/ring-principal-1200.webp" alt="Ring principal" loading="lazy" /></a>
+          <a class="shot" data-zone="salle" data-full="assets/media/allee-sacs-1200.webp" href="assets/media/allee-sacs-1200.webp"><img src="assets/media/allee-sacs-1200.webp" alt="Allée des sacs" loading="lazy" /></a>
+          <a class="shot" data-zone="anglaise" data-full="assets/media/cours-assaut-1200.webp" href="assets/media/cours-assaut-1200.webp"><img src="assets/media/cours-assaut-1200.webp" alt="Cours d’anglaise" loading="lazy" /></a>
+          <a class="shot" data-zone="anglaise" data-full="assets/media/cours-collectif-700.webp" href="assets/media/cours-collectif-700.webp"><img src="assets/media/cours-collectif-700.webp" alt="Cours collectif" loading="lazy" /></a>
+          <a class="shot" data-zone="technique" data-full="assets/media/sparring-graff-1200.webp" href="assets/media/sparring-graff-1200.webp"><img src="assets/media/sparring-graff-1200.webp" alt="Sparring" loading="lazy" /></a>
+          <a class="shot" data-zone="lady" data-full="assets/media/lady-garde-1200.webp" href="assets/media/lady-garde-1200.webp"><img src="assets/media/lady-garde-1200.webp" alt="Boxing Lady" loading="lazy" /></a>
+          <a class="shot" data-zone="lady" data-full="assets/media/coach-lady-1200.webp" href="assets/media/coach-lady-1200.webp"><img src="assets/media/coach-lady-1200.webp" alt="Coach Lady" loading="lazy" /></a>
+          <a class="shot" data-zone="ecole" data-full="assets/media/ecole-medailles-1200.webp" href="assets/media/ecole-medailles-1200.webp"><img src="assets/media/ecole-medailles-1200.webp" alt="École" loading="lazy" /></a>
+          <a class="shot" data-zone="ecole" data-full="assets/media/sparring-ados-700.webp" href="assets/media/sparring-ados-700.webp"><img src="assets/media/sparring-ados-700.webp" alt="Ados" loading="lazy" /></a>
+          <a class="shot" data-zone="technique" data-full="assets/media/pattes-ours-1200.webp" href="assets/media/pattes-ours-1200.webp"><img src="assets/media/pattes-ours-1200.webp" alt="Pattes d’ours" loading="lazy" /></a>
+          <a class="shot" data-zone="salle" data-full="assets/media/cross-rack-1200.webp" href="assets/media/cross-rack-1200.webp"><img src="assets/media/cross-rack-1200.webp" alt="Prépa physique" loading="lazy" /></a>
         </div>
       </div>
     </section>
-
-    <section class="section section--ink" data-round-id="03">
+    <section class="section" style="padding-top:0">
       <div class="wrap">
-        <p class="kicker" data-combo="jab">Le clip</p>
-        <h2 class="display" data-combo="jab">Le round, en <span class="tint">mouvement.</span></h2>
-        <div class="video-pocket shot" data-combo="cross" style="margin-top:24px; aspect-ratio:16/9">
+        <p class="eyebrow" data-reveal>Le clip</p>
+        <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Le round, en <span class="tint">mouvement.</span></h2>
+        <div class="video-pocket" data-reveal style="margin-top:1.4rem">
           <video src="assets/media/clip-sparring.mp4" muted loop playsinline preload="none" poster="assets/media/sparring-graff-1200.webp"></video>
         </div>
       </div>
@@ -115,14 +100,31 @@
   <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
-        <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive.</p>
+        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
+        <p class="sisters">
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Le réseau</a>
+          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Portet</a>
+          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Saint-Cyprien</a>
+        </p>
       </div>
-      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
-      <div><p class="kicker">Contact</p><p><a href="tel:+33562244682">05 62 24 46 82</a></p></div>
-      <div><p class="kicker">Suite</p><p><a href="contact.html">Venir</a></p></div>
+      <div>
+        <p class="eyebrow">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Club</p>
+        <p><a href="club.html">Le club</a><br /><a href="planning.html">Planning</a><br /><a href="tarifs.html">Tarifs</a><br /><a href="galerie.html">Galerie</a></p>
+      </div>
     </div>
-    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Photos du pool Boxing Center</span></div>
+    <div class="wrap legal">
+      <span>toulouse-minimes-boxing-club.fr · maquette</span>
+      <span>Lun–sam 10h–21h30</span>
+    </div>
   </footer>
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>

@@ -4,111 +4,105 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact & accès — TMBC | 12 rue de Fenouillet, Toulouse</title>
-  <meta name="description" content="TMBC, 12 rue de Fenouillet 31200 Toulouse. Métro B Barrière de Paris (3 min). Tél. 05 62 24 46 82. Lun–sam 10h–21h30." />
+  <meta name="description" content="TMBC, 12 rue de Fenouillet 31200 Toulouse. Métro B Barrière de Paris (3 min). Tél. 05 62 24 46 82." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07080a" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="fist" aria-hidden="true"></div>
-  <div class="fist-trail" aria-hidden="true"></div>
-  <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
-  <div class="hud hud--tl">TMBC · CONTACT<strong data-round>01</strong></div>
-  <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
-
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
-    <nav class="nav" id="nav">
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <nav class="nav__links">
       <a href="index.html">Accueil</a>
       <a href="club.html">Le club</a>
       <a href="activites.html">Activités</a>
       <a href="coachs.html">Coachs</a>
-      <a href="galerie.html">Galerie</a>
       <a href="planning.html">Planning</a>
       <a href="tarifs.html">Tarifs</a>
-      <a class="is-current" href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="galerie.html">Galerie</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
+    <div class="nav__right">
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </header>
-
+  <div class="menu" id="menu">
+    <div></div>
+    <nav class="menu__nav">
+      <a class="menu__link" href="index.html">Accueil</a>
+      <a class="menu__link" href="club.html">Le club</a>
+      <a class="menu__link" href="activites.html">Activités</a>
+      <a class="menu__link" href="coachs.html">Coachs</a>
+      <a class="menu__link" href="planning.html">Planning</a>
+      <a class="menu__link" href="tarifs.html">Tarifs</a>
+      <a class="menu__link" href="contact.html">Contact</a>
+      <a class="menu__link" href="galerie.html">Galerie</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    </div>
+  </div>
   <main id="main">
-    <header class="page-hero" data-round-id="01">
+    <header class="phero">
       <img src="assets/media/ring-tmbc-1200.webp" alt="Ring TMBC" width="1200" height="800" />
-      <div class="wrap" data-combo="uppercut">
-        <p class="kicker">Minimes / Barrière de Paris</p>
-        <h1 class="display" data-punch>Trois minutes du métro.</h1>
-        <p class="lede">12 rue de Fenouillet, 31200 Toulouse. Téléphone 05 62 24 46 82. E-mail boxingcenter31@gmail.com.</p>
-        <p class="btn-row" style="margin-top:22px">
-          <a class="btn" href="tel:+33562244682"><span>Appeler la salle</span></a>
-          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=12+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener"><span>Itinéraire</span></a>
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">Minimes / Barrière de Paris</p>
+        <h1 class="display">Trois minutes du métro.</h1>
+        <p class="lead">12 rue de Fenouillet, 31200 Toulouse. 05 62 24 46 82.</p>
+        <p class="btn-row" style="margin-top:1.2rem">
+          <a class="btn btn--primary" href="tel:+33562244682">Appeler la salle</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=12+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener">Itinéraire</a>
         </p>
       </div>
     </header>
-
-    <section class="section" data-round-id="02">
+    <section class="section">
       <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">Accès</p>
+        <div data-reveal>
+          <p class="eyebrow">Accès</p>
           <ul class="list-check">
             <li>Métro ligne B — station Barrière de Paris (3 min à pied)</li>
             <li>Rocade sortie 31, direction Les Minimes</li>
             <li>Bus 70 / 27 — arrêt Minimes-Roquelaine</li>
-            <li>Quartiers : Minimes, Lalande, Borderouge, Bonnefoy, Sept Deniers, Aucamville, Launaguet</li>
+            <li>Minimes, Lalande, Borderouge, Bonnefoy, Sept Deniers, Aucamville, Launaguet</li>
           </ul>
-          <p><strong>Horaires</strong><br />Lundi–samedi 10h00–21h30<br />Dimanche fermé</p>
+          <p style="margin-top:1rem"><strong>Horaires</strong><br />Lundi–samedi 10h00–21h30<br />Dimanche fermé</p>
         </div>
         <iframe class="map-frame" title="Carte — 12 rue de Fenouillet, Toulouse" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=12%20rue%20de%20Fenouillet%2031200%20Toulouse&z=16&output=embed"></iframe>
       </div>
     </section>
-
-    <section class="section section--navy" data-round-id="03">
+    <section class="section band-tint">
       <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">Écrire à la salle</p>
-          <h2 class="display">On vous <span class="tint">rappelle.</span></h2>
-          <form class="form" id="contact-form">
+        <div data-reveal>
+          <p class="eyebrow">Écrire à la salle</p>
+          <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem)">On vous <span class="tint">rappelle.</span></h2>
+          <form class="form" id="contact-form" style="margin-top:1.2rem">
             <label>Prénom <input name="prenom" required autocomplete="given-name" /></label>
             <label>Téléphone <input name="tel" type="tel" required autocomplete="tel" /></label>
             <label>E-mail <input name="email" type="email" required autocomplete="email" /></label>
-            <label>Message <textarea name="msg" rows="4" placeholder="Créneau, niveau, question…"></textarea></label>
-            <button class="btn" type="submit"><span>Envoyer</span></button>
+            <label>Message <textarea name="msg" rows="4"></textarea></label>
+            <button class="btn btn--primary" type="submit">Envoyer</button>
           </form>
           <div class="form-ok" id="form-ok" hidden>
-            <p class="kicker">Message reçu</p>
-            <p>Maquette : le formulaire ne part pas encore. En vrai, appelez le 05 62 24 46 82.</p>
+            <p class="eyebrow">Message reçu</p>
+            <p>Maquette : le formulaire ne part pas encore. Appelez le 05 62 24 46 82.</p>
           </div>
         </div>
-        <div class="faq" data-combo="cross">
-          <p class="kicker">Questions du vestiaire</p>
-          <h2 class="display" style="font-size:clamp(1.8rem,4vw,3rem)">FAQ</h2>
-          <details open>
-            <summary>Je n’ai jamais boxé. Je peux venir ?</summary>
-            <p>Oui. Créneaux débutants, Boxing camp, cardio boxing sans aucun coup reçu. L’essai est à 10 €, matériel prêté.</p>
-          </details>
-          <details>
-            <summary>Quelle est la spécialité de la salle ?</summary>
-            <p>La boxe anglaise. C’est la salle historique du groupe, le berceau de plusieurs boxeurs professionnels et amateurs.</p>
-          </details>
-          <details>
-            <summary>Y a-t-il des cours pour les enfants ?</summary>
-            <p>Oui, dès 3 ans : Baby Boxe 3/6, éducative 7/11, ados 12/16. 250 € l’année pour la Baby Boxe, 295 € au-delà, t-shirt inclus.</p>
-          </details>
-          <details>
-            <summary>Il y a des cours pour les femmes ?</summary>
-            <p>Le Boxing Lady est 100 % féminin : lundi et mercredi 18h30. Tous les autres cours sont mixtes et ouverts.</p>
-          </details>
-          <details>
-            <summary>On m’oblige à sparrer ?</summary>
-            <p>Non. Personne ne monte sur le ring sans l’avoir demandé. Le seul sparring hebdomadaire est l’open sparring du samedi 18h30, entre licenciés compétiteurs.</p>
-          </details>
+        <div class="faq" data-reveal>
+          <p class="eyebrow">Questions du vestiaire</p>
+          <h2 class="display" style="font-size:clamp(1.8rem,4vw,2.8rem)">FAQ</h2>
+          <details open><summary>Je n’ai jamais boxé. Je peux venir ?</summary><p>Oui. Créneaux débutants, Boxing camp, cardio boxing sans coup reçu. Essai 10 €.</p></details>
+          <details><summary>Quelle est la spécialité ?</summary><p>La boxe anglaise. Salle historique du groupe, plusieurs rings dédiés.</p></details>
+          <details><summary>Cours pour les enfants ?</summary><p>Oui, dès 3 ans. Baby Boxe 250 €, éducative 295 €, t-shirt inclus.</p></details>
+          <details><summary>Cours pour les femmes ?</summary><p>Boxing Lady, lundi et mercredi 18h30. Les autres cours sont mixtes.</p></details>
+          <details><summary>On m’oblige à sparrer ?</summary><p>Non. Le seul sparring est l’open du samedi 18h30, entre licenciés.</p></details>
         </div>
       </div>
     </section>
@@ -117,14 +111,31 @@
   <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
-        <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive.</p>
+        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
+        <p class="sisters">
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Le réseau</a>
+          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Portet</a>
+          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Saint-Cyprien</a>
+        </p>
       </div>
-      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
-      <div><p class="kicker">Contact</p><p><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p></div>
-      <div><p class="kicker">GPS</p><p>43.6256, 1.4309</p></div>
+      <div>
+        <p class="eyebrow">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Club</p>
+        <p><a href="club.html">Le club</a><br /><a href="planning.html">Planning</a><br /><a href="tarifs.html">Tarifs</a><br /><a href="galerie.html">Galerie</a></p>
+      </div>
     </div>
-    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30</span></div>
+    <div class="wrap legal">
+      <span>toulouse-minimes-boxing-club.fr · maquette</span>
+      <span>Lun–sam 10h–21h30</span>
+    </div>
   </footer>
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>

@@ -4,116 +4,103 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Le club — TMBC | Toulouse Minimes Boxing Club</title>
-  <meta name="description" content="Histoire de l’association TMBC depuis 2017, salle ouverte en 2016, équipements, affiliations FFBoxe. 12 rue de Fenouillet, Toulouse Minimes." />
+  <meta name="description" content="Histoire de l’association TMBC, salle ouverte en 2016, équipements, affiliations FFBoxe. 12 rue de Fenouillet, Toulouse Minimes." />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#07080a" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f6f3ee" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="fist" aria-hidden="true"></div>
-  <div class="fist-trail" aria-hidden="true"></div>
-  <svg class="ropes" aria-hidden="true"><path /><path /><path /></svg>
-  <div class="hud hud--tl">TMBC · CLUB<strong data-round>01</strong></div>
-  <div class="hud hud--tr">ROUND CLOCK<strong data-clock>03:00</strong></div>
-  <div class="split-gate" aria-hidden="true"><i data-letter="T"></i><i data-letter="M"></i><i data-letter="B"></i><i data-letter="C"></i></div>
-
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/img/logo.jpeg" width="220" height="90" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
-    <nav class="nav" id="nav">
+  <div class="wipe" aria-hidden="true"><i></i><i></i></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html"><img class="nav__logo" src="assets/img/logo.jpeg" width="180" height="74" alt="TMBC — Toulouse Minimes Boxing Club" /></a>
+    <nav class="nav__links">
       <a href="index.html">Accueil</a>
-      <a class="is-current" href="club.html">Le club</a>
+      <a href="club.html" aria-current="page">Le club</a>
       <a href="activites.html">Activités</a>
       <a href="coachs.html">Coachs</a>
-      <a href="galerie.html">Galerie</a>
       <a href="planning.html">Planning</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="contact.html">Contact</a>
+      <a href="galerie.html">Galerie</a>
     </nav>
-    <a class="btn cta-header" href="https://boutique.boxingcenter.fr/offre/29"><span>Offre 29 €</span></a>
+    <div class="nav__right">
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </header>
-
+  <div class="menu" id="menu">
+    <div></div>
+    <nav class="menu__nav">
+      <a class="menu__link" href="index.html">Accueil</a>
+      <a class="menu__link" href="club.html">Le club</a>
+      <a class="menu__link" href="activites.html">Activités</a>
+      <a class="menu__link" href="coachs.html">Coachs</a>
+      <a class="menu__link" href="planning.html">Planning</a>
+      <a class="menu__link" href="tarifs.html">Tarifs</a>
+      <a class="menu__link" href="contact.html">Contact</a>
+      <a class="menu__link" href="galerie.html">Galerie</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Offre 29 €</a>
+    </div>
+  </div>
   <main id="main">
-    <header class="page-hero" data-round-id="01">
+    <header class="phero">
       <img src="assets/media/salle-plongee-1200.webp" alt="Plateau vu de haut, sacs alignés sous la verrière" width="1200" height="800" />
-      <div class="wrap" data-combo="uppercut">
-        <p class="kicker">L’association</p>
-        <h1 class="display" data-punch>Le berceau.</h1>
-        <p class="lede">TMBC — Toulouse Minimes Boxing Club — est l’association de la salle historique de boxe anglaise des Minimes. Première salle du réseau Boxing Center, ouverte en 2016 au 12 rue de Fenouillet : des rings, pas des miroirs.</p>
+      <div class="wrap" data-reveal>
+        <p class="eyebrow">L’association</p>
+        <h1 class="display">Le berceau.</h1>
+        <p class="lead">TMBC est l’association de la salle historique de boxe anglaise des Minimes. Première salle du réseau Boxing Center, ouverte en 2016 au 12 rue de Fenouillet.</p>
       </div>
     </header>
-
-    <section class="section" data-round-id="02">
+    <section class="section">
       <div class="wrap split">
-        <div data-combo="jab">
-          <p class="kicker">Chronologie</p>
-          <h2 class="display">Une salle qui a <span class="tint">fait école.</span></h2>
+        <div data-reveal>
+          <p class="eyebrow">Chronologie</p>
+          <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Une salle qui a <span class="tint">fait école.</span></h2>
         </div>
-        <div class="timeline" data-combo="cross">
-          <article>
-            <p class="kicker">2016</p>
-            <p>Ouverture de la salle au 12 rue de Fenouillet. Concept des salles américaines : accès six jours sur sept, plusieurs rings, boxe anglaise d’abord.</p>
-          </article>
-          <article>
-            <p class="kicker">2017</p>
-            <p>L’association TMBC prend son nom. Le club s’ancre dans le quartier des Minimes — Barrière de Paris.</p>
-          </article>
-          <article>
-            <p class="kicker">2018</p>
-            <p>La boxe éducative et le Boxing Lady décollent. Johnson Suffo et Salomon Kitoko passent professionnels.</p>
-          </article>
-          <article>
-            <p class="kicker">Aujourd’hui</p>
-            <p>Trois boxeurs professionnels et une trentaine d’amateurs formés sur ces rings. Affiliations FFBoxe, FFKMDA, FMMAF.</p>
-          </article>
+        <div class="timeline" data-reveal>
+          <article><p class="eyebrow">2016</p><p>Ouverture au 12 rue de Fenouillet. Accès six jours sur sept, plusieurs rings, boxe anglaise d’abord.</p></article>
+          <article><p class="eyebrow">2017</p><p>L’association TMBC prend son nom. Le club s’ancre aux Minimes — Barrière de Paris.</p></article>
+          <article><p class="eyebrow">2018</p><p>La boxe éducative et le Boxing Lady décollent. Johnson Suffo et Salomon Kitoko passent professionnels.</p></article>
+          <article><p class="eyebrow">Aujourd’hui</p><p>Trois boxeurs professionnels et une trentaine d’amateurs formés. Affiliations FFBoxe, FFKMDA, FMMAF.</p></article>
         </div>
       </div>
     </section>
-
-    <section class="section section--navy" data-round-id="03">
+    <section class="section band-tint">
       <div class="wrap">
-        <p class="kicker" data-combo="jab">Le plateau</p>
-        <h2 class="display" data-combo="jab">Ce que vous touchez <span class="tint">en arrivant.</span></h2>
-        <ul class="equip" data-stagger>
-          <li data-combo="jab"><strong>Plusieurs rings</strong><p>Travail en petits groupes, sans attendre son tour.</p></li>
-          <li data-combo="cross"><strong>Douze sacs lourds</strong><p>Et une zone pattes d’ours dans le cours d’anglaise.</p></li>
-          <li data-combo="hook"><strong>Prépa à l’étage</strong><p>Rack, barres, cardio. Surplombe les rings. Accès libre aux heures d’ouverture.</p></li>
-          <li data-combo="uppercut"><strong>Vestiaires H / F</strong><p>Séparés. On peut venir voir un cours sans rien demander.</p></li>
-          <li data-combo="jab"><strong>Matériel prêté</strong><p>Gants, casques et protections le temps de l’essai et de s’équiper.</p></li>
-          <li data-combo="cross"><strong>Accès libre</strong><p>Rings et sacs en autonomie, sans réservation, du lundi au samedi.</p></li>
+        <p class="eyebrow" data-reveal>Le plateau</p>
+        <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Ce que vous touchez <span class="tint">en arrivant.</span></h2>
+        <ul class="equip" data-reveal-group>
+          <li><strong>Plusieurs rings</strong><p>Travail en petits groupes, sans attendre son tour.</p></li>
+          <li><strong>Douze sacs lourds</strong><p>Et une zone pattes d’ours dans le cours d’anglaise.</p></li>
+          <li><strong>Prépa à l’étage</strong><p>Rack, barres, cardio. Accès libre aux heures d’ouverture.</p></li>
+          <li><strong>Vestiaires H / F</strong><p>Séparés. On peut venir voir un cours sans rien demander.</p></li>
+          <li><strong>Matériel prêté</strong><p>Gants, casques et protections le temps de l’essai.</p></li>
+          <li><strong>Accès libre</strong><p>Rings et sacs en autonomie, du lundi au samedi.</p></li>
         </ul>
       </div>
     </section>
-
-    <section class="section" data-round-id="04">
+    <section class="section">
       <div class="wrap split">
-        <div class="shot develop magnet" data-combo="jab">
+        <div class="frame" data-reveal>
           <img src="assets/media/ring-principal-1200.webp" alt="Ring principal aux cordes rouges" width="1200" height="800" loading="lazy" />
-          <span class="tape">Le ring</span>
         </div>
-        <div data-combo="cross">
-          <p class="kicker">Une vraie salle de boxe</p>
-          <h2 class="display">Pas un plateau de <span class="tint">fitness.</span></h2>
-          <p>500 m². Plusieurs rings de compétition, douze sacs, un étage entier pour la préparation physique. Vous vous entraînez dans les conditions qui ont formé plus de 8 boxeurs professionnels.</p>
-          <p class="btn-row" style="margin-top:24px">
-            <a class="btn" href="galerie.html"><span>Voir la salle</span></a>
-            <a class="btn btn--ghost" href="coachs.html"><span>Les coachs</span></a>
+        <div data-reveal>
+          <p class="eyebrow">Une vraie salle de boxe</p>
+          <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Pas un plateau de <span class="tint">fitness.</span></h2>
+          <p class="lead" style="margin-top:1rem">500 m². Plusieurs rings, douze sacs, un étage entier pour la préparation physique.</p>
+          <p class="btn-row" style="margin-top:1.4rem">
+            <a class="btn btn--primary" href="galerie.html">Voir la salle</a>
+            <a class="btn" href="coachs.html">Les coachs</a>
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--ink" data-round-id="05">
-      <div class="wrap prose" data-combo="jab">
-        <h2>Association de boxe anglaise à Toulouse Minimes</h2>
-        <p>Le Toulouse Minimes Boxing Club (TMBC) est une association sportive affiliée FFBoxe, FFKMDA et FMMAF. La salle, au 12 rue de Fenouillet (31200 Toulouse), a ouvert en 2016. C’est le berceau du réseau Boxing Center : plusieurs rings, 12 sacs lourds, zone pattes d’ours, plateau de préparation physique à l’étage, vestiaires hommes et femmes.</p>
-        <p>L’encadrement est diplômé d’État. Personne n’est laissé frapper dans le vide : dès la première séance, un coach place les pieds, les poings et la garde.</p>
       </div>
     </section>
   </main>
@@ -121,14 +108,31 @@
   <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
-        <a class="brand" href="index.html" style="margin-bottom:12px"><img src="assets/img/logo.jpeg" alt="TMBC" width="180" height="74" /></a>
-        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise.</p>
+        <a class="nav__brand" href="index.html" style="margin-bottom:12px"><img class="nav__logo" src="assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
+        <p>Toulouse Minimes Boxing Club — association sportive de boxe anglaise. 12 rue de Fenouillet, 31200 Toulouse.</p>
+        <p class="sisters">
+          <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Le réseau</a>
+          <a href="https://www.boxing-center-portet.fr/" target="_blank" rel="noopener">Portet</a>
+          <a href="https://bc-st-cyprien.vercel.app/" target="_blank" rel="noopener">Saint-Cyprien</a>
+        </p>
       </div>
-      <div><p class="kicker">Salle</p><p>12 rue de Fenouillet, 31200 Toulouse</p></div>
-      <div><p class="kicker">Contact</p><p><a href="tel:+33562244682">05 62 24 46 82</a></p></div>
-      <div><p class="kicker">Suite</p><p><a href="coachs.html">Coachs</a><br /><a href="planning.html">Planning</a></p></div>
+      <div>
+        <p class="eyebrow">Salle</p>
+        <p>12 rue de Fenouillet<br />31200 Toulouse<br />Métro B · Barrière de Paris</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcenter31@gmail.com">boxingcenter31@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Club</p>
+        <p><a href="club.html">Le club</a><br /><a href="planning.html">Planning</a><br /><a href="tarifs.html">Tarifs</a><br /><a href="galerie.html">Galerie</a></p>
+      </div>
     </div>
-    <div class="wrap legal"><span>toulouse-minimes-boxing-club.fr · maquette</span><span>Lun–sam 10h–21h30</span></div>
+    <div class="wrap legal">
+      <span>toulouse-minimes-boxing-club.fr · maquette</span>
+      <span>Lun–sam 10h–21h30</span>
+    </div>
   </footer>
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>
