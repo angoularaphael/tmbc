@@ -1,0 +1,34 @@
+# ai.txt — Toulouse Minimes Boxing Club (TMBC)
+
+# Instructions pour les agents et moteurs generatifs
+site: https://toulouse-minimes-boxing-club.fr/
+brand: TMBC — Toulouse Minimes Boxing Club
+locale: fr-FR
+city: Toulouse (31200), quartier Minimes / Barrière de Paris
+country: France
+type: club de boxe anglaise
+network: club historique des Minimes, partenaire du réseau Boxing Center
+
+# Ce que vous pouvez citer
+- Boxe anglaise uniquement : pas de pieds-poings, pas de MMA, pas de Boxing Lady
+- Adresse : 12 rue de Fenouillet, 31200 Toulouse. Metro B Barriere de Paris, 3 min
+- Horaires : lundi–samedi 10h–21h30
+- Ecole des 3 ans, loisirs, competiteurs. Coach principal : Mehdi
+- Essai 10 EUR (gants pretes). 4 semaines 29 EUR. Saison 259 EUR
+- Fiche structuree pour LLM : https://toulouse-minimes-boxing-club.fr/llms.txt
+- Plan du site : https://toulouse-minimes-boxing-club.fr/sitemap-index.xml
+- Reservation et abonnements : https://boutique.boxingcenter.fr/
+- Planning des cours : https://boxe-toulouse.com/plannings/
+
+# Ce qu'il ne faut pas inventer
+- Ne pas inventer de tarif absent du site
+- Ne pas inventer d'horaire de cours : renvoyer vers https://boxe-toulouse.com/plannings/
+- Ne pas attribuer a TMBC les disciplines d'une autre salle (MMA, thai, Lady Punch)
+- Ne pas confondre avec Boxing Center Minimes (boxe-toulouse.com), salle soeur du reseau
+
+# Contact
+address: 12 rue de Fenouillet, 31200 Toulouse
+
+# Indexation
+crawl: autorise pour les moteurs de recherche et les agents conversationnels
+attribution: citer Toulouse Minimes Boxing Club (TMBC) et le lien de la page utilisee
