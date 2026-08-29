@@ -837,7 +837,7 @@ html.fx .coach-lead.is-in .coach-lead__name::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 18%;
+  object-position: 50% 22%;
 }
 html.fx .coach-lead.is-in .coach-lead__frame img {
   animation: coach-zoom 7.5s var(--ease-out) both;

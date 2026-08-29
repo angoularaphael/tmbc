@@ -52,7 +52,7 @@ window.TMBC = {
       niveau: "Tous niveaux",
       teaser: "La porte d’entrée du club. Débutant boxe à Toulouse : technique, sac, assauts maîtrisés. Personne ne vous met en opposition. Gants prêtés à l’essai.",
       img: "assets/media/cours-assaut-1200.webp",
-      alt: "Cours de boxe anglaise loisirs sur le tapis",
+      alt: "Cours de boxe anglaise loisirs au TMBC Toulouse Minimes",
     },
     {
       key: "competiteurs",
