@@ -55,7 +55,7 @@ def main() -> None:
 
     convert(featured["mehdi"], MEDIA / "coach-mehdi-photo.webp", max_side=1800, quality=82)
     convert(featured["pourquoi"], MEDIA / "pourquoi-tmbc-1200.webp", max_side=1600, quality=82)
-    convert(featured["loisirs"], MEDIA / "cours-assaut-1200.webp", max_side=1600, quality=82)
+    convert(featured["loisirs"], MEDIA / "loisirs-cecile-158.webp", max_side=1600, quality=82)
 
 
 if __name__ == "__main__":

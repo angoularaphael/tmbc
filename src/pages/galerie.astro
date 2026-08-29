@@ -1,6 +1,4 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
 import Base from '../layouts/Base.astro';
 
 const title = 'Galerie club boxe anglaise Toulouse | TMBC Minimes';
@@ -9,21 +7,25 @@ const pathName = '/galerie';
 const preloadHero = false;
 const jsonLd = undefined;
 
-const galDir = path.join(process.cwd(), 'public/assets/media/galerie');
-const shots = fs
-  .readdirSync(galDir)
-  .filter((file) => file.endsWith('.webp'))
-  .sort()
-  .map((file) => {
-    const src = `/assets/media/galerie/${file}`;
-    if (file.includes('mardi-013')) {
-      return { src, zone: 'salle', alt: 'Mehdi, coach principal TMBC Toulouse Minimes' };
-    }
-    if (file.includes('mardi')) {
-      return { src, zone: 'salle', alt: 'Salle de boxe TMBC, 12 rue de Fenouillet à Toulouse Minimes' };
-    }
-    return { src, zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' };
-  });
+const shots = [
+  { src: '/assets/media/galerie/galerie-cecile-018.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-020.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-155.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-158.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise loisirs au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-161.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-171.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-181.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-182.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-183.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-186.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-193.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-cecile-201.webp', zone: 'anglaise', alt: 'Cours de boxe anglaise au TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-mardi-012.webp', zone: 'salle', alt: 'Salle de boxe TMBC, 12 rue de Fenouillet à Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-mardi-013.webp', zone: 'salle', alt: 'Mehdi, coach principal TMBC Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-mardi-075.webp', zone: 'salle', alt: 'Salle de boxe TMBC, 12 rue de Fenouillet à Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-mardi-077.webp', zone: 'salle', alt: 'Salle de boxe TMBC, 12 rue de Fenouillet à Toulouse Minimes' },
+  { src: '/assets/media/galerie/galerie-mardi-080.webp', zone: 'salle', alt: 'Salle de boxe TMBC, 12 rue de Fenouillet à Toulouse Minimes' },
+];
 ---
 <Base title={title} description={description} path={pathName} preloadHero={preloadHero} jsonLd={jsonLd}>
 <main id="main">
