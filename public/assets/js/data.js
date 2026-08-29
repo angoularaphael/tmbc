@@ -51,8 +51,8 @@ window.TMBC = {
       jours: "Midi 12h40 et soir 19h40",
       niveau: "Tous niveaux",
       teaser: "La porte d’entrée du club. Débutant boxe à Toulouse : technique, sac, assauts maîtrisés. Personne ne vous met en opposition. Gants prêtés à l’essai.",
-      img: "assets/media/loisirs-cecile-158.webp",
-      alt: "Cours de boxe anglaise loisirs au TMBC Toulouse Minimes",
+      img: "assets/media/cours-boxe-debutant-loisirs-toulouse.webp",
+      alt: "Cours de boxe débutant et loisirs au club TMBC Toulouse Minimes",
     },
     {
       key: "competiteurs",
