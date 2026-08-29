@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap-index.xml
+Allow: /sitemap-0.xml
 
+Sitemap: https://toulouse-minimes-boxing-club.fr/sitemap.xml
 Sitemap: https://toulouse-minimes-boxing-club.fr/sitemap-index.xml
 # Fiches agents : /llms.txt · /ai.txt
 # Fiche pour les assistants IA : https://toulouse-minimes-boxing-club.fr/llms.txt
