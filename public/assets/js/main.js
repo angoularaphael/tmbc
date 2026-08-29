@@ -232,6 +232,9 @@
   };
 
   $$(".video-pocket video").forEach((video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) video.play().catch(() => {});
@@ -239,23 +242,6 @@
       });
     }, { threshold: 0.35 });
     io.observe(video);
-  });
-
-  $$("[data-yt]").forEach((pocket) => {
-    pocket.addEventListener("click", () => {
-      if (pocket.querySelector("iframe")) return;
-      const id = pocket.getAttribute("data-yt");
-      if (!id) return;
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&hd=1&vq=hd1080`;
-      iframe.title = "Gala de boxe Boxing Center Toulouse";
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.setAttribute("allowfullscreen", "");
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
-      iframe.width = "1280";
-      iframe.height = "720";
-      pocket.replaceChildren(iframe);
-    });
   });
 
   const form = $("#contact-form");

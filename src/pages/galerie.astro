@@ -73,11 +73,19 @@ const shots = [
       <div class="wrap">
         <p class="eyebrow" data-reveal>Vidéo</p>
         <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Gala de boxe <span class="tint">Boxing Center</span></h2>
-        <div class="video-pocket video-pocket--yt" data-yt="JsoneKRdNLk" data-reveal style="margin-top:1.4rem">
-          <button type="button" class="yt-lite" aria-label="Lire la vidéo : Gala de boxe le 30 mai 2023, Boxing Center Toulouse">
-            <img src="/assets/media/gala-boxe-toulouse-2023.webp" alt="Gala de boxe le 30 mai 2023, Boxing Center Toulouse" width="1280" height="720" decoding="async" />
-            <span class="yt-lite__play" aria-hidden="true"></span>
-          </button>
+        <div class="video-pocket" data-reveal style="margin-top:1.4rem">
+          <video
+            src="/assets/media/gala-boxe-toulouse-2023.mp4"
+            poster="/assets/media/gala-boxe-toulouse-2023.webp"
+            width="1280"
+            height="720"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Gala de boxe le 30 mai 2023, Boxing Center Toulouse"
+          ></video>
         </div>
       </div>
     </section>
