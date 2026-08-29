@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://toulouse-minimes-boxing-club.fr/sitemap-index.xml
+# Fiche pour les assistants IA : https://toulouse-minimes-boxing-club.fr/llms.txt
