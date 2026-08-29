@@ -164,6 +164,9 @@
     };
     $$("a[href]").forEach((a) => {
       const raw = a.getAttribute("href") || "";
+      if (a.hasAttribute("data-full")) return;
+      if (raw.startsWith("/assets/")) return;
+      if (/\.(webp|jpe?g|png|gif|avif|svg|mp4|webm)(\?|$)/i.test(raw)) return;
       if (!raw.startsWith("/") && !raw.endsWith(".html")) return;
       const url = new URL(a.href, location.href);
       if (url.origin !== location.origin) return;
@@ -217,18 +220,32 @@
     const box = $("#lightbox");
     if (!box) return;
     const img = $("img", box);
-    const close = () => { box.classList.remove("is-on"); box.setAttribute("aria-hidden", "true"); };
-    $$("[data-full]").forEach((a) => {
-      a.addEventListener("click", (e) => {
+    const btn = $(".lightbox__close", box);
+    const close = () => {
+      box.classList.remove("is-on");
+      box.setAttribute("aria-hidden", "true");
+      document.documentElement.classList.remove("is-locked");
+    };
+    const open = (src, alt) => {
+      img.src = src;
+      img.alt = alt || "";
+      box.classList.add("is-on");
+      box.setAttribute("aria-hidden", "false");
+      document.documentElement.classList.add("is-locked");
+      btn?.focus();
+    };
+    $$("[data-full]").forEach((el) => {
+      el.addEventListener("click", (e) => {
         e.preventDefault();
-        img.src = a.getAttribute("data-full");
-        img.alt = $("img", a)?.alt || "";
-        box.classList.add("is-on");
-        box.setAttribute("aria-hidden", "false");
+        e.stopImmediatePropagation();
+        open(el.getAttribute("data-full"), $("img", el)?.alt || "");
       });
     });
+    btn?.addEventListener("click", (e) => { e.stopPropagation(); close(); });
     box.addEventListener("click", close);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && box.classList.contains("is-on")) close();
+    });
   };
 
   $$(".video-pocket video").forEach((video) => {

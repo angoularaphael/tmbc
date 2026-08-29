@@ -31,7 +31,10 @@ const shots = [
 ---
 <Base title={title} description={description} path={pathName} preloadHero={preloadHero} jsonLd={jsonLd}>
 <main id="main">
-    <div id="lightbox" aria-hidden="true"><img alt="" /></div>
+    <div id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Photo agrandie">
+      <button class="lightbox__close" type="button">Fermer <span aria-hidden="true">✕</span></button>
+      <img alt="" />
+    </div>
     <header class="phero">
       <img src="/assets/media/galerie/salle-boxe-toulouse-barriere-de-paris.webp" alt="Salle de boxe Toulouse Barrière de Paris, TMBC Minimes" width="1600" height="1048" />
       <div class="wrap" data-reveal>
@@ -54,7 +57,7 @@ const shots = [
         </div>
         <div class="gallery-grid" style="margin-top:1.6rem">
           {shots.map((shot, i) => (
-            <a class="shot" data-zone={shot.zone} data-full={shot.src} href={shot.src}>
+            <button type="button" class="shot" data-zone={shot.zone} data-full={shot.src} aria-label={`Agrandir : ${shot.alt}`}>
               <img
                 src={shot.src.replace('/galerie/', '/galerie/thumbs/')}
                 alt={shot.alt}
@@ -64,7 +67,7 @@ const shots = [
                 decoding="async"
                 fetchpriority={i === 0 ? 'high' : 'low'}
               />
-            </a>
+            </button>
           ))}
         </div>
       </div>

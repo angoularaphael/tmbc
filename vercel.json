@@ -44,6 +44,12 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.toulouse-minimes-boxing-club.fr" }],
+      "destination": "https://toulouse-minimes-boxing-club.fr/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.toulouse-minimes-boxing-club.fr" }],
       "destination": "https://toulouse-minimes-boxing-club.fr/:path*",
