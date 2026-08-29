@@ -1,0 +1,642 @@
+[
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-01.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-01.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-01.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-01.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-01.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-01.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-01.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-01.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-01.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-01.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-01.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-01.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-01.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-01.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-01.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-02.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-02.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-02.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-02.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-02.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-02.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-02.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-02.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-02.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-02.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-02.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-02.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-02.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-02.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-02.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-03.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-03.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-03.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-03.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-03.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-03.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-03.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-03.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-03.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-03.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-03.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-03.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-03.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-03.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-03.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-04.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-04.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-04.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-04.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-04.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-04.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-04.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-04.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-04.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-04.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-04.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-04.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-04.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-04.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-04.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-05.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-05.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-05.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-05.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-05.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-05.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-05.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-05.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-05.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-05.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-05.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-05.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-05.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-05.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-05.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-06.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-06.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-06.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-06.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-06.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-06.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-06.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-06.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-06.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-06.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-06.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-06.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-06.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-06.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-06.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-07.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-07.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-07.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-07.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-07.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-07.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-07.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-07.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-07.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-07.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-07.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-07.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-07.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-07.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-07.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-08.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-08.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-08.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-08.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-08.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-08.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-08.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-08.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-assaut-boxe-toulouse-minimes-08.webp",
+    "zone": "anglaise",
+    "alt": "Assaut de boxe à Toulouse Minimes, TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-ring-boxe-toulouse-tmbc-08.webp",
+    "zone": "salle",
+    "alt": "Ring de boxe au club TMBC Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-anglaise-minimes-08.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe anglaise Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-collectif-boxe-toulouse-08.webp",
+    "zone": "anglaise",
+    "alt": "Cours collectif de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-loisirs-toulouse-minimes-08.webp",
+    "zone": "anglaise",
+    "alt": "Boxe loisirs à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-rue-de-fenouillet-08.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe, rue de Fenouillet à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-club-boxe-toulouse-08.webp",
+    "zone": "salle",
+    "alt": "TMBC, club de boxe à Toulouse"
+  },
+  {
+    "src": "/assets/media/galerie/photos-boxe-anglaise-toulouse-minimes-09.webp",
+    "zone": "anglaise",
+    "alt": "Boxe anglaise à Toulouse Minimes, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-toulouse-tmbc-09.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse TMBC pendant un cours"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-anglaise-toulouse-09.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-salle-boxe-toulouse-minimes-09.webp",
+    "zone": "anglaise",
+    "alt": "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet"
+  },
+  {
+    "src": "/assets/media/galerie/photos-entrainement-boxe-toulouse-09.webp",
+    "zone": "salle",
+    "alt": "Entraînement de boxe à Toulouse, club TMBC"
+  },
+  {
+    "src": "/assets/media/galerie/photos-club-boxe-barriere-de-paris-09.webp",
+    "zone": "anglaise",
+    "alt": "Club de boxe Toulouse Barrière de Paris"
+  },
+  {
+    "src": "/assets/media/galerie/photos-tmbc-boxe-anglaise-toulouse-09.webp",
+    "zone": "anglaise",
+    "alt": "TMBC, boxe anglaise à Toulouse Minimes"
+  },
+  {
+    "src": "/assets/media/galerie/photos-cours-boxe-debutant-toulouse-09.webp",
+    "zone": "anglaise",
+    "alt": "Cours de boxe débutant à Toulouse Minimes"
+  }
+]

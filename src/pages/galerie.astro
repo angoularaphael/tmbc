@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import folder2 from '../data/galerie-folder2.json';
 
 const title = 'Galerie club boxe anglaise Toulouse | TMBC Minimes';
 const description = 'Photos du club de boxe anglaise TMBC à Toulouse : débutants, loisirs, compétiteurs, école. Salle 12 rue de Fenouillet, Minimes.';
@@ -25,6 +26,7 @@ const shots = [
   { src: '/assets/media/galerie/salle-boxe-toulouse-500m2.webp', zone: 'salle', alt: 'Salle de boxe 500 m² à Toulouse Minimes' },
   { src: '/assets/media/galerie/salle-boxe-toulouse-ring.webp', zone: 'salle', alt: 'Ring de boxe à Toulouse Minimes' },
   { src: '/assets/media/galerie/salle-boxe-toulouse-barriere-de-paris.webp', zone: 'salle', alt: 'Salle de boxe Toulouse Barrière de Paris' },
+  ...folder2,
 ];
 ---
 <Base title={title} description={description} path={pathName} preloadHero={preloadHero} jsonLd={jsonLd}>

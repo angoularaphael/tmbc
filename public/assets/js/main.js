@@ -253,7 +253,7 @@
       const body = encodeURIComponent(
         `Prénom : ${prenom}\nTéléphone : ${tel}\nE-mail : ${email}\n\n${msg}`
       );
-      window.location.href = `mailto:boxingcentertls@gmail.com?subject=${encodeURIComponent("Contact TMBC — " + prenom)}&body=${body}`;
+      window.location.href = `mailto:bc.combat31@gmail.com?subject=${encodeURIComponent("Contact TMBC — " + prenom)}&body=${body}`;
       form.hidden = true;
       const ok = $("#form-ok");
       if (ok) ok.hidden = false;
