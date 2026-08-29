@@ -1,10 +1,71 @@
 ---
 import Base from '../layouts/Base.astro';
-const title = 'TMBC — Toulouse Minimes Boxing Club | Boxe à Toulouse Minimes';
-const description = 'Toulouse Minimes Boxing Club, 12 rue de Fenouillet. Essai 10 €, 4 semaines illimitées à 29 €, saison 259 €. Métro B Barrière de Paris, 3 min.';
+const title = 'TMBC — Toulouse Minimes Boxing Club | Boxe anglaise à Toulouse';
+const description = 'Boxe anglaise aux Minimes : loisirs, compétiteurs et école dès 3 ans. Essai 10 €, 4 semaines illimitées à 29 €, saison 259 €. Métro B Barrière de Paris.';
 const path = '/';
 const preloadHero = true;
-const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je n’ai jamais boxé. Je peux venir ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Boxing camp, cardio boxing, anglaise loisirs. Personne ne vous met en opposition. Essai 10 €, gants prêtés."}}, {"@type": "Question", "name": "Combien coûte l’essai ?", "acceptedAnswer": {"@type": "Answer", "text": "10 € la séance, toutes activités. Aucun dossier, aucun certificat. Gants et casque prêtés."}}, {"@type": "Question", "name": "C’est quoi l’offre 29 € ?", "acceptedAnswer": {"@type": "Answer", "text": "4 semaines illimitées, toutes les activités, 29 € par personne, sans engagement."}}, {"@type": "Question", "name": "On m’oblige à sparrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le seul open sparring est le samedi 18h30, entre licenciés du cours compétiteurs."}}, {"@type": "Question", "name": "Il y a des cours enfants ?", "acceptedAnswer": {"@type": "Answer", "text": "Dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus."}}, {"@type": "Question", "name": "Où est la salle, et quels horaires ?", "acceptedAnswer": {"@type": "Answer", "text": "12 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30."}}]};
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Je n’ai jamais boxé. Je peux venir ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui. Les cours de boxe anglaise loisirs sont ouverts à tous les niveaux. Personne ne vous met en opposition. Essai 10 €, gants prêtés.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Combien coûte l’essai ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '10 € la séance de boxe anglaise. Aucun dossier, aucun certificat. Gants et casque prêtés.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'C’est quoi l’offre 29 € ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '4 semaines illimitées de boxe anglaise (loisirs, compétiteurs selon le niveau), 29 € par personne, sans engagement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quelle différence entre loisirs et compétiteurs ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Les loisirs : technique, sac, assauts maîtrisés, pas d’opposition imposée. Les compétiteurs : entraînement licenciés en semaine et open sparring le samedi 18h30.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'On m’oblige à sparrer ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Non. Le seul open sparring est le samedi 18h30, entre licenciés du cours compétiteurs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Il y a des cours enfants ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus. Aucun coup porté chez les petits.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Où est la salle, et quels horaires ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '12 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30.',
+      },
+    },
+  ],
+};
 ---
 <Base title={title} description={description} path={path} preloadHero={preloadHero} jsonLd={jsonLd}>
 <main id="main">
@@ -14,12 +75,12 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
         <div class="hero__pitch">
         <p class="wordmark" aria-hidden="true"><span>T</span><span>M</span><span>B</span><span>C</span></p>
         <h1>Toulouse Minimes Boxing Club</h1>
-        <p>Essai 10 €. Coach dès la première séance. Gants prêtés. Pas de sparring imposé.</p>
+        <p>Boxe anglaise. Loisirs, compétiteurs, école dès 3 ans. Essai 10 €, gants prêtés. Pas de sparring imposé.</p>
       </div>
       <div class="hero__foot">
         <ul class="hero__facts" data-reveal>
           <li class="hfact"><b>Essai 10 €</b><span>Une séance · gants prêtés</span></li>
-          <li class="hfact"><b>4 semaines 29 €</b><span>Toutes activités, sans engagement</span></li>
+          <li class="hfact"><b>4 semaines 29 €</b><span>Boxe anglaise, sans engagement</span></li>
           <li class="hfact"><b>Métro B · 3 min</b><span>Barrière de Paris</span></li>
         </ul>
         <p class="hero__cta" data-reveal>
@@ -31,7 +92,7 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
 
     <aside class="dealbar">
       <div class="wrap">
-        <p><b>4 semaines illimitées à 29 €</b><span>Offre rentrée · par personne · inscription en ligne</span></p>
+        <p><b>4 semaines illimitées à 29 €</b><span>Offre rentrée · boxe anglaise · inscription en ligne</span></p>
         <p class="btn-row">
           <a class="btn" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
           <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/seance-essai">Essai 10 €</a>
@@ -55,13 +116,13 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
           <article class="offer">
             <h3>Essai</h3>
             <b><span data-count="10">0</span> €</b>
-            <p>Une séance pour voir si ça vous convient. Gants prêtés. Aucun dossier, aucun certificat.</p>
+            <p>Une séance de boxe anglaise pour voir si ça vous convient. Gants prêtés. Aucun dossier, aucun certificat.</p>
             <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai</a>
           </article>
           <article class="offer is-hot">
             <h3>Offre rentrée</h3>
             <b><s>44 €</s> <span data-count="29">0</span> €</b>
-            <p>4 semaines, cours illimités, toutes les activités. 29 € par personne, sans engagement.</p>
+            <p>4 semaines, cours illimités de boxe anglaise. 29 € par personne, sans engagement.</p>
             <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
           </article>
           <article class="offer">
@@ -79,11 +140,11 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
         <div data-reveal>
           <p class="eyebrow">Pourquoi TMBC</p>
           <h2 class="heading">Vous êtes encadré dès la première séance</h2>
-          <p class="lead" style="margin-top:1rem">TMBC est l’association de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> — première salle du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+          <p class="lead" style="margin-top:1rem">TMBC est l’association de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> — première salle du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>. Ici, on boxe à l’anglaise.</p>
           <ul class="why">
             <li><b>01</b> <span>Un coach diplômé vous place : pieds, garde, jab. Vous n’arrivez pas « dans le tas ».</span></li>
             <li><b>02</b> <span>Gants et casque prêtés à l’essai. Vous venez en tenue de sport.</span></li>
-            <li><b>03</b> <span>Pas de sparring imposé. Le seul open est le samedi 18h30, entre licenciés.</span></li>
+            <li><b>03</b> <span>Pas de sparring imposé. Le seul open est le samedi 18h30, entre licenciés compétiteurs.</span></li>
             <li><b>04</b> <span>3 minutes du métro B Barrière de Paris. Ouvert lundi–samedi 10h–21h30.</span></li>
           </ul>
           <p class="btn-row">
@@ -101,19 +162,19 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
     <section class="section band-tint">
       <div class="wrap">
         <p class="eyebrow" data-reveal>Pour qui</p>
-        <h2 class="heading" data-reveal>Débutant, Lady ou enfant : une porte d’entrée claire</h2>
+        <h2 class="heading" data-reveal>Loisirs, compétiteurs ou enfants : une porte d’entrée claire</h2>
         <div class="doors" data-reveal-group style="margin-top:1.6rem">
-          <a class="door" href="/activites#camp">
-            <img src="/assets/media/jumps-groupe-1200.webp" alt="Cours de boxing camp" width="800" height="1000" loading="lazy" />
+          <a class="door" href="/activites#loisirs">
+            <img src="/assets/media/cours-assaut-1200.webp" alt="Cours de boxe anglaise loisirs" width="800" height="1000" loading="lazy" />
             <p class="eyebrow">Vous n’avez jamais boxé</p>
-            <h3>Débutant</h3>
-            <p>Boxing camp, cardio boxing, anglaise loisirs. Personne ne vous met en opposition.</p>
+            <h3>Boxe anglaise loisirs</h3>
+            <p>Technique, sac, assauts maîtrisés. Personne ne vous met en opposition.</p>
           </a>
-          <a class="door" href="/activites#lady">
-            <img src="/assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady" width="800" height="1000" loading="lazy" />
-            <p class="eyebrow">Lundi &amp; mercredi 18h30</p>
-            <h3>Boxing Lady</h3>
-            <p>Cours 100 % féminin. Technique, sac, cardio. Un vrai cours de boxe.</p>
+          <a class="door" href="/activites#competiteurs">
+            <img src="/assets/media/sparring-graff-1200.webp" alt="Entraînement boxe anglaise compétiteurs" width="800" height="1000" loading="lazy" />
+            <p class="eyebrow">Lun mar jeu ven 18h · open samedi</p>
+            <h3>Boxe anglaise compétiteurs</h3>
+            <p>Entraînement licenciés. Open sparring samedi 18h30, encadré.</p>
           </a>
           <a class="door" href="/activites#educative">
             <img src="/assets/media/ecole-medailles-1200.webp" alt="École de boxe TMBC" width="800" height="1000" loading="lazy" />
@@ -130,43 +191,35 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
         <p class="eyebrow" data-reveal>Les cours</p>
         <h2 class="heading" data-reveal>Les créneaux, sans jargon</h2>
         <div class="courses" style="margin-top:1.2rem">
-          <a class="course" href="/activites#anglaise"><span class="course__n">01</span><div><h3>Boxe anglaise</h3><p>7 créneaux · midi 12h40 et soir 19h40 · tous niveaux</p></div><span>Voir →</span></a>
-          <a class="course" href="/activites#lady"><span class="course__n">02</span><div><h3>Boxing Lady</h3><p>Lundi et mercredi 18h30 · 100 % féminin</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#loisirs"><span class="course__n">01</span><div><h3>Boxe anglaise loisirs</h3><p>Midi 12h40 et soir 19h40 · tous niveaux · pas d’opposition imposée</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#competiteurs"><span class="course__n">02</span><div><h3>Boxe anglaise compétiteurs</h3><p>Lun mar jeu ven 18h · open sparring samedi 18h30</p></div><span>Voir →</span></a>
           <a class="course" href="/activites#educative"><span class="course__n">03</span><div><h3>École dès 3 ans</h3><p>Mercredi et samedi · Baby, éducative, ados</p></div><span>Voir →</span></a>
-          <a class="course" href="/activites#camp"><span class="course__n">04</span><div><h3>Boxing camp</h3><p>5 créneaux / semaine · aucune technique exigée</p></div><span>Voir →</span></a>
-          <a class="course" href="/activites#competiteurs"><span class="course__n">05</span><div><h3>Compétiteurs</h3><p>Lun mar jeu ven 18h · open sparring samedi 18h30</p></div><span>Voir →</span></a>
-          <a class="course" href="/activites#pieds"><span class="course__n">06</span><div><h3>Pieds-poings</h3><p>Mercredi 19h40 · un créneau, tous niveaux</p></div><span>Voir →</span></a>
         </div>
         <p class="btn-row" style="margin-top:1.4rem">
-          <a class="btn btn--primary" href="/planning">Voir le planning</a>
+          <a class="btn btn--primary" href="https://boxe-toulouse.com/plannings/" target="_blank" rel="noopener">Voir le planning</a>
           <a class="btn" href="/activites">Toutes les activités</a>
         </p>
       </div>
     </section>
 
-    <section class="section band-tint">
+    <section class="section band-tint" id="coach">
       <div class="wrap">
-        <p class="eyebrow" data-reveal>Les coachs</p>
-        <h2 class="heading" data-reveal>4 coachs diplômés. Vous n’êtes jamais seul sur le plateau.</h2>
-        <div class="coachrow__grid" data-reveal-group>
-          <article class="coachcard">
-            <div class="coachcard__media"><img src="/assets/media/coach-mehdi-photo.webp" alt="Portrait de Mehdi, coach principal TMBC" width="768" height="512" loading="lazy" /></div>
-            <div class="coachcard__body"><p class="coachcard__tag">Principal</p><h3 class="coachcard__name">Mehdi</h3><p class="coachcard__role">Anglaise, éducative, compétiteurs</p></div>
-          </article>
-          <article class="coachcard">
-            <div class="coachcard__media"><img src="/assets/media/lady-garde-1200.webp" alt="Cours Boxing Lady aux Minimes" width="800" height="1000" loading="lazy" /></div>
-            <div class="coachcard__body"><p class="coachcard__tag">Lady</p><h3 class="coachcard__name">Chloé</h3><p class="coachcard__role">Lundi et mercredi 18h30</p></div>
-          </article>
-          <article class="coachcard">
-            <div class="coachcard__media"><img src="/assets/media/pieds-poings-1200.webp" alt="Cours pieds-poings aux Minimes" width="1200" height="800" loading="lazy" /></div>
-            <div class="coachcard__body"><p class="coachcard__tag">Lady · pieds-poings</p><h3 class="coachcard__name">David</h3><p class="coachcard__role">Mercredi soir</p></div>
-          </article>
-          <article class="coachcard">
-            <div class="coachcard__media"><img src="/assets/media/jumps-groupe-1200.webp" alt="Boxing camp TMBC" width="800" height="1000" loading="lazy" /></div>
-            <div class="coachcard__body"><p class="coachcard__tag">Camp</p><h3 class="coachcard__name">Clément</h3><p class="coachcard__role">Boxing camp et cross</p></div>
-          </article>
+        <p class="eyebrow" data-reveal>Le coach</p>
+        <div class="coach-lead" data-reveal>
+          <div class="coach-lead__copy">
+            <h2 class="heading coach-lead__title">
+              <span class="coach-lead__kicker">Notre coach principal :</span>
+              <span class="coach-lead__name" aria-label="Mehdi">
+                <span>M</span><span>e</span><span>h</span><span>d</span><span>i</span>
+              </span>
+            </h2>
+            <p class="lead">Mehdi dirige le plateau : boxe anglaise loisirs, compétiteurs et école. Vous n’arrivez jamais « dans le tas ».</p>
+          </div>
+          <figure class="coach-lead__frame">
+            <img src="/assets/media/coach-mehdi-photo.webp" alt="Mehdi, coach principal TMBC" width="768" height="512" loading="lazy" />
+            <figcaption class="coach-lead__badge">Coach principal</figcaption>
+          </figure>
         </div>
-        <p style="margin-top:1.6rem" data-reveal><a class="btn" href="/coachs">Voir les coachs</a></p>
       </div>
     </section>
 
@@ -177,27 +230,27 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
         <div class="quotes" data-reveal-group style="margin-top:1.8rem">
           <blockquote>
             <p>« Je n’avais jamais fait de sport de combat. En trois séances, j’avais compris la garde et le direct. Personne ne se moque. »</p>
-            <footer>Thomas L. · Boxe anglaise loisir</footer>
+            <footer>Thomas L. · Boxe anglaise loisirs</footer>
           </blockquote>
           <blockquote>
-            <p>« Le cours Lady est ce qui m’a fait rester. On y travaille sérieusement, sans se sentir jugée. »</p>
-            <footer>Sarah M. · Boxing Lady</footer>
+            <p>« L’entraînement 18h, l’open du samedi : on progresse pour de vrai, encadré. Mehdi ne laisse rien passer. »</p>
+            <footer>Nicolas D. · Boxe anglaise compétiteurs</footer>
           </blockquote>
           <blockquote>
             <p>« Mon fils y va depuis ses 6 ans. Il a gagné en confiance — et n’a jamais pris un coup qu’il n’avait pas choisi. »</p>
             <footer>Karim B. · Parent, boxe éducative</footer>
           </blockquote>
           <blockquote>
-            <p>« Le camp du midi, 40 minutes, et je retourne au bureau. Mehdi corrige, personne ne juge. »</p>
-            <footer>Léa P. · Boxing camp</footer>
+            <p>« Les cours d’anglaise du soir, 40 minutes, et je rentre. Mehdi corrige, personne ne juge. »</p>
+            <footer>Léa P. · Boxe anglaise loisirs</footer>
           </blockquote>
           <blockquote>
             <p>« Très belle salle, matos au top, coachs et staff accueillants. On progresse dès la première semaine. »</p>
-            <footer>Hamed S. · Anglaise</footer>
+            <footer>Hamed S. · Boxe anglaise loisirs</footer>
           </blockquote>
           <blockquote>
-            <p>« Le créneau pieds-poings du mercredi est cash : kicks, paos, cardio. Un vrai cours, pas du fitness déguisé. »</p>
-            <footer>Julien R. · Pieds-poings</footer>
+            <p>« Ma fille a 8 ans. Elle aime les mercredis. Pas de coups, que de la technique et du jeu. »</p>
+            <footer>Sophie V. · Parent, école de boxe</footer>
           </blockquote>
         </div>
       </div>
@@ -229,16 +282,6 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
             <h3>Protège-dents</h3>
             <p>Gel, moulé à chaud</p>
           </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/protege-tibias-pieds-blade-metal-boxe" target="_blank" rel="noopener">
-            <img src="/assets/shop/protege-tibias.jpg" alt="Protège-tibias et pieds Blade" width="400" height="400" loading="lazy" />
-            <h3>Protège-tibias</h3>
-            <p>Pieds-poings · Blade</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/materiel/produit/short-boxe-thai-et-kick-boxing-noir-or-metal-boxe" target="_blank" rel="noopener">
-            <img src="/assets/shop/short-thai.jpg" alt="Short de boxe thaï noir et or" width="400" height="400" loading="lazy" />
-            <h3>Short thaï</h3>
-            <p>Kick / pieds-poings</p>
-          </a>
         </div>
         <p class="btn-row" style="margin-top:1.4rem" data-reveal>
           <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/materiel" target="_blank" rel="noopener">Toute la boutique</a>
@@ -251,12 +294,12 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
         <p class="eyebrow" data-reveal>Questions fréquentes</p>
         <h2 class="heading" data-reveal>Avant de pousser la porte</h2>
         <div class="faq" style="margin-top:1.2rem">
-          <details open><summary>Je n’ai jamais boxé. Je peux venir ?</summary><p>Oui. Boxing camp, cardio boxing, anglaise loisirs. Personne ne vous met en opposition. Essai 10 €, gants prêtés.</p></details>
-          <details><summary>Combien coûte l’essai ?</summary><p>10 € la séance, toutes activités. Aucun dossier, aucun certificat. Gants et casque prêtés.</p></details>
-          <details><summary>C’est quoi l’offre 29 € ?</summary><p>4 semaines illimitées, toutes les activités, 29 € par personne, sans engagement. Inscription en ligne.</p></details>
+          <details open><summary>Je n’ai jamais boxé. Je peux venir ?</summary><p>Oui. Les cours de boxe anglaise loisirs sont ouverts à tous les niveaux. Personne ne vous met en opposition. Essai 10 €, gants prêtés.</p></details>
+          <details><summary>Combien coûte l’essai ?</summary><p>10 € la séance de boxe anglaise. Aucun dossier, aucun certificat. Gants et casque prêtés.</p></details>
+          <details><summary>C’est quoi l’offre 29 € ?</summary><p>4 semaines illimitées de boxe anglaise, 29 € par personne, sans engagement. Inscription en ligne.</p></details>
+          <details><summary>Quelle différence entre loisirs et compétiteurs ?</summary><p>Les loisirs : technique, sac, assauts maîtrisés — pas d’opposition imposée. Les compétiteurs : entraînement licenciés en semaine (lun mar jeu ven 18h) et open sparring le samedi 18h30.</p></details>
           <details><summary>On m’oblige à sparrer ?</summary><p>Non. Le seul open sparring est le samedi 18h30, entre licenciés du cours compétiteurs.</p></details>
-          <details><summary>Il y a des cours enfants ?</summary><p>Dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus. Aucun coup porté chez les petits.</p></details>
-          <details><summary>Et pour les femmes ?</summary><p>Boxing Lady, lundi et mercredi 18h30, 100 % féminin. Les autres cours sont mixtes.</p></details>
+          <details><summary>Il y a des cours enfants ?</summary><p>Dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus. Aucun coup porté chez les petits. Mercredi et samedi.</p></details>
           <details><summary>Quel matériel faut-il ?</summary><p>Pour l’essai : tenue de sport et une bouteille d’eau. Ensuite, gants, bandes et protections se commandent à la boutique, retrait en salle.</p></details>
           <details><summary>Où est la salle, et quels horaires ?</summary><p>12 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30. Fermé dimanche.</p></details>
         </div>
@@ -290,10 +333,10 @@ const jsonLd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntit
       <div class="wrap">
         <p class="eyebrow">Inscription en ligne</p>
         <h2 class="display">4 semaines illimitées à 29 €</h2>
-        <p class="lead">Toutes les activités. Sans engagement. Matériel prêté le temps de vous équiper.</p>
+        <p class="lead">Boxe anglaise. Sans engagement. Matériel prêté le temps de vous équiper.</p>
         <p class="btn-row" style="margin-top:1.4rem">
           <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris — 29 €</a>
-          <a class="btn" href="tel:+33562244682">Appeler le 05 62 24 46 82</a>
+          <a class="btn" href="mailto:boxingcentertls@gmail.com">Écrire au club</a>
         </p>
       </div>
     </section>

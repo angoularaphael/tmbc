@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 const title = 'Galerie — TMBC | Photos et vidéo de la salle';
-const description = 'Galerie TMBC : rings, sacs, Boxing Lady, école, sparring. Photos et clip de la salle des Minimes.';
+const description = 'Galerie TMBC : rings, sacs, boxe anglaise, école, sparring. Photos et clip de la salle des Minimes.';
 const path = '/galerie';
 const preloadHero = false;
 const jsonLd = undefined;
@@ -28,10 +28,8 @@ const jsonLd = undefined;
           <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">Tout</button>
           <button class="chip" type="button" data-filter="salle" aria-pressed="false">La salle</button>
           <button class="chip" type="button" data-filter="anglaise" aria-pressed="false">Anglaise</button>
-          <button class="chip" type="button" data-filter="lady" aria-pressed="false">Lady</button>
           <button class="chip" type="button" data-filter="ecole" aria-pressed="false">École</button>
           <button class="chip" type="button" data-filter="technique" aria-pressed="false">Technique</button>
-          <button class="chip" type="button" data-filter="pieds" aria-pressed="false">Pieds-poings</button>
         </div>
         <div class="gallery-grid" style="margin-top:1.6rem">
           <a class="shot" data-zone="salle" data-full="/assets/media/salle-plongee-1200.webp" href="/assets/media/salle-plongee-1200.webp"><img src="/assets/media/salle-plongee-1200.webp" alt="Vue plongeante" loading="lazy" /></a>
@@ -40,9 +38,8 @@ const jsonLd = undefined;
           <a class="shot" data-zone="anglaise" data-full="/assets/media/cours-assaut-1200.webp" href="/assets/media/cours-assaut-1200.webp"><img src="/assets/media/cours-assaut-1200.webp" alt="Cours d’anglaise" loading="lazy" /></a>
           <a class="shot" data-zone="anglaise" data-full="/assets/media/cours-collectif-700.webp" href="/assets/media/cours-collectif-700.webp"><img src="/assets/media/cours-collectif-700.webp" alt="Cours collectif" loading="lazy" /></a>
           <a class="shot" data-zone="technique" data-full="/assets/media/sparring-graff-1200.webp" href="/assets/media/sparring-graff-1200.webp"><img src="/assets/media/sparring-graff-1200.webp" alt="Sparring" loading="lazy" /></a>
-          <a class="shot" data-zone="lady" data-full="/assets/media/lady-garde-1200.webp" href="/assets/media/lady-garde-1200.webp"><img src="/assets/media/lady-garde-1200.webp" alt="Boxing Lady" loading="lazy" /></a>
-          <a class="shot" data-zone="lady" data-full="/assets/media/coach-lady-1200.webp" href="/assets/media/coach-lady-1200.webp"><img src="/assets/media/coach-lady-1200.webp" alt="Coach Lady" loading="lazy" /></a>
-          <a class="shot" data-zone="pieds" data-full="/assets/media/pieds-poings-1200.webp" href="/assets/media/pieds-poings-1200.webp"><img src="/assets/media/pieds-poings-1200.webp" alt="Pieds-poings" loading="lazy" /></a>
+          <a class="shot" data-zone="anglaise" data-full="/assets/media/lady-garde-1200.webp" href="/assets/media/lady-garde-1200.webp"><img src="/assets/media/lady-garde-1200.webp" alt="Travail de garde en boxe anglaise" loading="lazy" /></a>
+          <a class="shot" data-zone="anglaise" data-full="/assets/media/coach-lady-1200.webp" href="/assets/media/coach-lady-1200.webp"><img src="/assets/media/coach-lady-1200.webp" alt="Cours de boxe anglaise" loading="lazy" /></a>
           <a class="shot" data-zone="ecole" data-full="/assets/media/ecole-medailles-1200.webp" href="/assets/media/ecole-medailles-1200.webp"><img src="/assets/media/ecole-medailles-1200.webp" alt="École" loading="lazy" /></a>
           <a class="shot" data-zone="ecole" data-full="/assets/media/sparring-ados-700.webp" href="/assets/media/sparring-ados-700.webp"><img src="/assets/media/sparring-ados-700.webp" alt="Ados" loading="lazy" /></a>
           <a class="shot" data-zone="technique" data-full="/assets/media/pattes-ours-1200.webp" href="/assets/media/pattes-ours-1200.webp"><img src="/assets/media/pattes-ours-1200.webp" alt="Pattes d’ours" loading="lazy" /></a>

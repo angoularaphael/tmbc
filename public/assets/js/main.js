@@ -115,7 +115,7 @@
       <p class="config__desc">${d.teaser}</p>
       <div class="config__cta">
         <a class="btn btn--primary" href="${window.TMBC.boutique.essai}">Essayer · 10 €</a>
-        <a class="btn" href="/planning">Les créneaux</a>
+        <a class="btn" href="${window.TMBC.planning}" target="_blank" rel="noopener">Les créneaux</a>
         <a class="btn" href="/activites#${d.key}">En détail</a>
       </div>`;
     if (body) body.innerHTML = sheet(discs[0]);

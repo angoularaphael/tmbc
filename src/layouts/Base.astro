@@ -17,10 +17,8 @@ const nav = [
   { href: '/', label: 'Accueil' },
   { href: '/club', label: 'Le club' },
   { href: '/activites', label: 'Activités' },
-  { href: '/coachs', label: 'Coachs' },
-  { href: '/planning', label: 'Planning' },
-  { href: '/tarifs', label: 'Tarifs' },
-  { href: '/contact', label: 'Contact' },
+  { href: 'https://boxe-toulouse.com/plannings/', label: 'Planning', external: true },
+  { href: 'https://boutique.boxingcenter.fr/abonnements', label: 'Tarifs', external: true },
   { href: '/galerie', label: 'Galerie' },
 ];
 
@@ -31,7 +29,6 @@ const sportsClub = {
   alternateName: 'TMBC',
   url: `${SITE}/`,
   email: 'boxingcentertls@gmail.com',
-  telephone: '+33562244682',
   image: ogImage,
   address: {
     '@type': 'PostalAddress',
@@ -47,6 +44,7 @@ const sportsClub = {
 };
 
 function isCurrent(href) {
+  if (href.startsWith('http')) return false;
   if (href === '/') return current === '/';
   return current === href || current.startsWith(`${href}/`);
 }
@@ -60,7 +58,7 @@ function isCurrent(href) {
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Toulouse Minimes Boxing Club" />
-  <meta name="keywords" content="boxe Toulouse, club de boxe Minimes, TMBC, Toulouse Minimes Boxing Club, Boxing Center Minimes, essai boxe 10€, salle de boxe Barrière de Paris, boxe anglaise Toulouse, Boxing Lady Toulouse" />
+  <meta name="keywords" content="boxe Toulouse, club de boxe Minimes, TMBC, Toulouse Minimes Boxing Club, boxe anglaise Toulouse, boxe anglaise loisirs, boxe compétiteurs Toulouse, boxe enfants Toulouse, Boxing Center Minimes, essai boxe 10€, salle de boxe Barrière de Paris" />
   <meta name="geo.region" content="FR-31" />
   <meta name="geo.placename" content="Toulouse — Minimes" />
   <meta name="geo.position" content="43.6256;1.4309" />
@@ -71,7 +69,7 @@ function isCurrent(href) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/styles.css?v=6" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=7" />
   {preloadHero && <link rel="preload" as="image" href="/assets/img/hero.png" fetchpriority="high" />}
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
@@ -99,7 +97,7 @@ function isCurrent(href) {
       <ul>
         {nav.map((item) => (
           <li class={item.href === '/' ? 'nav__home' : undefined}>
-            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+            <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener' : undefined} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
           </li>
         ))}
       </ul>
@@ -113,11 +111,11 @@ function isCurrent(href) {
     <div></div>
     <nav class="menu__nav">
       {nav.map((item) => (
-        <a class="menu__link" href={item.href}>{item.label}</a>
+        <a class="menu__link" href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener' : undefined}>{item.label}</a>
       ))}
     </nav>
     <div class="menu__foot">
-      <a href="tel:+33562244682">05 62 24 46 82</a>
+      <a href="mailto:boxingcentertls@gmail.com">boxingcentertls@gmail.com</a>
       <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
     </div>
   </div>
@@ -138,7 +136,7 @@ function isCurrent(href) {
       </div>
       <div>
         <p class="eyebrow">Contact</p>
-        <p><a href="tel:+33562244682">05 62 24 46 82</a><br /><a href="mailto:boxingcentertls@gmail.com">boxingcentertls@gmail.com</a></p>
+        <p><a href="mailto:boxingcentertls@gmail.com">boxingcentertls@gmail.com</a></p>
       </div>
       <div>
         <p class="eyebrow">Sites officiels</p>
@@ -153,7 +151,7 @@ function isCurrent(href) {
       <span>Lun–sam 10h–21h30</span>
     </div>
   </footer>
-  <script src="/assets/js/data.js?v=6" defer></script>
-  <script src="/assets/js/main.js?v=6" defer></script>
+  <script src="/assets/js/data.js?v=7" defer></script>
+  <script src="/assets/js/main.js?v=7" defer></script>
 </body>
 </html>

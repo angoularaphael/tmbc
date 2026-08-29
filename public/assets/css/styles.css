@@ -762,6 +762,103 @@ html.fx .is-in .frame img {
 .coachcard__name { font-family: var(--f-display); font-weight: 900; font-size: var(--step-1); margin-top: 0.45rem; }
 .coachcard__role { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
 
+.coach-lead {
+  display: grid;
+  gap: 1.8rem;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+@media (min-width: 860px) {
+  .coach-lead { grid-template-columns: 1.05fr 0.95fr; gap: 2.4rem; }
+}
+.coach-lead__title {
+  margin: 0;
+}
+.coach-lead__kicker {
+  display: block;
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  letter-spacing: -0.03em;
+}
+.coach-lead__name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.02em;
+  margin-top: 0.12em;
+  color: var(--red);
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  perspective: 400px;
+}
+.coach-lead__name span {
+  display: inline-block;
+  transform-origin: 50% 100%;
+}
+.coach-lead__name::after {
+  content: "";
+  display: block;
+  flex: 0 0 100%;
+  height: 5px;
+  width: 0;
+  margin-top: 0.18em;
+  background: var(--red);
+  box-shadow: 0 0 18px rgba(211, 31, 38, 0.55);
+}
+html.fx .coach-lead.is-in .coach-lead__name span {
+  animation: coach-letter 0.72s var(--ease-out) both;
+}
+html.fx .coach-lead.is-in .coach-lead__name span:nth-child(1) { animation-delay: 0.08s; }
+html.fx .coach-lead.is-in .coach-lead__name span:nth-child(2) { animation-delay: 0.16s; }
+html.fx .coach-lead.is-in .coach-lead__name span:nth-child(3) { animation-delay: 0.24s; }
+html.fx .coach-lead.is-in .coach-lead__name span:nth-child(4) { animation-delay: 0.32s; }
+html.fx .coach-lead.is-in .coach-lead__name span:nth-child(5) { animation-delay: 0.4s; }
+html.fx .coach-lead.is-in .coach-lead__name::after {
+  animation: coach-rule 0.7s 0.55s var(--ease-out) forwards;
+}
+@keyframes coach-letter {
+  from { opacity: 0; transform: translateY(0.55em) rotateX(50deg); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes coach-rule {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.coach-lead__copy .lead { margin-top: 1.1rem; }
+.coach-lead__frame {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  aspect-ratio: 4 / 5;
+  background: var(--navy);
+  box-shadow: var(--shadow);
+}
+.coach-lead__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+html.fx .coach-lead.is-in .coach-lead__frame img {
+  animation: coach-zoom 7.5s var(--ease-out) both;
+}
+@keyframes coach-zoom {
+  from { transform: scale(1.14); filter: saturate(0.7); }
+  to { transform: scale(1); filter: none; }
+}
+.coach-lead__badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font: 700 0.68rem/1 var(--f-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* ——— Essai / quotes / gong ——— */
 .essai {
   display: grid;

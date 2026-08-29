@@ -21,10 +21,14 @@
     { "source": "/activites.html", "destination": "/activites", "permanent": true },
     { "source": "/disciplines.html", "destination": "/activites", "permanent": true },
     { "source": "/disciplines", "destination": "/activites", "permanent": true },
-    { "source": "/coachs.html", "destination": "/coachs", "permanent": true },
-    { "source": "/planning.html", "destination": "/planning", "permanent": true },
-    { "source": "/tarifs.html", "destination": "/tarifs", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/coachs", "destination": "/", "permanent": true },
+    { "source": "/coachs.html", "destination": "/", "permanent": true },
+    { "source": "/contact", "destination": "/", "permanent": true },
+    { "source": "/contact.html", "destination": "/", "permanent": true },
+    { "source": "/planning", "destination": "https://boxe-toulouse.com/plannings/", "permanent": false },
+    { "source": "/planning.html", "destination": "https://boxe-toulouse.com/plannings/", "permanent": false },
+    { "source": "/tarifs", "destination": "https://boutique.boxingcenter.fr/abonnements", "permanent": false },
+    { "source": "/tarifs.html", "destination": "https://boutique.boxingcenter.fr/abonnements", "permanent": false },
     { "source": "/galerie.html", "destination": "/galerie", "permanent": true },
     { "source": "/mentions-legales.html", "destination": "/mentions-legales", "permanent": true }
   ]

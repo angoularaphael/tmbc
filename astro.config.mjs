@@ -11,6 +11,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
+      filter: (page) => !/\/(planning|tarifs|coachs|contact)\/?$/.test(page),
     }),
   ],
   devToolbar: { enabled: false },
