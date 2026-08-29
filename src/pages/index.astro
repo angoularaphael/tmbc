@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-const title = 'Boxe anglaise à Toulouse | Loisirs & compétiteurs | TMBC Minimes';
-const description = 'Club de boxe anglaise à Toulouse Minimes : cours loisirs tous niveaux, boxe anglaise compétiteurs et école dès 3 ans. Essai 10 €. Métro B Barrière de Paris.';
+const title = 'Club de boxe anglaise à Toulouse | Débutants, loisirs, compétiteurs';
+const description = 'Club Toulouse Minimes : club de boxe anglaise à Toulouse pour débutants, loisirs et compétiteurs. Cours de boxe débutant, école dès 3 ans. Essai 10 €, Barrière de Paris.';
 const path = '/';
 const preloadHero = true;
 const jsonLd = {
@@ -13,7 +13,7 @@ const jsonLd = {
       name: 'Je n’ai jamais boxé. Je peux venir ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oui. Les cours de boxe anglaise loisirs à Toulouse Minimes sont ouverts à tous les niveaux. Personne ne vous met en opposition. Essai 10 €, gants prêtés.',
+        text: 'Oui. Le TMBC est un club de boxe anglaise à Toulouse ouvert aux débutants. Les cours loisirs : technique, sac, assauts maîtrisés. Personne ne vous met en opposition. Essai 10 €, gants prêtés.',
       },
     },
     {
@@ -58,6 +58,22 @@ const jsonLd = {
     },
     {
       '@type': 'Question',
+      name: 'C’est un club pour débutants ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui. Débutant boxe à Toulouse : le club TMBC accueille les premiers gants en boxe anglaise loisirs. Pas de sparring imposé, coach dès la première séance, gants prêtés.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quel club de boxe anglaise à Toulouse ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le TMBC est un club de boxe anglaise à Toulouse Minimes (club Toulouse, 12 rue de Fenouillet, Barrière de Paris). Boxe anglaise uniquement : débutants, loisirs, compétiteurs et école.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Où pratiquer la boxe anglaise à Toulouse ?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -70,12 +86,12 @@ const jsonLd = {
 <Base title={title} description={description} path={path} preloadHero={preloadHero} jsonLd={jsonLd}>
 <main id="main">
     <header class="hero" aria-label="Toulouse Minimes Boxing Club">
-      <img class="hero__bg" src="/assets/img/hero.png" width="1920" height="1080" alt="Salle de boxe anglaise TMBC à Toulouse Minimes, ring et sacs" fetchpriority="high" />
+      <img class="hero__bg" src="/assets/img/hero.png" width="1920" height="1080" alt="Club de boxe anglaise TMBC à Toulouse, salle pour débutants et compétiteurs" fetchpriority="high" />
       <div class="hero__veil"></div>
         <div class="hero__pitch">
         <p class="wordmark" aria-hidden="true"><span>T</span><span>M</span><span>B</span><span>C</span></p>
-        <h1>Boxe anglaise à Toulouse Minimes</h1>
-        <p>Club de boxe anglaise TMBC : loisirs, compétiteurs et école dès 3 ans. Essai 10 €, gants prêtés. Pas de sparring imposé.</p>
+        <h1>Club de boxe anglaise à Toulouse</h1>
+        <p>Club Toulouse Minimes : débutants, loisirs, compétiteurs et école dès 3 ans. Essai 10 €, gants prêtés. Pas de sparring imposé.</p>
       </div>
       <div class="hero__foot">
         <ul class="hero__facts" data-reveal>
@@ -104,7 +120,7 @@ const jsonLd = {
 
     <aside class="juice">
       <div class="wrap">
-        <p>TMBC est le club de boxe anglaise de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> (Boxing Center Minimes). Cours de boxe anglaise loisirs, compétiteurs et école, au sein du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+        <p>TMBC est le club de boxe anglaise de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> (Boxing Center Minimes). Club Toulouse pour débutants, loisirs et compétiteurs, réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
       </div>
     </aside>
 
@@ -116,7 +132,7 @@ const jsonLd = {
           <article class="offer">
             <h3>Essai</h3>
             <b><span data-count="10">0</span> €</b>
-            <p>Une séance de boxe anglaise à Toulouse pour voir si ça vous convient. Gants prêtés. Aucun dossier, aucun certificat.</p>
+            <p>Une séance de boxe anglaise à Toulouse, même débutant. Gants prêtés. Aucun dossier, aucun certificat.</p>
             <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai</a>
           </article>
           <article class="offer is-hot">
@@ -139,8 +155,8 @@ const jsonLd = {
       <div class="wrap split">
         <div data-reveal>
           <p class="eyebrow">Pourquoi TMBC</p>
-          <h2 class="heading">Club de boxe anglaise à Toulouse : encadré dès la première séance</h2>
-          <p class="lead" style="margin-top:1rem">TMBC est le club de boxe anglaise de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> — première salle du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>. Ici, on boxe à l’anglaise : loisirs, compétiteurs, école.</p>
+          <h2 class="heading">Club Toulouse : encadré dès la première séance, même débutant</h2>
+          <p class="lead" style="margin-top:1rem">Le TMBC est le club de boxe anglaise de la <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">salle de boxe Toulouse Minimes</a> — première salle du réseau <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>. Club boxe anglaise Toulouse : débutants, loisirs, compétiteurs, école.</p>
           <ul class="why">
             <li><b>01</b> <span>Un coach diplômé vous place : pieds, garde, jab. Vous n’arrivez pas « dans le tas ».</span></li>
             <li><b>02</b> <span>Gants et casque prêtés à l’essai. Vous venez en tenue de sport.</span></li>
@@ -162,13 +178,13 @@ const jsonLd = {
     <section class="section band-tint">
       <div class="wrap">
         <p class="eyebrow" data-reveal>Pour qui</p>
-        <h2 class="heading" data-reveal>Boxe anglaise à Toulouse : loisirs, compétiteurs ou enfants</h2>
+        <h2 class="heading" data-reveal>Club boxe anglaise Toulouse : débutants, loisirs, compétiteurs, enfants</h2>
         <div class="doors" data-reveal-group style="margin-top:1.6rem">
           <a class="door" href="/activites#loisirs">
-            <img src="/assets/media/cours-assaut-1200.webp" alt="Cours de boxe anglaise loisirs à Toulouse Minimes" width="800" height="1000" loading="lazy" />
-            <p class="eyebrow">Vous n’avez jamais boxé</p>
+            <img src="/assets/media/cours-assaut-1200.webp" alt="Cours de boxe débutant et loisirs au club TMBC Toulouse" width="800" height="1000" loading="lazy" />
+            <p class="eyebrow">Débutant boxe · Toulouse</p>
             <h3>Boxe anglaise loisirs</h3>
-            <p>Cours de boxe anglaise à Toulouse. Technique, sac, assauts maîtrisés. Personne ne vous met en opposition.</p>
+            <p>Club de boxe anglaise à Toulouse pour débutants. Technique, sac, assauts maîtrisés. Personne ne vous met en opposition.</p>
           </a>
           <a class="door" href="/activites#competiteurs">
             <img src="/assets/media/sparring-graff-1200.webp" alt="Entraînement boxe anglaise compétiteurs à Toulouse" width="800" height="1000" loading="lazy" />
@@ -191,7 +207,7 @@ const jsonLd = {
         <p class="eyebrow" data-reveal>Les cours</p>
         <h2 class="heading" data-reveal>Créneaux de boxe anglaise à Toulouse, sans jargon</h2>
         <div class="courses" style="margin-top:1.2rem">
-          <a class="course" href="/activites#loisirs"><span class="course__n">01</span><div><h3>Boxe anglaise loisirs</h3><p>Toulouse Minimes · midi 12h40 et soir 19h40 · tous niveaux · pas d’opposition imposée</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#loisirs"><span class="course__n">01</span><div><h3>Boxe anglaise loisirs</h3><p>Débutant boxe à Toulouse · midi 12h40 et soir 19h40 · pas d’opposition imposée</p></div><span>Voir →</span></a>
           <a class="course" href="/activites#competiteurs"><span class="course__n">02</span><div><h3>Boxe anglaise compétiteurs</h3><p>Toulouse · lun mar jeu ven 18h · open sparring samedi 18h30</p></div><span>Voir →</span></a>
           <a class="course" href="/activites#educative"><span class="course__n">03</span><div><h3>École de boxe anglaise</h3><p>Enfants à Toulouse · mercredi et samedi · Baby, éducative, ados</p></div><span>Voir →</span></a>
         </div>
@@ -294,7 +310,9 @@ const jsonLd = {
         <p class="eyebrow" data-reveal>Questions fréquentes</p>
         <h2 class="heading" data-reveal>Avant de pousser la porte</h2>
         <div class="faq" style="margin-top:1.2rem">
-          <details open><summary>Je n’ai jamais boxé. Je peux venir ?</summary><p>Oui. Les cours de boxe anglaise loisirs à Toulouse Minimes sont ouverts à tous les niveaux. Personne ne vous met en opposition. Essai 10 €, gants prêtés.</p></details>
+          <details open><summary>Je n’ai jamais boxé. Je peux venir ?</summary><p>Oui. Le TMBC est un club de boxe anglaise à Toulouse ouvert aux débutants. Cours loisirs : technique, sac, assauts maîtrisés. Personne ne vous met en opposition. Essai 10 €, gants prêtés.</p></details>
+          <details><summary>C’est un club pour débutants ?</summary><p>Oui. Débutant boxe à Toulouse : le club accueille les premiers gants en boxe anglaise loisirs. Pas de sparring imposé, coach dès la première séance, gants prêtés.</p></details>
+          <details><summary>Quel club de boxe anglaise à Toulouse ?</summary><p>Le TMBC, club Toulouse Minimes, 12 rue de Fenouillet, Barrière de Paris. Club de boxe anglaise uniquement : débutants, loisirs, compétiteurs et école.</p></details>
           <details><summary>Combien coûte l’essai ?</summary><p>10 € la séance de boxe anglaise à Toulouse. Aucun dossier, aucun certificat. Gants et casque prêtés au TMBC.</p></details>
           <details><summary>C’est quoi l’offre 29 € ?</summary><p>4 semaines illimitées de boxe anglaise à Toulouse, 29 € par personne, sans engagement. Inscription en ligne.</p></details>
           <details><summary>Quelle différence entre loisirs et compétiteurs ?</summary><p>Boxe anglaise loisirs à Toulouse : technique, sac, assauts maîtrisés — pas d’opposition imposée. Boxe anglaise compétiteurs : entraînement licenciés en semaine (lun mar jeu ven 18h) et open sparring le samedi 18h30.</p></details>
@@ -333,7 +351,7 @@ const jsonLd = {
       <div class="wrap">
         <p class="eyebrow">Inscription en ligne</p>
         <h2 class="display">4 semaines illimitées à 29 €</h2>
-        <p class="lead">Boxe anglaise à Toulouse Minimes. Sans engagement. Matériel prêté le temps de vous équiper.</p>
+        <p class="lead">Club de boxe anglaise à Toulouse. Débutants bienvenus. Sans engagement. Matériel prêté le temps de vous équiper.</p>
         <p class="btn-row" style="margin-top:1.4rem">
           <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris — 29 €</a>
           <a class="btn" href="mailto:boxingcentertls@gmail.com">Écrire au club</a>

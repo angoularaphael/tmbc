@@ -26,19 +26,25 @@ const sportsClub = {
   '@context': 'https://schema.org',
   '@type': ['SportsClub', 'SportsActivityLocation'],
   name: 'Toulouse Minimes Boxing Club',
-  alternateName: ['TMBC', 'Club de boxe anglaise Toulouse Minimes'],
-  description: 'Club de boxe anglaise à Toulouse Minimes : cours loisirs tous niveaux, boxe anglaise compétiteurs et école de boxe dès 3 ans. 12 rue de Fenouillet, Barrière de Paris.',
+  alternateName: ['TMBC', 'Club de boxe anglaise Toulouse', 'Club boxe Toulouse Minimes', 'Toulouse Minimes Boxing Club'],
+  description: 'Club de boxe anglaise à Toulouse Minimes. Club Toulouse pour débutants, loisirs et compétiteurs. Cours de boxe anglaise, école dès 3 ans. 12 rue de Fenouillet, Barrière de Paris.',
   url: `${SITE}/`,
   email: 'boxingcentertls@gmail.com',
   image: ogImage,
   sport: 'Boxing',
   knowsAbout: [
-    'Boxe anglaise',
+    'Club Toulouse',
+    'Club de boxe Toulouse',
+    'Club boxe anglaise Toulouse',
+    'Boxe anglaise Toulouse',
+    'Boxe débutant Toulouse',
+    'Débutant boxe',
+    'Cours de boxe débutant Toulouse',
     'Boxe anglaise loisirs Toulouse',
     'Boxe anglaise compétiteurs Toulouse',
     'Club de boxe Toulouse Minimes',
     'École de boxe anglaise Toulouse',
-    'Cours de boxe anglaise Barrière de Paris',
+    'Salle de boxe Toulouse Barrière de Paris',
   ],
   areaServed: [
     { '@type': 'City', name: 'Toulouse' },
@@ -74,7 +80,7 @@ function isCurrent(href) {
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Toulouse Minimes Boxing Club" />
-  <meta name="keywords" content="boxe anglaise Toulouse, club de boxe anglaise Toulouse, boxe anglaise loisirs Toulouse, boxe anglaise compétiteurs Toulouse, cours de boxe anglaise Toulouse, salle de boxe Toulouse Minimes, club boxe Minimes, boxe Toulouse Barrière de Paris, école de boxe Toulouse, boxe enfants Toulouse, TMBC, Toulouse Minimes Boxing Club, Boxing Center Minimes, essai boxe anglaise 10€" />
+  <meta name="keywords" content="club Toulouse, club de boxe Toulouse, club boxe anglaise Toulouse, boxe anglaise Toulouse, boxe débutant Toulouse, débutant boxe, cours boxe débutant Toulouse, club sport Toulouse, salle de boxe Toulouse, club de boxe anglaise Toulouse Minimes, boxe anglaise loisirs Toulouse, boxe anglaise compétiteurs Toulouse, école de boxe Toulouse, boxe enfants Toulouse, boxe Toulouse Barrière de Paris, TMBC, Toulouse Minimes Boxing Club, essai boxe 10€" />
   <meta name="geo.region" content="FR-31" />
   <meta name="geo.placename" content="Toulouse — Minimes — Barrière de Paris" />
   <meta name="geo.position" content="43.6256;1.4309" />
@@ -86,7 +92,7 @@ function isCurrent(href) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/styles.css?v=8" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=9" />
   {preloadHero && <link rel="preload" as="image" href="/assets/img/hero.png" fetchpriority="high" />}
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
@@ -97,7 +103,7 @@ function isCurrent(href) {
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1920" />
   <meta property="og:image:height" content="1080" />
-  <meta property="og:image:alt" content="Club de boxe anglaise TMBC à Toulouse Minimes — ring et sacs" />
+  <meta property="og:image:alt" content="Club de boxe anglaise TMBC à Toulouse — débutants, loisirs, compétiteurs" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={ogTitle} />
   <meta name="twitter:description" content={description} />
@@ -141,7 +147,7 @@ function isCurrent(href) {
     <div class="wrap foot-grid">
       <div>
         <a class="nav__brand" href="/" style="margin-bottom:12px"><img class="nav__logo" src="/assets/img/logo.jpeg" alt="TMBC" width="160" height="66" /></a>
-        <p>TMBC — club de boxe anglaise à Toulouse Minimes. Cours loisirs, compétiteurs et école dès 3 ans. 12 rue de Fenouillet, 31200 Toulouse, Barrière de Paris.</p>
+        <p>TMBC — club de boxe anglaise à Toulouse. Club Toulouse Minimes pour débutants, loisirs, compétiteurs et enfants. 12 rue de Fenouillet, 31200 Toulouse, Barrière de Paris.</p>
         <p class="sisters">
           <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>
           <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>
@@ -168,7 +174,7 @@ function isCurrent(href) {
       <span>Lun–sam 10h–21h30</span>
     </div>
   </footer>
-  <script src="/assets/js/data.js?v=8" defer></script>
-  <script src="/assets/js/main.js?v=8" defer></script>
+  <script src="/assets/js/data.js?v=9" defer></script>
+  <script src="/assets/js/main.js?v=9" defer></script>
 </body>
 </html>
