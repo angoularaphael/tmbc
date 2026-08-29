@@ -53,9 +53,17 @@ const shots = [
           <button class="chip" type="button" data-filter="anglaise" aria-pressed="false">Anglaise</button>
         </div>
         <div class="gallery-grid" style="margin-top:1.6rem">
-          {shots.map((shot) => (
+          {shots.map((shot, i) => (
             <a class="shot" data-zone={shot.zone} data-full={shot.src} href={shot.src}>
-              <img src={shot.src} alt={shot.alt} loading="lazy" />
+              <img
+                src={shot.src.replace('/galerie/', '/galerie/thumbs/')}
+                alt={shot.alt}
+                width="640"
+                height="640"
+                loading={i < 6 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchpriority={i === 0 ? 'high' : 'low'}
+              />
             </a>
           ))}
         </div>
@@ -64,9 +72,12 @@ const shots = [
     <section class="section" style="padding-top:0">
       <div class="wrap">
         <p class="eyebrow" data-reveal>Vidéo</p>
-        <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Un extrait de <span class="tint">cours</span></h2>
-        <div class="video-pocket" data-reveal style="margin-top:1.4rem">
-          <video src="/assets/media/clip-sparring.mp4" muted loop playsinline preload="none" poster="/assets/media/galerie/cours-boxe-loisirs-toulouse-minimes.webp"></video>
+        <h2 class="display" data-reveal style="font-size:clamp(2rem,4.5vw,3.4rem)">Gala de boxe <span class="tint">Boxing Center</span></h2>
+        <div class="video-pocket video-pocket--yt" data-yt="JsoneKRdNLk" data-reveal style="margin-top:1.4rem">
+          <button type="button" class="yt-lite" aria-label="Lire la vidéo : Gala de boxe le 30 mai 2023, Boxing Center Toulouse">
+            <img src="/assets/media/gala-boxe-toulouse-2023.webp" alt="Gala de boxe le 30 mai 2023, Boxing Center Toulouse" width="1280" height="720" decoding="async" />
+            <span class="yt-lite__play" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </section>
