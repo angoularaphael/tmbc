@@ -10,7 +10,8 @@ const {
 } = Astro.props;
 
 const canonical = path === '/' ? `${SITE}/` : `${SITE}${path}`;
-const ogImage = `${SITE}/assets/img/hero.webp`;
+const ogImage = `${SITE}/assets/img/og.jpg`;
+const logoImage = `${SITE}/assets/img/favicon-192.png`;
 const current = (Astro.url.pathname.replace(/\/$/, '') || '/');
 
 const nav = [
@@ -30,7 +31,8 @@ const sportsClub = {
   description: 'Club de boxe anglaise à Toulouse Minimes. Club Toulouse pour débutants, loisirs et compétiteurs. Cours de boxe anglaise, école dès 3 ans. 12 rue de Fenouillet, Barrière de Paris.',
   url: `${SITE}/`,
   email: 'bc.combat31@gmail.com',
-  image: ogImage,
+  logo: logoImage,
+  image: [ogImage, `${SITE}/assets/img/hero.webp`],
   sport: 'Boxing',
   knowsAbout: [
     'Club Toulouse',
@@ -87,7 +89,12 @@ function isCurrent(href) {
   <meta name="ICBM" content="43.6256, 1.4309" />
   <link rel="canonical" href={canonical} />
   <link rel="alternate" type="text/plain" title="LLM" href={`${SITE}/llms.txt`} />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="image_src" href={ogImage} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
@@ -101,14 +108,25 @@ function isCurrent(href) {
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={ogImage} />
-  <meta property="og:image:width" content="1920" />
-  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Club de boxe anglaise TMBC à Toulouse — débutants, loisirs, compétiteurs" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={ogTitle} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
   <script type="application/ld+json" set:html={JSON.stringify(sportsClub)} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: ogImage,
+    url: ogImage,
+    width: 1200,
+    height: 630,
+    representativeOfPage: true,
+    caption: 'Salle du club de boxe anglaise TMBC à Toulouse Minimes',
+  })} />
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 </head>
 <body>
