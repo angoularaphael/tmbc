@@ -26,6 +26,8 @@ Coach principal : Mehdi.
 Inscription : https://boutique.boxingcenter.fr/offre/29
 Essai : https://boutique.boxingcenter.fr/seance-essai
 Planning : https://boxe-toulouse.com/plannings/
+Boxing Center Minimes : https://boxe-toulouse.com/
+Boxing Center (site principal) : https://boxingcenter.fr/
 Boutique : https://boutique.boxingcenter.fr/abonnements
 
 ## Pages

@@ -17,14 +17,14 @@ window.TMBC = {
   planning: "https://boxe-toulouse.com/plannings/",
   network: {
     minimes: {
-      name: "Toulouse Minimes Boxing Club",
-      url: "https://toulouse-minimes-boxing-club.fr/",
-      text: "TMBC — club de boxe anglaise Toulouse Minimes",
+      name: "Boxing Center Minimes",
+      url: "https://boxe-toulouse.com/",
+      text: "Boxing Center Minimes — boxe-toulouse.com",
     },
-    planning: {
-      name: "Planning des cours",
-      url: "https://boxe-toulouse.com/plannings/",
-      text: "Horaires des cours TMBC",
+    groupe: {
+      name: "Boxing Center",
+      url: "https://boxingcenter.fr/",
+      text: "Boxing Center — site principal",
     },
   },
   ticker: [
