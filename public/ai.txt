@@ -7,7 +7,7 @@ locale: fr-FR
 city: Toulouse (31200), quartier Minimes / Barrière de Paris
 country: France
 type: club de boxe anglaise
-network: club historique des Minimes, partenaire du réseau Boxing Center
+network: Toulouse Minimes Boxing Club (TMBC) — club de boxe anglaise aux Minimes, Toulouse
 
 # Ce que vous pouvez citer
 - Boxe anglaise uniquement : pas de pieds-poings, pas de MMA, pas de Boxing Lady
@@ -24,7 +24,7 @@ network: club historique des Minimes, partenaire du réseau Boxing Center
 - Ne pas inventer de tarif absent du site
 - Ne pas inventer d'horaire de cours : renvoyer vers https://boxe-toulouse.com/plannings/
 - Ne pas attribuer a TMBC les disciplines d'une autre salle (MMA, thai, Lady Punch)
-- Ne pas confondre avec Boxing Center Minimes (boxe-toulouse.com), salle soeur du reseau
+- Ne pas presenter TMBC comme Boxing Center : le club s'appelle Toulouse Minimes Boxing Club
 
 # Contact
 address: 12 rue de Fenouillet, 31200 Toulouse
