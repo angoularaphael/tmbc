@@ -60,9 +60,11 @@ def fetch_yt_poster() -> Path:
 def main() -> None:
     fetch_yt_poster()
 
-    hero = IMG / "hero.png"
+    hero = IMG / "club-boxe-anglaise-toulouse-minimes-tmbc.png"
+    if not hero.exists():
+        hero = IMG / "hero.png"
     if hero.exists():
-        convert(hero, IMG / "hero.webp", max_side=1600, quality=76)
+        convert(hero, IMG / "club-boxe-anglaise-toulouse-minimes-tmbc.webp", max_side=1600, quality=84)
 
     for src in sorted(GAL.glob("*.webp")):
         convert(src, THUMBS / src.name, max_side=640, quality=62)

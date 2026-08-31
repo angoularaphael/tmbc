@@ -12,6 +12,7 @@ const {
 const canonical = path === '/' ? `${SITE}/` : `${SITE}${path}`;
 const ogImage = `${SITE}/assets/img/og.jpg`;
 const logoImage = `${SITE}/assets/img/favicon-192.png`;
+const heroImage = `${SITE}/assets/img/club-boxe-anglaise-toulouse-minimes-tmbc.webp`;
 const current = (Astro.url.pathname.replace(/\/$/, '') || '/');
 
 const nav = [
@@ -32,7 +33,7 @@ const sportsClub = {
   url: `${SITE}/`,
   email: 'bc.combat31@gmail.com',
   logo: logoImage,
-  image: [ogImage, `${SITE}/assets/img/hero.webp`],
+  image: [ogImage, heroImage],
   sport: 'Boxing',
   knowsAbout: [
     'Club de boxe à Toulouse',
@@ -107,8 +108,8 @@ function isCurrent(href) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#f6f3ee" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/styles.css?v=14" />
-  {preloadHero && <link rel="preload" as="image" href="/assets/img/hero.webp" fetchpriority="high" />}
+  <link rel="stylesheet" href="/assets/css/styles.css?v=15" />
+  {preloadHero && <link rel="preload" as="image" href={`${SITE}/assets/img/club-boxe-anglaise-toulouse-minimes-tmbc.webp`} fetchpriority="high" />}
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="TMBC — Toulouse Minimes Boxing Club" />
@@ -119,7 +120,7 @@ function isCurrent(href) {
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Club de boxe anglaise TMBC à Toulouse — débutants, loisirs, compétiteurs" />
+  <meta property="og:image:alt" content="Toulouse Minimes Boxing Club — club de boxe anglaise à Toulouse, loisirs et compétition" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={ogTitle} />
   <meta name="twitter:description" content={description} />
@@ -133,7 +134,7 @@ function isCurrent(href) {
     width: 1200,
     height: 630,
     representativeOfPage: true,
-    caption: 'Salle du club de boxe anglaise TMBC à Toulouse Minimes',
+    caption: 'Toulouse Minimes Boxing Club — club de boxe anglaise à Toulouse Minimes',
   })} />
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 </head>

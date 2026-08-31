@@ -550,6 +550,54 @@ html.fx .hero__bg { animation: ken-m 28s ease-in-out infinite alternate; }
   .hero { min-height: 100svh; height: 100svh; }
 }
 
+.hero--banner {
+  min-height: 0;
+  height: auto;
+  justify-content: flex-start;
+  padding-top: 4.6rem;
+  background: #0c0e12;
+}
+.hero--banner .hero__bg {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  transform: none;
+  display: block;
+}
+html.fx .hero--banner .hero__bg { animation: none; }
+.hero--banner .hero__veil { display: none; }
+.hero--banner .hero__pitch {
+  width: var(--wrap);
+  margin-inline: auto;
+  padding: 1.15rem 0 0.4rem;
+}
+.hero--banner .hero__pitch h1 {
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  letter-spacing: 0.12em;
+  text-shadow: none;
+}
+.hero--banner .hero__foot {
+  width: var(--wrap);
+  margin-inline: auto;
+}
+@media (max-width: 799px) {
+  .hero--banner {
+    padding-top: 4.5rem;
+  }
+  .hero--banner .hero__bg {
+    height: auto;
+    max-height: none;
+  }
+  .hero--banner .hero__pitch,
+  .hero--banner .hero__foot {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 /* ——— Marquee ——— */
 .marquee {
   overflow: hidden;
