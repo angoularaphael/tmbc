@@ -59,15 +59,18 @@
       "source": "/",
       "has": [{ "type": "host", "value": "www.toulouse-minimes-boxing-club.fr" }],
       "destination": "https://toulouse-minimes-boxing-club.fr/",
-      "permanent": true
+      "statusCode": 308
     },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.toulouse-minimes-boxing-club.fr" }],
       "destination": "https://toulouse-minimes-boxing-club.fr/:path*",
-      "permanent": true
+      "statusCode": 308
     },
     { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/contactez-nous", "destination": "/", "permanent": true },
+    { "source": "/contactez-nous.html", "destination": "/", "permanent": true },
+    { "source": "/nous-contacter", "destination": "/", "permanent": true },
     { "source": "/club.html", "destination": "/club", "permanent": true },
     { "source": "/activites.html", "destination": "/activites", "permanent": true },
     { "source": "/disciplines.html", "destination": "/activites", "permanent": true },

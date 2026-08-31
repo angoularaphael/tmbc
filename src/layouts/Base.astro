@@ -9,7 +9,7 @@ const {
   preloadHero = false,
 } = Astro.props;
 
-const canonical = path === '/' ? `${SITE}/` : `${SITE}${path}`;
+const canonical = path === '/' ? SITE : `${SITE}${path}`;
 const ogImage = `${SITE}/assets/img/og.jpg`;
 const logoImage = `${SITE}/assets/img/favicon-192.png`;
 const heroImage = `${SITE}/assets/img/club-boxe-anglaise-toulouse-minimes-tmbc.webp`;
@@ -98,6 +98,7 @@ function isCurrent(href) {
   <meta name="geo.position" content="43.6256;1.4309" />
   <meta name="ICBM" content="43.6256, 1.4309" />
   <link rel="canonical" href={canonical} />
+  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
   <link rel="alternate" type="text/plain" title="LLM" href={`${SITE}/llms.txt`} />
   <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
   <link rel="icon" href="/favicon.ico?v=3" sizes="48x48" />
