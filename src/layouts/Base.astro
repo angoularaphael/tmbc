@@ -24,9 +24,12 @@ const nav = [
   { href: '/galerie', label: 'Galerie' },
 ];
 
+const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Toulouse+Minimes+Boxing+Club+12+rue+de+Fenouillet+31200+Toulouse';
+
 const sportsClub = {
   '@context': 'https://schema.org',
   '@type': ['SportsClub', 'SportsActivityLocation'],
+  '@id': `${SITE}/#club`,
   name: 'Toulouse Minimes Boxing Club',
   alternateName: ['TMBC', 'Club de boxe anglaise Toulouse', 'Club boxe Toulouse Minimes', 'Toulouse Minimes Boxing Club'],
   description: 'Club de boxe anglaise à Toulouse Minimes. Club Toulouse pour débutants, loisirs et compétiteurs. Cours de boxe anglaise, école dès 3 ans. 12 rue de Fenouillet, Barrière de Paris.',
@@ -34,6 +37,7 @@ const sportsClub = {
   email: 'bc.combat31@gmail.com',
   logo: logoImage,
   image: [ogImage, heroImage],
+  hasMap: mapsUrl,
   sport: 'Boxing',
   knowsAbout: [
     'Club de boxe à Toulouse',
@@ -74,7 +78,7 @@ const sportsClub = {
   geo: { '@type': 'GeoCoordinates', latitude: 43.6256, longitude: 1.4309 },
   openingHours: 'Mo-Sa 10:00-21:30',
   memberOf: { '@type': 'Organization', name: 'Boxing Center', url: 'https://boxingcenter.fr/' },
-  sameAs: ['https://boxe-toulouse.com/', 'https://boxingcenter.fr/'],
+  sameAs: ['https://boxe-toulouse.com/', 'https://boxingcenter.fr/', mapsUrl],
 };
 
 function isCurrent(href) {
@@ -128,6 +132,14 @@ function isCurrent(href) {
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
   <script type="application/ld+json" set:html={JSON.stringify(sportsClub)} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE}/#website`,
+    name: 'Toulouse Minimes Boxing Club',
+    url: `${SITE}/`,
+    inLanguage: 'fr-FR',
+  })} />
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ImageObject',
