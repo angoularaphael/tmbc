@@ -14,6 +14,19 @@
     {
       "source": "/favicon.ico",
       "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" },
+        { "key": "Content-Type", "value": "image/x-icon" }
+      ]
+    },
+    {
+      "source": "/favicon-48x48.png",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/favicon-96x96.png",
+      "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     },
@@ -21,6 +34,12 @@
       "source": "/apple-touch-icon.png",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [
+        { "key": "Content-Type", "value": "application/manifest+json; charset=utf-8" }
       ]
     },
     {
