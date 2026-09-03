@@ -45,7 +45,7 @@ ALTS = [
     "Boxe anglaise à Toulouse Minimes, club TMBC",
     "Club de boxe Toulouse TMBC pendant un cours",
     "Cours de boxe anglaise à Toulouse Minimes",
-    "Salle de boxe Toulouse Minimes, 12 rue de Fenouillet",
+    "Salle de boxe Toulouse Minimes, 10 rue de Fenouillet",
     "Entraînement de boxe à Toulouse, club TMBC",
     "Club de boxe Toulouse Barrière de Paris",
     "TMBC, boxe anglaise à Toulouse Minimes",

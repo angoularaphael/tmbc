@@ -3,7 +3,7 @@ window.TMBC = {
   short: "TMBC",
   since: 2017,
   salleSince: 2016,
-  address: "12 rue de Fenouillet, 31200 Toulouse",
+  address: "10 rue de Fenouillet, 31200 Toulouse",
   email: "bc.combat31@gmail.com",
   hours: "Lundi–samedi 10h00–21h30",
   metro: "Métro B · Barrière de Paris · 3 min",
