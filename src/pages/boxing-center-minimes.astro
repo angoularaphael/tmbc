@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import SeoLinks from '../components/SeoLinks.astro';
+
+const BOXE_Toulouse = 'https://boxe-toulouse.com/';
+const title = 'Boxing Center Minimes | boxe-toulouse.com | Salle Toulouse';
+const description = 'Boxing Center Minimes — site officiel boxe-toulouse.com. Boxe anglaise aux Minimes, planning, essai 10 €, offre 29 €. 10 rue de Fenouillet, Toulouse.';
+const path = '/boxing-center-minimes';
+const faq = [
+  { q: 'C’est quoi Boxing Center Minimes ?', a: 'Le site boxe-toulouse.com présente la salle des Minimes : boxe anglaise, planning des cours, tarifs et inscriptions. Même adresse que le TMBC.' },
+  { q: 'TMBC ou Boxing Center Minimes ?', a: 'TMBC est le nom de l’association (Toulouse Minimes Boxing Club). Boxing Center Minimes est le site vitrine et planning sur boxe-toulouse.com.' },
+  { q: 'Où s’inscrire ?', a: 'Sur boutique.boxingcenter.fr : essai 10 €, offre 29 € ou saison. Le planning détaillé est sur boxe-toulouse.com/plannings/.' },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+<main id="main">
+  <header class="phero">
+    <img src="/assets/media/hero-club-boxe-toulouse-minimes.webp" alt="Boxing Center Minimes Toulouse — boxe-toulouse.com" width="1024" height="768" />
+    <div class="wrap" data-reveal>
+      <p class="eyebrow">boxe-toulouse.com · Minimes</p>
+      <h1 class="display">Boxing Center Minimes — Toulouse</h1>
+      <p class="lead">Site officiel <a href={BOXE_Toulouse} target="_blank" rel="noopener">boxe-toulouse.com</a> : boxe anglaise aux Minimes, planning, essai 10 € et offre 29 €. Même salle que le TMBC, 10 rue de Fenouillet.</p>
+      <p class="btn-row" style="margin-top:1.2rem">
+        <a class="btn btn--primary" href={BOXE_Toulouse} target="_blank" rel="noopener">Aller sur boxe-toulouse.com</a>
+        <a class="btn" href="https://boxe-toulouse.com/plannings/" target="_blank" rel="noopener">Planning des cours</a>
+      </p>
+    </div>
+  </header>
+  <aside class="juice"><div class="wrap"><p>Boxing Center Minimes = salle boxe anglaise Toulouse Minimes. Site principal du réseau : <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">boxingcenter.fr</a>. Club associatif : <a href="/club-boxe-toulouse-minimes">TMBC</a>.</p></div></aside>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Sur boxe-toulouse.com</p>
+      <h2 class="heading" data-reveal>Ce que vous trouvez sur le site Boxing Center Minimes</h2>
+      <ul class="equip" data-reveal-group>
+        <li><strong>Planning</strong><p>Horaires boxe anglaise loisirs, compétiteurs et école. <a href="https://boxe-toulouse.com/plannings/" target="_blank" rel="noopener">Voir le planning →</a></p></li>
+        <li><strong>Tarifs & offres</strong><p>Essai 10 €, 4 semaines à 29 €, formules saison. Liens vers la boutique en ligne.</p></li>
+        <li><strong>La salle</strong><p>Photos, équipements, accès Minimes — Barrière de Paris.</p></li>
+        <li><strong>Boxe anglaise</strong><p>Discipline unique aux Minimes : pas de thaï ni kick sur ce site.</p></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section band-tint">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Réseau Boxing Center</p>
+      <h2 class="heading" data-reveal>5 salles à Toulouse et alentours</h2>
+      <div class="netgrid netgrid--duo" data-reveal-group>
+        <a class="netcard" href={BOXE_Toulouse} target="_blank" rel="noopener">
+          <span class="eyebrow">Minimes</span>
+          <b>boxe-toulouse.com</b>
+          <p>Boxing Center Minimes — boxe anglaise, planning, inscriptions. 10 rue de Fenouillet.</p>
+          <em>Voir le site →</em>
+        </a>
+        <a class="netcard" href="https://boxingcenter.fr/" target="_blank" rel="noopener">
+          <span class="eyebrow">Groupe</span>
+          <b>boxingcenter.fr</b>
+          <p>Site principal Boxing Center : toutes les salles, actualités, partenaires.</p>
+          <em>Voir le site →</em>
+        </a>
+      </div>
+      <p class="lead" style="margin-top:1.4rem" data-reveal>Le TMBC (Toulouse Minimes Boxing Club) est le club associatif FFBoxe sur place. <a href="/club">En savoir plus sur le club</a> · <a href="/essai-boxe-toulouse">Essai 10 €</a>.</p>
+    </div>
+  </section>
+  <FaqList items={faq} title="Boxing Center Minimes — FAQ" />
+  <SeoLinks />
+  <CtaBand primaryHref={BOXE_Toulouse} primaryLabel="boxe-toulouse.com" secondaryHref="https://boutique.boxingcenter.fr/seance-essai" secondaryLabel="Essai 10 €" />
+</main>
+</Base>

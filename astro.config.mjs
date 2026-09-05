@@ -16,6 +16,9 @@ export default defineConfig({
         if (item.url === 'https://toulouse-minimes-boxing-club.fr' || item.url === 'https://toulouse-minimes-boxing-club.fr/') {
           item.priority = 1.0;
         }
+        if (/\/club-boxe-toulouse-minimes|\/boxe-anglaise-toulouse|\/essai-boxe-toulouse|\/boxing-center-minimes/.test(item.url)) {
+          item.priority = 0.9;
+        }
         return item;
       },
     }),

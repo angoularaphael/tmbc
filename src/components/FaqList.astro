@@ -1,0 +1,16 @@
+---
+const { items = [], title = 'Questions fréquentes' } = Astro.props;
+---
+<section class="section" id="faq">
+  <div class="wrap home-faq">
+    <p class="eyebrow" data-reveal>{title}</p>
+    <div class="faq" style="margin-top:1.2rem">
+      {items.map((item, i) => (
+        <details open={i === 0}>
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

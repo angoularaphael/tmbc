@@ -1,0 +1,20 @@
+---
+const {
+  title = '4 semaines illimitées à 29 €',
+  lead = 'Boxe anglaise. Sans engagement. Inscription en ligne.',
+  primaryHref = 'https://boutique.boxingcenter.fr/offre/29',
+  primaryLabel = 'Je m’inscris',
+  secondaryHref = 'https://boutique.boxingcenter.fr/seance-essai',
+  secondaryLabel = 'Essai 10 €',
+} = Astro.props;
+---
+<section class="cta-band">
+  <div class="wrap">
+    <h2>{title}</h2>
+    <p>{lead}</p>
+    <p class="btn-row">
+      <a class="btn btn--primary" href={primaryHref}>{primaryLabel}</a>
+      {secondaryHref && <a class="btn" href={secondaryHref}>{secondaryLabel}</a>}
+    </p>
+  </div>
+</section>

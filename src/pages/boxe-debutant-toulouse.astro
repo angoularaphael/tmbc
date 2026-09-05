@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import SeoLinks from '../components/SeoLinks.astro';
+
+const title = 'Boxe débutant Toulouse | Premier cours 10 € | TMBC Minimes';
+const description = 'Jamais boxé ? Cours de boxe débutant à Toulouse Minimes. Coach dès la 1re séance, gants prêtés, pas de sparring imposé. Essai 10 €.';
+const path = '/boxe-debutant-toulouse';
+const faq = [
+  { q: 'Je n’ai jamais boxé, je peux venir ?', a: 'Oui. Le TMBC accueille les débutants en boxe anglaise loisirs. Coach dès la première séance, gants prêtés. Essai 10 €.' },
+  { q: 'Faut-il être en forme ?', a: 'Non. Le coach adapte l’intensité. On commence par la garde, le jab et le travail au sac.' },
+  { q: 'Vais-je me battre dès le premier cours ?', a: 'Non. Pas de sparring imposé. Le seul open sparring est le samedi 18h30, entre licenciés compétiteurs.' },
+  { q: 'Que dois-je apporter ?', a: 'Tenue de sport et bouteille d’eau. Gants et casque prêtés pour l’essai.' },
+  { q: 'Combien coûte le premier cours ?', a: '10 € l’essai. Puis 4 semaines illimitées à 29 € si vous continuez.' },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+<main id="main">
+  <header class="phero">
+    <img src="/assets/media/cours-boxe-loisirs-debutant-toulouse.webp" alt="Cours boxe débutant Toulouse TMBC" width="1024" height="768" />
+    <div class="wrap" data-reveal>
+      <p class="eyebrow">Débutant boxe · Toulouse</p>
+      <h1 class="display">Boxe débutant à Toulouse : votre premier cours</h1>
+      <p class="lead">Jamais mis les gants ? Le TMBC est un club de boxe anglaise à Toulouse ouvert aux débutants. Essai 10 €, coach dès la première séance, matériel prêté.</p>
+    </div>
+  </header>
+  <aside class="juice"><div class="wrap"><p>Premier cours de boxe à Toulouse Minimes. <a href="/essai-boxe-toulouse">Réserver l’essai 10 €</a> · <a href="/boxe-anglaise-toulouse">Boxe anglaise Toulouse</a>.</p></div></aside>
+  <section class="section">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">Déroulé</p>
+        <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Votre première <span class="tint">séance</span></h2>
+        <ul class="why">
+          <li><b>01</b> <span>Échauffement et placement : pieds, garde, déplacements.</span></li>
+          <li><b>02</b> <span>Technique de base : jab, direct, hooks au sac.</span></li>
+          <li><b>03</b> <span>Assauts maîtrisés si le niveau le permet — jamais imposés.</span></li>
+          <li><b>04</b> <span>Retour au calme. Mehdi ou l’équipe corrige en direct.</span></li>
+        </ul>
+      </div>
+      <div class="frame" data-reveal><img src="/assets/media/coach-mehdi-boxe-anglaise-toulouse.webp" alt="Coach boxe débutant Toulouse" width="1200" height="1800" loading="lazy" /></div>
+    </div>
+  </section>
+  <section class="section band-tint">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Horaires débutants</p>
+      <h2 class="heading" data-reveal>Cours boxe débutant à Toulouse — loisirs</h2>
+      <p class="lead" data-reveal>Midi 12h40 (mar, mer, jeu) et soir 19h40 (lun, mar, jeu, ven). Même créneaux pour débutants et confirmés loisirs : le coach adapte.</p>
+      <p class="btn-row" data-reveal>
+        <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai — 10 €</a>
+        <a class="btn" href="https://boxe-toulouse.com/plannings/" target="_blank" rel="noopener">Voir le planning</a>
+      </p>
+    </div>
+  </section>
+  <FaqList items={faq} title="Boxe débutant — questions" />
+  <SeoLinks />
+  <CtaBand primaryHref="https://boutique.boxingcenter.fr/seance-essai" primaryLabel="Essai 10 €" secondaryHref="https://boutique.boxingcenter.fr/offre/29" secondaryLabel="Offre 29 €" />
+</main>
+</Base>

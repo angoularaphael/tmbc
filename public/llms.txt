@@ -33,6 +33,12 @@ Boutique : https://boutique.boxingcenter.fr/abonnements
 ## Pages
 
 - Accueil : https://toulouse-minimes-boxing-club.fr/
+- Club boxe Toulouse : https://toulouse-minimes-boxing-club.fr/club-boxe-toulouse-minimes
+- Boxe anglaise Toulouse : https://toulouse-minimes-boxing-club.fr/boxe-anglaise-toulouse
+- Boxe débutant Toulouse : https://toulouse-minimes-boxing-club.fr/boxe-debutant-toulouse
+- Boxe enfants Toulouse : https://toulouse-minimes-boxing-club.fr/boxe-enfants-toulouse
+- Essai boxe Toulouse : https://toulouse-minimes-boxing-club.fr/essai-boxe-toulouse
+- Boxing Center Minimes (boxe-toulouse.com) : https://toulouse-minimes-boxing-club.fr/boxing-center-minimes
 - Activités : https://toulouse-minimes-boxing-club.fr/activites
 - Le club : https://toulouse-minimes-boxing-club.fr/club
 - Galerie : https://toulouse-minimes-boxing-club.fr/galerie

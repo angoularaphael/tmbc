@@ -1,0 +1,77 @@
+---
+import Base from '../layouts/Base.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import SeoLinks from '../components/SeoLinks.astro';
+
+const title = 'Club boxe Toulouse Minimes | TMBC — Barrière de Paris';
+const description = 'Club de boxe anglaise à Toulouse Minimes depuis 2017. 10 rue de Fenouillet, FFBoxe. Débutants, loisirs, compétiteurs, enfants dès 3 ans. Essai 10 €.';
+const path = '/club-boxe-toulouse-minimes';
+const faq = [
+  { q: 'Où est le club boxe Toulouse TMBC ?', a: '10 rue de Fenouillet, 31200 Toulouse, quartier Minimes — Barrière de Paris. Métro B, 3 minutes à pied.' },
+  { q: 'Quelle discipline au TMBC ?', a: 'Boxe anglaise uniquement : gants, technique, sac, assauts maîtrisés. Pas de thaï, kick ou MMA.' },
+  { q: 'Le club est-il ouvert aux débutants ?', a: 'Oui. Cours loisirs midi et soir, coach dès la première séance, gants prêtés. Essai 10 €.' },
+  { q: 'TMBC et Boxing Center, c’est la même chose ?', a: 'Le TMBC est le club de boxe anglaise aux Minimes. Boxing Center est le réseau (5 salles). Même adresse, même équipe, sites complémentaires.' },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+<main id="main">
+  <header class="phero">
+    <img src="/assets/img/club-boxe-anglaise-toulouse-minimes-tmbc.webp" alt="Club boxe Toulouse Minimes — salle TMBC" width="1600" height="854" />
+    <div class="wrap" data-reveal>
+      <p class="eyebrow">Club boxe Toulouse · Minimes</p>
+      <h1 class="display">Club boxe Toulouse — aux Minimes</h1>
+      <p class="lead">Le TMBC — Toulouse Minimes Boxing Club — est un club de boxe anglaise à Toulouse depuis 2017. Débutants, loisirs, compétiteurs et école dès 3 ans. 10 rue de Fenouillet, Barrière de Paris.</p>
+    </div>
+  </header>
+  <aside class="juice"><div class="wrap"><p>Club boxe Toulouse (31), affilié FFBoxe. Essai 10 €, offre 29 €. Voir aussi <a href="/boxe-anglaise-toulouse">boxe anglaise Toulouse</a>, <a href="/essai-boxe-toulouse">essai boxe</a> et <a href="/boxing-center-minimes">Boxing Center Minimes</a>.</p></div></aside>
+  <section class="section">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">Adresse</p>
+        <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">10 rue de Fenouillet, <span class="tint">31200 Toulouse</span></h2>
+        <p class="lead" style="margin-top:1rem">Quartier Minimes, métro B Barrière de Paris. Ouvert lundi–samedi 10h–21h30. Plusieurs rings, douze sacs, prépa physique à l’étage. Vestiaires séparés H/F.</p>
+        <p class="btn-row" style="margin-top:1.2rem">
+          <a class="btn btn--primary" href="/club">Voir la salle</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Toulouse+Minimes+Boxing+Club+10+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener">Plan d’accès</a>
+        </p>
+      </div>
+      <div class="frame" data-reveal><img src="/assets/media/club-boxe-anglaise-toulouse-minimes.webp" alt="Salle club boxe Toulouse TMBC" width="1600" height="1064" loading="lazy" /></div>
+    </div>
+  </section>
+  <section class="section band-tint">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Pour qui ?</p>
+      <h2 class="heading" data-reveal>Un club boxe Toulouse pour tous les profils</h2>
+      <ul class="equip" data-reveal-group>
+        <li><strong>Débutants</strong><p>Première séance encadrée, pas de sparring imposé. <a href="/boxe-debutant-toulouse">Boxe débutant Toulouse</a>.</p></li>
+        <li><strong>Loisirs</strong><p>Technique, sac, assauts maîtrisés. Midi et soir.</p></li>
+        <li><strong>Compétiteurs</strong><p>Entraînement licenciés, open sparring samedi 18h30.</p></li>
+        <li><strong>Enfants</strong><p>École dès 3 ans. <a href="/boxe-enfants-toulouse">Boxe enfants Toulouse</a>.</p></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap split">
+      <div class="frame" data-reveal><img src="/assets/media/ring-principal-1200.webp" alt="Ring club boxe anglaise Toulouse" width="1200" height="800" loading="lazy" /></div>
+      <div data-reveal>
+        <p class="eyebrow">Depuis 2016</p>
+        <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem)">Salle ouverte en 2016, <span class="tint">association TMBC en 2017</span></h2>
+        <p class="lead" style="margin-top:1rem">Trois boxeurs professionnels formés ici, une trentaine d’amateurs licenciés. Affiliation FFBoxe. Le club boxe Toulouse des Minimes, dédié à la boxe anglaise.</p>
+      </div>
+    </div>
+  </section>
+  <FaqList items={faq} title="Club boxe Toulouse — questions" />
+  <SeoLinks />
+  <CtaBand />
+</main>
+</Base>

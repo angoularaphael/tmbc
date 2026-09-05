@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import SeoLinks from '../components/SeoLinks.astro';
 const title = 'Club boxe Toulouse | Boxe anglaise Minimes | TMBC';
 const description = 'Club boxe Toulouse : boxe anglaise aux Minimes, débutants, loisirs, compétiteurs et école dès 3 ans. Tarifs, horaires des cours, photos et plan d’accès. FFBoxe, essai 10 €.';
 const path = '/';
@@ -337,6 +338,8 @@ const jsonLd = {
       </div>
     </section>
 
+    <SeoLinks />
+
     <section class="section" id="faq">
       <div class="wrap home-faq">
         <p class="eyebrow" data-reveal>Questions fréquentes</p>
@@ -363,7 +366,7 @@ const jsonLd = {
         <h2 class="heading" data-reveal>Boxing Center Minimes, et Boxing Center</h2>
         <p class="lead" data-reveal>Le TMBC est le Toulouse Minimes Boxing Club. Nos sites partenaires :</p>
         <ul class="partner-list" data-reveal>
-          <li><a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a></li>
+          <li><a href="/boxing-center-minimes">Boxing Center Minimes</a></li>
           <li><a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a></li>
         </ul>
         <div class="netgrid netgrid--duo" data-reveal-group>

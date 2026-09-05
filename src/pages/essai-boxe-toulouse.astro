@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaBand from '../components/CtaBand.astro';
+import SeoLinks from '../components/SeoLinks.astro';
+
+const title = 'Essai boxe Toulouse 10 € | Séance découverte | TMBC';
+const description = 'Réservez votre essai de boxe anglaise à Toulouse pour 10 €. Une séance, gants prêtés, sans dossier ni certificat. Minimes, métro B Barrière de Paris.';
+const path = '/essai-boxe-toulouse';
+const faq = [
+  { q: 'Combien coûte l’essai boxe à Toulouse ?', a: '10 € la séance. Gants et casque prêtés. Aucun dossier, aucun certificat médical pour l’essai.' },
+  { q: 'Comment réserver ?', a: 'En ligne sur boutique.boxingcenter.fr/seance-essai. Choisissez Minimes et un créneau loisirs.' },
+  { q: 'Que se passe-t-il après l’essai ?', a: 'Offre 29 € : 4 semaines illimitées. Ou formule saison 259 € pour 12 mois.' },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+<main id="main">
+  <header class="phero">
+    <img src="/assets/img/club-boxe-anglaise-toulouse-minimes-tmbc.webp" alt="Essai boxe Toulouse TMBC Minimes" width="1600" height="854" />
+    <div class="wrap" data-reveal>
+      <p class="eyebrow">Essai boxe · 10 €</p>
+      <h1 class="display">Essai boxe à Toulouse — 10 € la séance</h1>
+      <p class="lead">Une séance de boxe anglaise aux Minimes. Gants prêtés, coach dès l’arrivée. Réservation en ligne — sans engagement.</p>
+      <p class="btn-row" style="margin-top:1.2rem">
+        <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai</a>
+      </p>
+    </div>
+  </header>
+  <aside class="juice"><div class="wrap"><p>Essai boxe Toulouse Minimes, 10 rue de Fenouillet. <a href="/boxe-debutant-toulouse">Première fois ?</a> · <a href="/club">Plan d’accès</a>.</p></div></aside>
+  <section class="section">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">Inclus</p>
+        <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem)">Ce qui est <span class="tint">compris</span></h2>
+        <ul class="why">
+          <li><b>01</b> <span>Une séance complète de boxe anglaise loisirs.</span></li>
+          <li><b>02</b> <span>Gants et casque prêtés — venez en tenue de sport.</span></li>
+          <li><b>03</b> <span>Coach qui vous place dès le début.</span></li>
+          <li><b>04</b> <span>Pas de sparring imposé.</span></li>
+        </ul>
+      </div>
+      <div class="frame" data-reveal><img src="/assets/media/ring-principal-1200.webp" alt="Séance essai boxe Toulouse" width="1200" height="800" loading="lazy" /></div>
+    </div>
+  </section>
+  <section class="section band-tint">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Accès</p>
+      <h2 class="heading" data-reveal>10 rue de Fenouillet — métro B, 3 min</h2>
+      <p class="lead" data-reveal>Barrière de Paris, 31200 Toulouse. Ouvert lun–sam 10h–21h30. Arrivez 10 minutes avant le cours pour l’accueil.</p>
+      <p class="btn-row" data-reveal>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Toulouse+Minimes+Boxing+Club+10+rue+de+Fenouillet+31200+Toulouse" target="_blank" rel="noopener">Ouvrir dans Maps</a>
+        <a class="btn btn--primary" href="https://boxe-toulouse.com/plannings/" target="_blank" rel="noopener">Choisir un créneau</a>
+      </p>
+    </div>
+  </section>
+  <FaqList items={faq} title="Essai boxe Toulouse — FAQ" />
+  <SeoLinks />
+  <CtaBand primaryHref="https://boutique.boxingcenter.fr/seance-essai" primaryLabel="Réserver l’essai — 10 €" secondaryHref="https://boutique.boxingcenter.fr/offre/29" secondaryLabel="Offre 29 €" />
+</main>
+</Base>

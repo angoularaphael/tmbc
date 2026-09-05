@@ -1,0 +1,21 @@
+---
+const links = [
+  { href: '/club-boxe-toulouse-minimes', label: 'Club boxe Toulouse' },
+  { href: '/boxe-anglaise-toulouse', label: 'Boxe anglaise' },
+  { href: '/boxe-debutant-toulouse', label: 'Boxe débutant' },
+  { href: '/boxe-enfants-toulouse', label: 'Boxe enfants' },
+  { href: '/essai-boxe-toulouse', label: 'Essai 10 €' },
+  { href: '/boxing-center-minimes', label: 'Boxing Center Minimes' },
+];
+---
+<section class="section band-tint">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Guides</p>
+    <h2 class="heading" data-reveal>Boxe anglaise à Toulouse Minimes</h2>
+    <ul class="partner-list" data-reveal>
+      {links.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</section>
