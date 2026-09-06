@@ -1,5 +1,9 @@
 ---
+import { keywordsMeta, knowsAbout as seoKnowsAbout } from '../lib/seo-keywords';
+
 const SITE = 'https://toulouse-minimes-boxing-club.fr';
+const SEO_KEYWORDS = keywordsMeta();
+const SEO_KNOWS_ABOUT = seoKnowsAbout();
 const {
   title,
   description,
@@ -39,30 +43,7 @@ const sportsClub = {
   image: [ogImage, heroImage],
   hasMap: mapsUrl,
   sport: 'Boxing',
-  knowsAbout: [
-    'Club boxe Toulouse',
-    'Club de boxe à Toulouse',
-    'Club de boxe Toulouse 31',
-    'Club de boxe toulousain',
-    'Club Toulouse',
-    'Club de boxe Toulouse',
-    'Club boxe anglaise Toulouse',
-    'Boxe anglaise Toulouse',
-    'Boxe débutant Toulouse',
-    'Débutant boxe',
-    'Cours de boxe débutant Toulouse',
-    'Boxe anglaise loisirs Toulouse',
-    'Boxe anglaise compétiteurs Toulouse',
-    'Boxe éducative Toulouse',
-    'Boxe éducative filles et garçons',
-    'Club de boxe Toulouse Minimes',
-    'École de boxe anglaise Toulouse',
-    'Salle de boxe Toulouse Barrière de Paris',
-    'Tarifs boxe Toulouse',
-    'Horaires des cours de boxe Toulouse',
-    'Plan d’accès salle de boxe Toulouse',
-    'FFBoxe Toulouse',
-  ],
+  knowsAbout: SEO_KNOWS_ABOUT,
   areaServed: [
     { '@type': 'City', name: 'Toulouse' },
     { '@type': 'Place', name: 'Minimes, Toulouse' },
@@ -97,7 +78,7 @@ function isCurrent(href) {
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Toulouse Minimes Boxing Club" />
-  <meta name="keywords" content="club boxe Toulouse, club de boxe à Toulouse, club de boxe Toulouse, club de boxe Toulouse 31, club de boxe toulousain, club boxe anglaise Toulouse, boxe anglaise Toulouse, boxe débutant Toulouse, débutant boxe, cours boxe débutant Toulouse, club sport Toulouse, salle de boxe Toulouse, salle de sport Toulouse, club de boxe anglaise Toulouse Minimes, boxe anglaise loisirs Toulouse, boxe anglaise compétiteurs Toulouse, boxe éducative Toulouse, boxe éducative filles et garçons, école de boxe Toulouse, boxe enfants Toulouse, boxe femme Toulouse, tarifs boxe Toulouse, horaires des cours de boxe Toulouse, photos club de boxe Toulouse, plan d’accès salle de boxe Toulouse, FFBoxe Toulouse, boxe Toulouse Barrière de Paris, TMBC, Toulouse Minimes Boxing Club, essai boxe 10€" />
+  <meta name="keywords" content={SEO_KEYWORDS} />
   <meta name="geo.region" content="FR-31" />
   <meta name="geo.placename" content="Toulouse — Minimes — Barrière de Paris" />
   <meta name="geo.position" content="43.6256;1.4309" />
