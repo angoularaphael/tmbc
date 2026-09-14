@@ -1,3 +1,7 @@
+# Toulouse Minimes Boxing Club — robots.txt
+# Fiches agents IA : /llms.txt · /ai.txt
+
+# ---------------------------- Moteurs classiques ----------------------------
 User-agent: Googlebot
 Allow: /
 
@@ -9,13 +13,83 @@ Allow: /favicon-96x96.png
 Allow: /apple-touch-icon.png
 Allow: /assets/img/
 
+User-agent: Bingbot
+Allow: /
+
+# ------- IA de réponse — référencement dans ChatGPT, Claude, Perplexity… ----
+# Priorité : bots *Search* et *User* (citations). GPTBot / ClaudeBot = entraînement (Allow par défaut ici).
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Meta-WebIndexer
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# ---------------------------- Le reste --------------------------------------
 User-agent: *
 Allow: /
 Allow: /sitemap.xml
 Allow: /sitemap-index.xml
 Allow: /sitemap-0.xml
+Allow: /llms.txt
+Allow: /ai.txt
 
 Sitemap: https://toulouse-minimes-boxing-club.fr/sitemap.xml
 Sitemap: https://toulouse-minimes-boxing-club.fr/sitemap-index.xml
-# Fiches agents : /llms.txt · /ai.txt
 # Fiche pour les assistants IA : https://toulouse-minimes-boxing-club.fr/llms.txt
