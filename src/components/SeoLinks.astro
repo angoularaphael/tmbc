@@ -6,6 +6,8 @@ const links = [
   { href: '/boxe-enfants-toulouse', label: 'Boxe enfants' },
   { href: '/essai-boxe-toulouse', label: 'Essai 10 €' },
   { href: '/boxing-center-minimes', label: 'Boxing Center Minimes' },
+  { href: 'https://materiel-de-boxe.fr', label: 'matériel de boxe', external: true },
+  { href: 'https://materiel-de-boxe.fr/boutique-boxe-toulouse', label: 'matériel de boxe Toulouse', external: true },
 ];
 ---
 <section class="section band-tint">
@@ -14,7 +16,7 @@ const links = [
     <h2 class="heading" data-reveal>Boxe anglaise à Toulouse Minimes</h2>
     <ul class="partner-list" data-reveal>
       {links.map((item) => (
-        <li><a href={item.href}>{item.label}</a></li>
+        <li><a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener' : undefined}>{item.label}</a></li>
       ))}
     </ul>
   </div>
