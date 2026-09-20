@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import MaterielBand from '../components/MaterielBand.astro';
 const title = 'Club boxe Toulouse | Cours boxe anglaise | TMBC';
 const description = 'Club boxe Toulouse : cours de boxe anglaise, boxe éducative filles et garçons, tarifs et horaires. Débutants, loisirs, compétiteurs. Essai 10 €, Minimes.';
 const path = '/activites';
@@ -18,7 +19,7 @@ const jsonLd = undefined;
     </header>
     <aside class="juice">
       <div class="wrap">
-        <p>Les cours de boxe anglaise loisirs, compétiteurs et école du Toulouse Minimes Boxing Club. Aussi sur <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a> et <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a>.</p>
+        <p>Les cours de boxe anglaise loisirs, compétiteurs et école du Toulouse Minimes Boxing Club. Aussi sur <a href="https://boxe-toulouse.com/" target="_blank" rel="noopener">Boxing Center Minimes</a>, <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">Boxing Center</a> et <a href="https://materiel-de-boxe.fr/" target="_blank" rel="noopener">matériel de boxe</a>.</p>
       </div>
     </aside>
     <article class="section" id="loisirs"><div class="wrap split">
@@ -33,6 +34,7 @@ const jsonLd = undefined;
       <div data-reveal><p class="eyebrow">03 · école de boxe anglaise · dès 3 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.6rem)">École de <span class="tint">boxe anglaise</span></h2><p class="lead" style="margin-top:1rem">École de boxe anglaise à Toulouse dès 3 ans. Baby Boxe 250 € (3–6 ans), éducative 295 € (7–16 ans), t-shirt inclus. Mercredi et samedi. Aucun coup porté chez les petits.</p></div>
       <div class="frame" data-reveal><img src="/assets/media/ecole-boxe-enfants-toulouse-tmbc.webp" alt="École de boxe anglaise enfants à Toulouse Minimes" width="768" height="1024" loading="lazy" /></div>
     </div></article>
+    <MaterielBand />
     <section class="cta-band">
       <div class="wrap">
         <h2>Testez un cours de boxe, même débutant, pour 10 €</h2>

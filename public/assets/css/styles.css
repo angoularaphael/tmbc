@@ -1638,7 +1638,10 @@ html.fx .offer.is-hot {
   gap: 0.7rem;
   margin-top: 0.8rem;
 }
-@media (min-width: 800px) { .netgrid--duo { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 800px) {
+  .netgrid { grid-template-columns: repeat(3, 1fr); }
+  .netgrid--duo { grid-template-columns: 1fr 1fr; }
+}
 .netcard {
   display: flex;
   flex-direction: column;

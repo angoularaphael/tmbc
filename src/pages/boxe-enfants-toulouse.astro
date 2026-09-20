@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
 import SeoLinks from '../components/SeoLinks.astro';
+import MaterielBand from '../components/MaterielBand.astro';
 
 const title = 'Boxe enfants Toulouse | École dès 3 ans | TMBC Minimes';
 const description = 'École de boxe anglaise à Toulouse pour filles et garçons dès 3 ans. Baby Boxe, boxe éducative, sans coup porté. Mercredi & samedi aux Minimes.';
@@ -40,7 +41,7 @@ const jsonLd = {
   </div></article>
   <article class="section band-tint"><div class="wrap split">
     <div class="frame" data-reveal><img src="/assets/shop/pack-enfants.jpg" alt="Pack boxe enfants Toulouse" width="400" height="400" loading="lazy" /></div>
-    <div data-reveal><p class="eyebrow">7–16 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Boxe <span class="tint">éducative</span></h2><p class="lead" style="margin-top:1rem">295 € l’année, t-shirt inclus. Mercredi et samedi. Technique, sac, assauts très encadrés selon l’âge. Matériel enfant dispo à la boutique Boxing Center.</p></div>
+    <div data-reveal><p class="eyebrow">7–16 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Boxe <span class="tint">éducative</span></h2><p class="lead" style="margin-top:1rem">295 € l’année, t-shirt inclus. Mercredi et samedi. Technique, sac, assauts très encadrés selon l’âge. Pour le kit : <a href="https://materiel-de-boxe.fr/equipement-boxe-enfant" target="_blank" rel="noopener">équipement boxe enfant</a> sur <a href="https://materiel-de-boxe.fr/" target="_blank" rel="noopener">matériel de boxe</a>.</p></div>
   </div></article>
   <section class="section">
     <div class="wrap">
@@ -50,6 +51,7 @@ const jsonLd = {
     </div>
   </section>
   <FaqList items={faq} title="Boxe enfants — FAQ parents" />
+  <MaterielBand title="Matériel de boxe enfant" lead="Gants junior, packs enfants, protège-dents : le matériel de boxe adapté aux 4/7 et 8/15 ans. Colis chez vous." />
   <SeoLinks />
   <CtaBand title="Inscrire votre enfant" lead="Baby Boxe et boxe éducative — renseignements par mail ou en salle." primaryHref="mailto:bc.combat31@gmail.com" primaryLabel="Écrire au club" secondaryHref="https://boutique.boxingcenter.fr/abonnements" secondaryLabel="Voir les tarifs" />
 </main>

@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import FaqList from '../components/FaqList.astro';
 import CtaBand from '../components/CtaBand.astro';
 import SeoLinks from '../components/SeoLinks.astro';
+import MaterielBand from '../components/MaterielBand.astro';
 
 const BOXE_Toulouse = 'https://boxe-toulouse.com/';
 const title = 'Boxing Center Minimes | boxe-toulouse.com | Salle Toulouse';
@@ -37,7 +38,7 @@ const jsonLd = {
       </p>
     </div>
   </header>
-  <aside class="juice"><div class="wrap"><p>Boxing Center Minimes = salle boxe anglaise Toulouse Minimes. Site principal du réseau : <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">boxingcenter.fr</a>. Club associatif : <a href="/club-boxe-toulouse-minimes">TMBC</a>.</p></div></aside>
+  <aside class="juice"><div class="wrap"><p>Boxing Center Minimes = salle boxe anglaise Toulouse Minimes. Site principal du réseau : <a href="https://boxingcenter.fr/" target="_blank" rel="noopener">boxingcenter.fr</a>. Club associatif : <a href="/club-boxe-toulouse-minimes">TMBC</a>. Équipement : <a href="https://materiel-de-boxe.fr/" target="_blank" rel="noopener">matériel de boxe</a>.</p></div></aside>
   <section class="section">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Sur boxe-toulouse.com</p>
@@ -72,6 +73,7 @@ const jsonLd = {
     </div>
   </section>
   <FaqList items={faq} title="Boxing Center Minimes — FAQ" />
+  <MaterielBand />
   <SeoLinks />
   <CtaBand primaryHref={BOXE_Toulouse} primaryLabel="boxe-toulouse.com" secondaryHref="https://boutique.boxingcenter.fr/seance-essai" secondaryLabel="Essai 10 €" />
 </main>
