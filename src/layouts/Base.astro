@@ -63,7 +63,7 @@ const sportsClub = {
   sameAs: ['https://boxe-toulouse.com/', 'https://boxingcenter.fr/', 'https://materiel-de-boxe.fr/', mapsUrl],
 };
 
-function isCurrent(href) {
+function isCurrent(href: string) {
   if (href.startsWith('http')) return false;
   if (href === '/') return current === '/';
   return current === href || current.startsWith(`${href}/`);
