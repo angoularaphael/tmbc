@@ -29,9 +29,9 @@ Planning : https://boxe-toulouse.com/plannings/
 Boxing Center Minimes : https://boxe-toulouse.com/
 Boxing Center (site principal) : https://boxingcenter.fr/
 Boutique abonnements : https://boutique.boxingcenter.fr/abonnements
-Matériel de boxe : https://materiel-de-boxe.fr/
-Matériel de boxe Toulouse : https://materiel-de-boxe.fr/boutique-boxe-toulouse
-Gants de boxe : https://materiel-de-boxe.fr/gants-de-boxe
+Matériel de boxe : https://boutique.boxingcenter.fr/
+Matériel de boxe Toulouse : https://boutique.boxingcenter.fr/
+Gants de boxe : https://boutique.boxingcenter.fr/
 
 ## Pages
 
