@@ -1,0 +1,20 @@
+<form id="contact-form" class="contact-form" action="mailto:bc.combat31@gmail.com" method="post" enctype="text/plain">
+  <p>Remplissez ce formulaire pour préparer votre message au club. Votre application de messagerie s’ouvrira : vous devrez y envoyer le message.</p>
+  <label for="prenom">Votre nom</label>
+  <input id="prenom" name="prenom" autocomplete="name" required maxlength="100" />
+  <label for="email">Votre adresse e-mail</label>
+  <input id="email" name="email" type="email" autocomplete="email" required maxlength="254" />
+  <label for="tel">Téléphone (facultatif)</label>
+  <input id="tel" name="tel" type="tel" autocomplete="tel" maxlength="30" />
+  <label for="msg">Votre message</label>
+  <textarea id="msg" name="msg" rows="5" required maxlength="3000" placeholder="Inscription adulte ou enfant, demande de renseignements…"></textarea>
+  <button class="btn btn--primary" type="submit">Préparer mon e-mail</button>
+  <p id="form-ok" role="status" hidden>Votre message est prêt à être envoyé dans votre messagerie. Si elle ne s’ouvre pas, envoyez votre demande à bc.combat31@gmail.com. Aucun message n’est envoyé automatiquement.</p>
+</form>
+<style>
+  .contact-form { display: grid; gap: .8rem; max-width: 42rem; margin-top: 1.5rem; }
+  label { font-weight: 700; }
+  input, textarea { width: 100%; padding: .85rem; border: 1px solid #7b8490; border-radius: .4rem; color: #182331; background: #fff; font: inherit; }
+  input:focus-visible, textarea:focus-visible { outline: 3px solid #c22d39; outline-offset: 2px; }
+  button { justify-self: start; }
+</style>

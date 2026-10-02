@@ -11,7 +11,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !/\/(planning|tarifs|coachs|contact)\/?$/.test(page),
+      filter: (page) => !/\/(coachs)\/?$/.test(page),
       serialize(item) {
         if (item.url === 'https://toulouse-minimes-boxing-club.fr' || item.url === 'https://toulouse-minimes-boxing-club.fr/') {
           item.priority = 1.0;

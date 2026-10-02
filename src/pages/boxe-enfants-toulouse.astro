@@ -12,7 +12,7 @@ const faq = [
   { q: 'À partir de quel âge ?', a: 'Dès 3 ans en Baby Boxe (mercredi). Boxe éducative de 7 à 16 ans (mercredi et samedi).' },
   { q: 'Les enfants se battent-ils ?', a: 'Non chez les petits. Coordination, jeu, respect. Aucun coup porté en Baby Boxe et éducative.' },
   { q: 'Filles et garçons ensemble ?', a: 'Oui. Boxe éducative filles et garçons, groupes adaptés à l’âge.' },
-  { q: 'Quels tarifs ?', a: 'Baby Boxe 250 € l’année (3–6 ans). Boxe éducative 295 € (7–16 ans), t-shirt inclus.' },
+  { q: 'Quels tarifs ?', a: '250 € par saison enfants. Les cours ont lieu mercredi et samedi de 18h à 19h.' },
 ];
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -34,14 +34,14 @@ const jsonLd = {
       <p class="lead">École de boxe anglaise à Toulouse Minimes : Baby Boxe et boxe éducative filles et garçons. Pas de combat chez les petits — technique, coordination et confiance.</p>
     </div>
   </header>
-  <aside class="juice"><div class="wrap"><p>Boxe enfants Toulouse, 10 rue de Fenouillet. <a href="/activites#educative">Détail activités</a> · <a href="https://boutique.boxingcenter.fr/abonnements" target="_blank" rel="noopener">Tarifs</a>.</p></div></aside>
+  <aside class="juice"><div class="wrap"><p>Boxe enfants Toulouse, 10 rue de Fenouillet. <a href="/activites#educative">Détail activités</a> · <a href="/tarifs">Tarifs</a>.</p></div></aside>
   <article class="section"><div class="wrap split">
-    <div data-reveal><p class="eyebrow">3–6 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Baby <span class="tint">Boxe</span></h2><p class="lead" style="margin-top:1rem">250 € l’année. Mercredi. Jeu, coordination, respect. Aucun coup porté — initiation douce à la boxe anglaise.</p></div>
+    <div data-reveal><p class="eyebrow">3–6 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Baby <span class="tint">Boxe</span></h2><p class="lead" style="margin-top:1rem">250 € par saison. Mercredi et samedi de 18h à 19h. Jeu, coordination, respect. Aucun coup porté — initiation douce à la boxe anglaise.</p></div>
     <div class="frame" data-reveal><img src="/assets/media/ecole-boxe-enfants-toulouse-tmbc.webp" alt="Baby boxe enfants Toulouse" width="768" height="1024" loading="lazy" /></div>
   </div></article>
   <article class="section band-tint"><div class="wrap split">
     <div class="frame" data-reveal><img src="/assets/shop/pack-enfants.jpg" alt="Pack boxe enfants Toulouse" width="400" height="400" loading="lazy" /></div>
-    <div data-reveal><p class="eyebrow">7–16 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Boxe <span class="tint">éducative</span></h2><p class="lead" style="margin-top:1rem">295 € l’année, t-shirt inclus. Mercredi et samedi. Technique, sac, assauts très encadrés selon l’âge. Pour le kit : <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">équipement boxe enfant</a> sur <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">matériel de boxe</a>.</p></div>
+    <div data-reveal><p class="eyebrow">7–16 ans</p><h2 class="display" style="font-size:clamp(2rem,4.5vw,3.4rem)">Boxe <span class="tint">éducative</span></h2><p class="lead" style="margin-top:1rem">250 € par saison. Mercredi et samedi de 18h à 19h. Technique, sac, assauts très encadrés selon l’âge. Pour le kit : <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">équipement boxe enfant</a> sur <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">matériel de boxe</a>.</p></div>
   </div></article>
   <section class="section">
     <div class="wrap">
@@ -53,6 +53,6 @@ const jsonLd = {
   <FaqList items={faq} title="Boxe enfants — FAQ parents" />
   <MaterielBand title="Matériel de boxe enfant" lead="Gants junior, packs enfants, protège-dents : le matériel de boxe adapté aux 4/7 et 8/15 ans. Colis chez vous." />
   <SeoLinks />
-  <CtaBand title="Inscrire votre enfant" lead="Baby Boxe et boxe éducative — renseignements par mail ou en salle." primaryHref="mailto:bc.combat31@gmail.com" primaryLabel="Écrire au club" secondaryHref="https://boutique.boxingcenter.fr/abonnements" secondaryLabel="Voir les tarifs" />
+  <CtaBand title="Inscrire votre enfant" lead="Baby Boxe et boxe éducative — renseignements via le formulaire de contact." primaryHref="/contact" primaryLabel="Écrire au club" secondaryHref="/tarifs" secondaryLabel="Voir les tarifs" />
 </main>
 </Base>

@@ -1,3 +1,18 @@
 ---
-return Astro.redirect('https://boutique.boxingcenter.fr/abonnements');
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
+<Base title="Tarifs | TMBC Toulouse Minimes" description="295 € par saison adultes, 250 € par saison enfants. Contactez le TMBC pour les renseignements et inscriptions." path="/tarifs">
+  <main id="main" class="section"><div class="wrap">
+    <h1 class="heading">Tarifs de la saison</h1>
+    <div class="offers season-offers" style="margin-top:2rem">
+      <article class="offer"><h2>Adultes</h2><b>295 €</b><p>Par saison</p></article>
+      <article class="offer"><h2>Enfants</h2><b>250 €</b><p>Par saison</p></article>
+    </div>
+    <section style="margin-top:3rem" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="heading">Contacter le club</h2>
+      <p>Pour vous inscrire ou obtenir des renseignements, contactez-nous via le formulaire.</p>
+      <ContactForm />
+    </section>
+  </div></main>
+</Base>

@@ -1,3 +1,11 @@
 ---
-return Astro.redirect('/');
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
+<Base title="Contact | TMBC Toulouse Minimes" description="Contactez le Toulouse Minimes Boxing Club pour votre inscription ou vos questions sur les cours adultes et enfants." path="/contact">
+  <main id="main" class="section"><div class="wrap">
+    <h1 class="heading">Contacter le club</h1>
+    <p class="lead">Renseignements et inscriptions · 10 rue de Fenouillet, 31200 Toulouse.</p>
+    <ContactForm />
+  </div></main>
+</Base>

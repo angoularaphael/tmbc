@@ -23,9 +23,10 @@ const nav = [
   { href: '/', label: 'Accueil' },
   { href: '/club', label: 'Le club' },
   { href: '/activites', label: 'Activités' },
-  { href: 'https://boxe-toulouse.com/plannings/', label: 'Planning', external: true },
-  { href: 'https://boutique.boxingcenter.fr/abonnements', label: 'Tarifs', external: true },
+  { href: '/planning', label: 'Planning' },
+  { href: '/tarifs', label: 'Tarifs' },
   { href: '/galerie', label: 'Galerie' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Toulouse+Minimes+Boxing+Club+10+rue+de+Fenouillet+31200+Toulouse';
@@ -58,7 +59,7 @@ const sportsClub = {
     addressCountry: 'FR',
   },
   geo: { '@type': 'GeoCoordinates', latitude: 43.6256, longitude: 1.4309 },
-  openingHours: 'Mo-Sa 10:00-21:30',
+  openingHours: ['Mo-Fr 17:30-20:00', 'Sa 18:00-19:00'],
   memberOf: { '@type': 'Organization', name: 'Boxing Center', url: 'https://boxingcenter.fr/' },
   sameAs: ['https://boxe-toulouse.com/', 'https://boxingcenter.fr/', 'https://boutique.boxingcenter.fr/', mapsUrl],
 };
@@ -152,7 +153,7 @@ function isCurrent(href: string) {
       </ul>
     </nav>
     <div class="nav__right">
-      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
+      <a class="btn btn--primary" href="/contact">Je m’inscris</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -165,7 +166,7 @@ function isCurrent(href: string) {
     </nav>
     <div class="menu__foot">
       <a href="mailto:bc.combat31@gmail.com">bc.combat31@gmail.com</a>
-      <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
+      <a class="btn btn--primary" href="/contact">Je m’inscris</a>
     </div>
   </div>
   <slot />
@@ -207,7 +208,7 @@ function isCurrent(href: string) {
       <a href="/boxing-center-minimes">Boxing Center Minimes</a>
       <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">matériel de boxe</a>
       <a href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">matériel de boxe Toulouse</a>
-      <span>Lun–sam 10h–21h30</span>
+      <span>Lundi–vendredi 17h30–20h ; enfants mercredi et samedi 18h–19h</span>
     </div>
   </footer>
   <script src="/assets/js/data.js?v=12" defer></script>

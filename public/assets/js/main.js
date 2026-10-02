@@ -114,8 +114,8 @@
       </div>
       <p class="config__desc">${d.teaser}</p>
       <div class="config__cta">
-        <a class="btn btn--primary" href="${window.TMBC.boutique.essai}">Essayer · 10 €</a>
-        <a class="btn" href="${window.TMBC.planning}" target="_blank" rel="noopener">Les créneaux</a>
+        <a class="btn btn--primary" href="${window.TMBC.contact}">Contacter le club</a>
+        <a class="btn" href="${window.TMBC.planning}">Les créneaux</a>
         <a class="btn" href="/activites#${d.key}">En détail</a>
       </div>`;
     if (body) body.innerHTML = sheet(discs[0]);
@@ -274,7 +274,7 @@
         `Prénom : ${prenom}\nTéléphone : ${tel}\nE-mail : ${email}\n\n${msg}`
       );
       window.location.href = `mailto:bc.combat31@gmail.com?subject=${encodeURIComponent("Contact TMBC — " + prenom)}&body=${body}`;
-      form.hidden = true;
+
       const ok = $("#form-ok");
       if (ok) ok.hidden = false;
     });
@@ -316,160 +316,4 @@
   tickTop();
   totop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
 
-  const shop = window.TMBC?.boutique || {};
-  const offre29 = shop.offre29 || "https://boutique.boxingcenter.fr/offre/29";
-  const offre259 = shop.offre259 || "https://boutique.boxingcenter.fr/offre/259";
-  const OFFERS = [
-    { price: 29, label: "4 semaines", lead: "Sans engagement · toutes activités", href: offre29 },
-    { price: 259, label: "12 mois", lead: "1× ou 4× sans frais · 5 salles", href: offre259 },
-  ];
-
-  const dockBar = () => {
-    if (document.querySelector(".dock")) return;
-    const bar = document.createElement("div");
-    bar.className = "dock";
-    bar.setAttribute("role", "region");
-    bar.setAttribute("aria-label", "Inscription");
-    const prices = ["29&nbsp;€", "259&nbsp;€"];
-    bar.innerHTML = `
-      <p class="dock__copy"><span class="dock__live"><i></i>Tirage</span>Offre rentrée<span>4 semaines ou saison</span></p>
-      <div class="dock__reel" aria-hidden="true"><span class="dock__mark"></span><div class="dock__strip">${Array.from({ length: 8 }, (_, i) => `<div class="dock__row">${prices[i % 2]}</div>`).join("")}</div></div>
-      <p class="dock__btns">
-        <a class="btn btn--primary" data-dock-29 href="${offre29}">29 €</a>
-        <a class="btn btn--ghost" data-dock-259 href="${offre259}">259 €</a>
-      </p>`;
-    document.body.appendChild(bar);
-    const btn29 = $("[data-dock-29]", bar);
-    const btn259 = $("[data-dock-259]", bar);
-    const hotSwap = () => {
-      if (reduce) return;
-      const hot29 = Math.random() < 0.5;
-      btn29.classList.toggle("btn--primary", hot29);
-      btn29.classList.toggle("btn--ghost", !hot29);
-      btn29.classList.toggle("is-hot", hot29);
-      btn29.classList.toggle("is-dim", !hot29);
-      btn259.classList.toggle("btn--primary", !hot29);
-      btn259.classList.toggle("btn--ghost", hot29);
-      btn259.classList.toggle("is-hot", !hot29);
-      btn259.classList.toggle("is-dim", hot29);
-    };
-    if (!reduce) setInterval(hotSwap, 2800);
-    const show = () => {
-      const drawOpen = !!document.querySelector(".draw.is-open");
-      const on = !drawOpen && (window.scrollY > 280 || document.body.classList.contains("dock-ready"));
-      bar.classList.toggle("is-on", on);
-      document.body.classList.toggle("has-dock", on);
-    };
-    window.addEventListener("scroll", show, { passive: true });
-    show();
-    dockBar.refresh = show;
-  };
-  dockBar.refresh = () => {};
-
-  const offerDraw = () => {
-    const home = location.pathname === "/" || /\/index\.html?$/.test(location.pathname);
-    if (!home) return;
-    try {
-      if (sessionStorage.getItem("tmbc_draw_seen") === "1") return;
-    } catch { /* continue */ }
-
-    const rows = [];
-    for (let i = 0; i < 18; i += 1) rows.push(OFFERS[i % 2]);
-    const pick = OFFERS[Math.random() < 0.5 ? 0 : 1];
-    const stopAt = 12 + (pick.price === 29 ? 0 : 1);
-
-    const root = document.createElement("div");
-    root.className = "draw";
-    root.id = "offerDraw";
-    root.setAttribute("role", "dialog");
-    root.setAttribute("aria-modal", "true");
-    root.setAttribute("aria-labelledby", "drawTitle");
-    root.innerHTML = `
-      <div class="draw__panel">
-        <button type="button" class="draw__close" data-draw-close aria-label="Fermer">×</button>
-        <span class="draw__eyebrow">Offre du jour</span>
-        <h2 class="draw__title" id="drawTitle">29 € ou 259 €</h2>
-        <p class="draw__lead">On fait défiler le tableau. Ça s’arrête sur une offre.</p>
-        <div class="draw__board" aria-hidden="true">
-          <span class="draw__mark"></span>
-          <div class="draw__window">
-            <div class="draw__strip" id="drawStrip">
-              ${rows.map((o, i) => `<div class="draw__row${i === stopAt ? " is-hit" : ""}"><b>${o.price}&nbsp;€</b></div>`).join("")}
-            </div>
-          </div>
-        </div>
-        <div class="draw__actions">
-          <button type="button" class="btn btn--primary" data-draw-go>Lancer le tableau</button>
-          <a class="draw__alt" href="${offre29}">Voir les deux offres</a>
-        </div>
-      </div>`;
-    document.body.appendChild(root);
-
-    const strip = $("#drawStrip", root);
-    const goBtn = $("[data-draw-go]", root);
-    const rowH = 56;
-    const centerOffset = 56;
-    const setY = (index, ms) => {
-      const y = -(index * rowH) + centerOffset;
-      strip.style.transition = reduce || !ms ? "none" : `transform ${ms}ms cubic-bezier(0.13, 0.82, 0.18, 1)`;
-      strip.style.transform = `translateY(${y}px)`;
-    };
-    setY(1, 0);
-
-    const markSeen = () => {
-      try { sessionStorage.setItem("tmbc_draw_seen", "1"); } catch { /* ignore */ }
-    };
-    const close = () => {
-      root.classList.remove("is-open");
-      markSeen();
-      document.body.classList.remove("draw-open");
-      document.body.classList.add("dock-ready");
-      dockBar.refresh();
-    };
-    const land = () => {
-      if (root.classList.contains("is-landed")) return;
-      root.classList.add("is-landed");
-      const cta = document.createElement("a");
-      cta.className = "btn btn--primary";
-      cta.href = pick.href;
-      cta.textContent = `Je prends ${pick.price} € — ${pick.label}`;
-      goBtn.replaceWith(cta);
-      const lead = $(".draw__lead", root);
-      if (lead) lead.textContent = `${pick.price} € · ${pick.lead}`;
-      const other = OFFERS.find((o) => o.price !== pick.price);
-      const alt = $(".draw__alt", root);
-      if (alt && other) {
-        alt.href = other.href;
-        alt.textContent = `Plutôt ${other.price} € ?`;
-      }
-    };
-
-    const spin = () => {
-      if (root.classList.contains("is-spinning") || root.classList.contains("is-landed")) return;
-      root.classList.add("is-spinning");
-      goBtn.disabled = true;
-      goBtn.textContent = "…";
-      if (reduce) {
-        setY(stopAt, 0);
-        land();
-        return;
-      }
-      setY(stopAt, 2200);
-      setTimeout(land, 2250);
-    };
-
-    goBtn.addEventListener("click", spin);
-    root.querySelectorAll("[data-draw-close]").forEach((b) => b.addEventListener("click", close));
-    root.addEventListener("click", (e) => { if (e.target === root) close(); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && root.classList.contains("is-open")) close(); });
-
-    setTimeout(() => {
-      root.classList.add("is-open");
-      document.body.classList.add("draw-open");
-      dockBar.refresh();
-    }, 800);
-  };
-
-  dockBar();
-  offerDraw();
 })();

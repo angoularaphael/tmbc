@@ -1,3 +1,12 @@
 ---
-return Astro.redirect('https://boxe-toulouse.com/plannings/');
+import Base from '../layouts/Base.astro';
 ---
+<Base title="Planning | TMBC Toulouse Minimes" description="Boxe anglaise du lundi au vendredi de 17h30 à 20h. Boxe enfants mercredi et samedi de 18h à 19h." path="/planning">
+  <main id="main" class="section"><div class="wrap">
+    <h1 class="heading">Planning</h1>
+    <div class="courses" style="margin-top:2rem">
+      <article class="course"><div><h2>Boxe Anglaise</h2><p>Lundi au vendredi : 17h30 / 20h</p></div></article>
+      <article class="course"><div><h2>Boxe Enfants</h2><p>Mercredi et Samedi : 18h / 19h</p></div></article>
+    </div>
+  </div></main>
+</Base>

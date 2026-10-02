@@ -8,7 +8,7 @@
         { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://boutique.boxingcenter.fr; base-uri 'self'; form-action 'self' https://boutique.boxingcenter.fr; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests" }
       ]
     },
     {
@@ -99,7 +99,7 @@
     { "source": "/qui-sommes-nous", "destination": "/club", "permanent": true },
     { "source": "/qui-sommes-nous.html", "destination": "/club", "permanent": true },
     { "source": "/a-propos", "destination": "/club", "permanent": true },
-    { "source": "/planning-toulouse-minimes-boxing-club-tmbc", "destination": "https://boxe-toulouse.com/plannings/", "permanent": true },
+    { "source": "/planning-toulouse-minimes-boxing-club-tmbc", "destination": "/planning", "permanent": true },
     { "source": "/pole-inclusion-toulouse-minimes-boxing-club-tmbc", "destination": "/club", "permanent": true },
     { "source": "/pole-handi-sport-toulouse-minimes-boxing-club-tmbc", "destination": "/club", "permanent": true },
     { "source": "/pole-inclusion", "destination": "/club", "permanent": true },
@@ -113,12 +113,9 @@
     { "source": "/disciplines", "destination": "/activites", "permanent": true },
     { "source": "/coachs", "destination": "/", "permanent": true },
     { "source": "/coachs.html", "destination": "/", "permanent": true },
-    { "source": "/contact", "destination": "/", "permanent": true },
-    { "source": "/contact.html", "destination": "/", "permanent": true },
-    { "source": "/planning", "destination": "https://boxe-toulouse.com/plannings/", "permanent": false },
-    { "source": "/planning.html", "destination": "https://boxe-toulouse.com/plannings/", "permanent": false },
-    { "source": "/tarifs", "destination": "https://boutique.boxingcenter.fr/abonnements", "permanent": false },
-    { "source": "/tarifs.html", "destination": "https://boutique.boxingcenter.fr/abonnements", "permanent": false },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/planning.html", "destination": "/planning", "permanent": false },
+    { "source": "/tarifs.html", "destination": "/tarifs", "permanent": false },
     { "source": "/galerie.html", "destination": "/galerie", "permanent": true },
     { "source": "/mentions-legales.html", "destination": "/mentions-legales", "permanent": true }
   ]

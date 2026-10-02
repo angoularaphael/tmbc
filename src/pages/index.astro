@@ -27,10 +27,10 @@ const jsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'C’est quoi l’offre 29 € ?',
+      name: 'Quels sont les tarifs de la saison ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '4 semaines illimitées de boxe anglaise à Toulouse (loisirs, compétiteurs selon le niveau), 29 € par personne, sans engagement.',
+        text: '295 € par saison adultes et 250 € par saison enfants. Renseignements via le formulaire de contact.',
       },
     },
     {
@@ -38,7 +38,7 @@ const jsonLd = {
       name: 'Quelle différence entre loisirs et compétiteurs ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'À Toulouse Minimes, les loisirs : technique, sac, assauts maîtrisés, pas d’opposition imposée. Les compétiteurs : entraînement licenciés en semaine et open sparring le samedi 18h30.',
+        text: 'À Toulouse Minimes, les loisirs : technique, sac, assauts maîtrisés, pas d’opposition imposée. Les compétiteurs : entraînement encadré du lundi au vendredi de 17h30 à 20h.',
       },
     },
     {
@@ -46,7 +46,7 @@ const jsonLd = {
       name: 'On m’oblige à sparrer ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Non. Le seul open sparring est le samedi 18h30, entre licenciés du cours compétiteurs.',
+        text: 'Non. Les assauts sont adaptés au niveau et encadrés par le coach.',
       },
     },
     {
@@ -54,7 +54,7 @@ const jsonLd = {
       name: 'Il y a des cours enfants ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Dès 3 ans, école de boxe anglaise à Toulouse. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus. Aucun coup porté chez les petits.',
+        text: 'Dès 3 ans, école de boxe anglaise à Toulouse. Boxe enfants : 250 € par saison. Aucun coup porté chez les petits.',
       },
     },
     {
@@ -86,7 +86,7 @@ const jsonLd = {
       name: 'Où pratiquer la boxe anglaise à Toulouse ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Au TMBC, club de boxe anglaise Toulouse Minimes, 10 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30. Cours loisirs, compétiteurs et école.',
+        text: 'Au TMBC, club de boxe anglaise Toulouse Minimes, 10 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–vendredi 17h30–20h ; enfants mercredi et samedi 18h–19h. Cours loisirs, compétiteurs et école.',
       },
     },
   ],
@@ -104,22 +104,22 @@ const jsonLd = {
       <div class="hero__foot">
         <ul class="hero__facts" data-reveal>
           <li class="hfact"><b>Essai 10 €</b><span>Une séance · gants prêtés</span></li>
-          <li class="hfact"><b>4 semaines 29 €</b><span>Boxe anglaise, sans engagement</span></li>
+          <li class="hfact"><b>Adultes : 295 €/saison</b><span>Boxe anglaise, tarif saison</span></li>
           <li class="hfact"><b>Métro B · 3 min</b><span>Barrière de Paris</span></li>
         </ul>
         <p class="hero__cta" data-reveal>
-          <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris — 29 €</a>
-          <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai</a>
+          <a class="btn btn--primary" href="/contact">Contacter le club</a>
+          <a class="btn" href="/contact">Réserver l’essai</a>
         </p>
       </div>
     </header>
 
     <aside class="dealbar">
       <div class="wrap">
-        <p><b>4 semaines illimitées à 29 €</b><span>Offre rentrée · boxe anglaise · inscription en ligne</span></p>
+        <p><b>Adultes : 295 € par saison</b><span>Enfants : 250 € par saison · renseignements auprès du club</span></p>
         <p class="btn-row">
-          <a class="btn" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
-          <a class="btn btn--ghost" href="https://boutique.boxingcenter.fr/seance-essai">Essai 10 €</a>
+          <a class="btn" href="/contact">Je m’inscris</a>
+          <a class="btn btn--ghost" href="/contact">Essai 10 €</a>
         </p>
       </div>
     </aside>
@@ -136,25 +136,9 @@ const jsonLd = {
       <div class="wrap">
         <p class="eyebrow" data-reveal>Les formules</p>
         <h2 class="heading" data-reveal>Choisissez comment vous commencez</h2>
-        <div class="offers" data-reveal-group style="margin-top:1.6rem">
-          <article class="offer">
-            <h3>Essai</h3>
-            <b><span data-count="10">0</span> €</b>
-            <p>Une séance de boxe anglaise à Toulouse, même débutant. Gants prêtés. Aucun dossier, aucun certificat.</p>
-            <a class="btn" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai</a>
-          </article>
-          <article class="offer is-hot">
-            <h3>Offre rentrée</h3>
-            <b><s>44 €</s> <span data-count="29">0</span> €</b>
-            <p>4 semaines, cours illimités de boxe anglaise à Toulouse (loisirs et compétiteurs). 29 € par personne, sans engagement.</p>
-            <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris</a>
-          </article>
-          <article class="offer">
-            <h3>Saison</h3>
-            <b><s>400 €</s> <span data-count="259">0</span> €</b>
-            <p>12 mois, payable en 4× sans frais. Accès à 5 salles à Toulouse et alentours.</p>
-            <a class="btn" href="https://boutique.boxingcenter.fr/offre/259">Prendre la saison</a>
-          </article>
+        <div class="offers season-offers" data-reveal-group style="margin-top:1.6rem">
+          <article class="offer"><h3>Adultes</h3><b>295 €</b><p>Par saison · boxe anglaise.</p><a class="btn btn--primary" href="/contact">Contacter le club</a></article>
+          <article class="offer"><h3>Enfants</h3><b>250 €</b><p>Par saison · boxe enfants.</p><a class="btn btn--primary" href="/contact">Contacter le club</a></article>
         </div>
       </div>
     </section>
@@ -168,11 +152,11 @@ const jsonLd = {
           <ul class="why">
             <li><b>01</b> <span>Un coach diplômé vous place : pieds, garde, jab.</span></li>
             <li><b>02</b> <span>Gants et casque prêtés à l’essai. Vous venez en tenue de sport.</span></li>
-            <li><b>03</b> <span>Pas de sparring imposé. Le seul open est le samedi 18h30, entre licenciés compétiteurs.</span></li>
-            <li><b>04</b> <span>3 minutes du métro B Barrière de Paris. Ouvert lundi–samedi 10h–21h30.</span></li>
+            <li><b>03</b> <span>Pas de sparring imposé. Les assauts sont adaptés au niveau et encadrés par le coach.</span></li>
+            <li><b>04</b> <span>3 minutes du métro B Barrière de Paris. Cours : lundi–vendredi 17h30–20h ; enfants mercredi et samedi 18h–19h.</span></li>
           </ul>
           <p class="btn-row">
-            <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/seance-essai">Réserver l’essai — 10 €</a>
+            <a class="btn btn--primary" href="/contact">Réserver l’essai — 10 €</a>
             <a class="btn" href="/club">Voir la salle</a>
           </p>
         </div>
@@ -196,15 +180,15 @@ const jsonLd = {
           </a>
           <a class="door" href="/activites#competiteurs">
             <img src="/assets/media/boxe-anglaise-competiteurs-toulouse.webp" alt="Entraînement boxe anglaise compétiteurs à Toulouse" width="1200" height="814" loading="lazy" decoding="async" />
-            <p class="eyebrow">Lun mar jeu ven 18h · open samedi</p>
+            <p class="eyebrow">Lundi au vendredi 17h30–20h</p>
             <h3>Boxe anglaise compétiteurs</h3>
-            <p>Boxe anglaise compétiteurs à Toulouse. Entraînement licenciés. Open sparring samedi 18h30, encadré.</p>
+            <p>Boxe anglaise compétiteurs à Toulouse. Entraînement licenciés. Travail technique et assauts encadrés.</p>
           </a>
           <a class="door" href="/activites#educative">
             <img src="/assets/media/ecole-boxe-enfants-toulouse-tmbc.webp" alt="École de boxe anglaise enfants à Toulouse Minimes" width="768" height="1024" loading="lazy" decoding="async" />
             <p class="eyebrow">Dès 3 ans · t-shirt inclus</p>
             <h3>Enfants</h3>
-            <p>École de boxe anglaise à Toulouse. Baby Boxe 250 €, éducative 295 €. Aucun coup porté chez les petits.</p>
+            <p>École de boxe anglaise à Toulouse. Boxe enfants : 250 € par saison. Aucun coup porté chez les petits.</p>
           </a>
         </div>
       </div>
@@ -215,12 +199,12 @@ const jsonLd = {
         <p class="eyebrow" data-reveal>Les cours</p>
         <h2 class="heading" data-reveal>Créneaux de boxe anglaise à Toulouse, sans jargon</h2>
         <div class="courses" style="margin-top:1.2rem">
-          <a class="course" href="/activites#loisirs"><span class="course__n">01</span><div><h3>Boxe anglaise loisirs</h3><p>Débutant boxe à Toulouse · midi 12h40 et soir 19h40 · pas d’opposition imposée</p></div><span>Voir →</span></a>
-          <a class="course" href="/activites#competiteurs"><span class="course__n">02</span><div><h3>Boxe anglaise compétiteurs</h3><p>Toulouse · lun mar jeu ven 18h · open sparring samedi 18h30</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#loisirs"><span class="course__n">01</span><div><h3>Boxe anglaise loisirs</h3><p>Débutant boxe à Toulouse · lundi au vendredi 17h30–20h · pas d’opposition imposée</p></div><span>Voir →</span></a>
+          <a class="course" href="/activites#competiteurs"><span class="course__n">02</span><div><h3>Boxe anglaise compétiteurs</h3><p>Toulouse · lundi au vendredi 17h30–20h</p></div><span>Voir →</span></a>
           <a class="course" href="/activites#educative"><span class="course__n">03</span><div><h3>École de boxe anglaise</h3><p>Enfants à Toulouse · mercredi et samedi · Baby, éducative, ados</p></div><span>Voir →</span></a>
         </div>
         <p class="btn-row" style="margin-top:1.4rem">
-          <a class="btn btn--primary" href="https://boxe-toulouse.com/plannings/" target="_blank" rel="noopener">Voir le planning</a>
+          <a class="btn btn--primary" href="/planning">Voir le planning</a>
           <a class="btn" href="/activites">Toutes les activités</a>
         </p>
       </div>
@@ -233,14 +217,14 @@ const jsonLd = {
           <div class="coach-lead__copy">
             <h2 class="heading coach-lead__title">
               <span class="coach-lead__kicker">Notre coach principal :</span>
-              <span class="coach-lead__name" aria-label="Mehdi">
-                <span>M</span><span>e</span><span>h</span><span>d</span><span>i</span>
+              <span class="coach-lead__name" aria-label="Dadi">
+                <span>D</span><span>a</span><span>d</span><span>i</span>
               </span>
             </h2>
-            <p class="lead">Mehdi dirige le plateau de boxe anglaise à Toulouse : cours loisirs, compétiteurs et école.</p>
+            <p class="lead">Dadi Boutlelis, coach de boxe anglaise, est titulaire du Prévôt fédéral. Il accompagne les pratiquants loisirs et les compétiteurs, avec une expérience auprès de boxeurs professionnels et de haut niveau.</p>
           </div>
           <figure class="coach-lead__frame">
-            <img src="/assets/media/coach-mehdi-boxe-anglaise-toulouse.webp" alt="Mehdi, coach de boxe anglaise au TMBC Toulouse Minimes" width="1200" height="1800" loading="lazy" />
+            <img src="/assets/media/coach-dadi-tmbc.png" alt="Dadi, coach de boxe anglaise au TMBC Toulouse Minimes" width="273" height="310" loading="lazy" />
             <figcaption class="coach-lead__badge">Coach principal</figcaption>
           </figure>
         </div>
@@ -257,16 +241,8 @@ const jsonLd = {
             <footer>Thomas L. · Boxe anglaise loisirs</footer>
           </blockquote>
           <blockquote>
-            <p>« L’entraînement 18h, l’open du samedi : on progresse pour de vrai, encadré. Mehdi ne laisse rien passer. »</p>
-            <footer>Nicolas D. · Boxe anglaise compétiteurs</footer>
-          </blockquote>
-          <blockquote>
             <p>« Mon fils y va depuis ses 6 ans. Il a gagné en confiance — et n’a jamais pris un coup qu’il n’avait pas choisi. »</p>
             <footer>Karim B. · Parent, boxe éducative</footer>
-          </blockquote>
-          <blockquote>
-            <p>« Les cours d’anglaise du soir, 40 minutes, et je rentre. Mehdi corrige, personne ne juge. »</p>
-            <footer>Léa P. · Boxe anglaise loisirs</footer>
           </blockquote>
           <blockquote>
             <p>« Très belle salle, matos au top, coachs et staff accueillants. On progresse dès la première semaine. »</p>
@@ -277,65 +253,6 @@ const jsonLd = {
             <footer>Sophie V. · Parent, école de boxe</footer>
           </blockquote>
         </div>
-      </div>
-    </section>
-
-    <section class="section band-tint" id="boutique">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal>Le matériel</p>
-        <h2 class="heading" data-reveal>Le matériel, le même qu’en salle</h2>
-        <p class="lead" data-reveal>Gants, bandes, protections, packs enfants. Commande en ligne, colis chez vous — pas de retrait en club.</p>
-        <div class="shopgrid" data-reveal-group>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/blade.jpg" alt="Gants de boxe Blade noir et blanc" width="400" height="400" loading="lazy" />
-            <h3>Gants Blade</h3>
-            <p>17,90 € · 10 / 12 / 14 oz</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/sparring.jpg" alt="Gants de sparring Metal Boxe 16 oz" width="400" height="400" loading="lazy" />
-            <h3>Gants sparring 16 oz</h3>
-            <p>34,90 € · Metal Boxe</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/ergo.jpg" alt="Gants ERGO 90 Metal Boxe 14 oz" width="400" height="400" loading="lazy" />
-            <h3>Gants ERGO 90</h3>
-            <p>24,90 € · 14 oz</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/bandes-4m.jpg" alt="Bandes de boxe 4 mètres rouge blanc bleu" width="400" height="400" loading="lazy" />
-            <h3>Bandes 4 m</h3>
-            <p>6,90 € · rouge / blanc / bleu</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/dents-adulte.jpg" alt="Protège-dents adulte gel" width="400" height="400" loading="lazy" />
-            <h3>Protège-dents adulte</h3>
-            <p>5,90 € · gel thermoformable</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/pack-enfants.jpg" alt="Pack enfants gants mitaines et porte-clés" width="400" height="400" loading="lazy" />
-            <h3>Pack enfants</h3>
-            <p>25 € · gants + mitaines</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/gants-enfant.jpg" alt="Gants de boxe enfant ONE" width="400" height="400" loading="lazy" />
-            <h3>Gants enfant ONE</h3>
-            <p>19,90 € · 4/7 ou 8/15 ans</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/ensemble-enfants.jpg" alt="Ensemble enfants short et débardeur de boxe" width="400" height="400" loading="lazy" />
-            <h3>Ensemble enfants</h3>
-            <p>24,90 € · short + débardeur</p>
-          </a>
-          <a class="shopcard" href="https://boutique.boxingcenter.fr/" target="_blank" rel="noopener">
-            <img src="/assets/shop/dents-enfants.png" alt="Protège-dents enfants" width="400" height="400" loading="lazy" />
-            <h3>Protège-dents enfants</h3>
-            <p>12 € · gel, taille junior</p>
-          </a>
-        </div>
-        <p class="btn-row" style="margin-top:1.4rem" data-reveal>
-          <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/">matériel de boxe</a>
-          <a class="btn" href="https://boutique.boxingcenter.fr/">matériel de boxe Toulouse</a>
-        </p>
       </div>
     </section>
 
@@ -351,12 +268,12 @@ const jsonLd = {
           <details><summary>Quel club boxe à Toulouse ?</summary><p>Le TMBC — Toulouse Minimes Boxing Club — club boxe Toulouse aux Minimes, 10 rue de Fenouillet, Barrière de Paris. Boxe anglaise : débutants, loisirs, compétiteurs et école. Essai 10 €.</p></details>
           <details><summary>Quel club de boxe anglaise à Toulouse ?</summary><p>Le TMBC, club Toulouse Minimes, 10 rue de Fenouillet, Barrière de Paris. Club de boxe anglaise uniquement : débutants, loisirs, compétiteurs et école.</p></details>
           <details><summary>Combien coûte l’essai ?</summary><p>10 € la séance de boxe anglaise à Toulouse. Aucun dossier, aucun certificat. Gants et casque prêtés au TMBC.</p></details>
-          <details><summary>C’est quoi l’offre 29 € ?</summary><p>4 semaines illimitées de boxe anglaise à Toulouse, 29 € par personne, sans engagement. Inscription en ligne.</p></details>
-          <details><summary>Quelle différence entre loisirs et compétiteurs ?</summary><p>Boxe anglaise loisirs à Toulouse : technique, sac, assauts maîtrisés — pas d’opposition imposée. Boxe anglaise compétiteurs : entraînement licenciés en semaine (lun mar jeu ven 18h) et open sparring le samedi 18h30.</p></details>
-          <details><summary>On m’oblige à sparrer ?</summary><p>Non. Le seul open sparring du club de boxe anglaise TMBC est le samedi 18h30, entre licenciés du cours compétiteurs.</p></details>
-          <details><summary>Il y a des cours enfants ?</summary><p>Oui, école de boxe anglaise à Toulouse dès 3 ans. Baby Boxe 250 €, éducative 295 € l’année, t-shirt inclus. Aucun coup porté chez les petits. Mercredi et samedi.</p></details>
+          <details><summary>Quels sont les tarifs de la saison ?</summary><p>295 € par saison adultes et 250 € par saison enfants. Renseignements et inscription via le formulaire de contact.</p></details>
+          <details><summary>Quelle différence entre loisirs et compétiteurs ?</summary><p>Boxe anglaise loisirs à Toulouse : technique, sac, assauts maîtrisés — pas d’opposition imposée. Boxe anglaise compétiteurs : entraînement encadré du lundi au vendredi de 17h30 à 20h.</p></details>
+          <details><summary>On m’oblige à sparrer ?</summary><p>Non. Les assauts sont adaptés au niveau et encadrés par le coach.</p></details>
+          <details><summary>Il y a des cours enfants ?</summary><p>Oui, école de boxe anglaise à Toulouse dès 3 ans. Boxe enfants : 250 € par saison. Aucun coup porté chez les petits. Mercredi et samedi.</p></details>
           <details><summary>Quel matériel faut-il ?</summary><p>Pour l’essai : tenue de sport et une bouteille d’eau. Le club prête les gants. Ensuite, le <a href="https://boutique.boxingcenter.fr/">matériel de boxe</a> (gants, bandes, protège-dents) se commande en ligne ; le colis arrive chez vous. Voir aussi le <a href="https://boutique.boxingcenter.fr/">matériel de boxe Toulouse</a>.</p></details>
-          <details><summary>Où pratiquer la boxe anglaise à Toulouse ?</summary><p>TMBC, club de boxe anglaise Toulouse Minimes, 10 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–samedi 10h–21h30. Fermé dimanche.</p></details>
+          <details><summary>Où pratiquer la boxe anglaise à Toulouse ?</summary><p>TMBC, club de boxe anglaise Toulouse Minimes, 10 rue de Fenouillet, 31200 Toulouse. Métro B Barrière de Paris, 3 min. Lundi–vendredi 17h30–20h ; enfants mercredi et samedi 18h–19h. Fermé dimanche.</p></details>
         </div>
       </div>
     </section>
@@ -376,7 +293,7 @@ const jsonLd = {
           <a class="netcard" href="https://boxe-toulouse.com/" target="_blank" rel="noopener">
             <span class="eyebrow">Minimes</span>
             <b>Boxing Center Minimes</b>
-            <p>Le site de Boxing Center Minimes : cours, planning, essai 10 €, offre 29 €. boxe-toulouse.com</p>
+            <p>Le site de Boxing Center Minimes : cours, planning, essai 10 €, tarifs saison. boxe-toulouse.com</p>
             <em>Voir le site →</em>
           </a>
           <a class="netcard" href="https://boxingcenter.fr/" target="_blank" rel="noopener">
@@ -398,12 +315,12 @@ const jsonLd = {
     <section class="closer" aria-label="Inscription">
       <img data-parallax src="/assets/media/ring-principal-1200.webp" alt="Ring de boxe anglaise du club TMBC à Toulouse Minimes" width="1600" height="1000" />
       <div class="wrap">
-        <p class="eyebrow">Inscription en ligne</p>
-        <h2 class="display">4 semaines illimitées à 29 €</h2>
-        <p class="lead">Club de boxe anglaise à Toulouse. Débutants bienvenus. Sans engagement. Matériel prêté le temps de vous équiper.</p>
+        <p class="eyebrow">Renseignements et inscription</p>
+        <h2 class="display">Adultes : 295 € par saison</h2>
+        <p class="lead">Club de boxe anglaise à Toulouse. Débutants bienvenus. Inscription auprès du club. Matériel prêté le temps de vous équiper.</p>
         <p class="btn-row" style="margin-top:1.4rem">
-          <a class="btn btn--primary" href="https://boutique.boxingcenter.fr/offre/29">Je m’inscris — 29 €</a>
-          <a class="btn" href="mailto:bc.combat31@gmail.com">Écrire au club</a>
+          <a class="btn btn--primary" href="/contact">Contacter le club</a>
+          <a class="btn" href="/tarifs">Voir les tarifs</a>
         </p>
       </div>
     </section>
